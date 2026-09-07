@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KWSFTNW1VF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KWSFTNW1VF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator Online - Exact Chronological Age, Days & Milestones</title>
+  <meta name="description" content="Calculate your exact age in years, months, weeks, days, hours, and minutes from date of birth. Includes countdown to your next birthday, birth day of week, and Indian exam eligibility.">
+  <meta name="keywords" content="age calculator, exact age calculator, chronological age online, date of birth calculator, upsc age eligibility, next birthday countdown, calculate age in days">
+  <link rel="canonical" href="https://roaring-boba-b53db8.netlify.app/age-calculator">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://roaring-boba-b53db8.netlify.app/age-calculator">
+  <meta property="og:title" content="Age Calculator Online - Exact Chronological Age & DOB Breakdown">
+  <meta property="og:description" content="Calculate your precise age in years, months, days, hours, and find government exam eligibility.">
+  <meta property="og:image" content="https://roaring-boba-b53db8.netlify.app/images/logo.svg">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Age Calculator Online - Exact Date of Birth Tool">
+  <meta name="twitter:description" content="Precise age calculation with leap year adjustments, birthday countdown, and Indian exam cutoffs.">
+  
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/calculators.css">
+
+  <!-- Schema.org FAQPage Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does this tool calculate exact chronological age with leap years?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The calculator uses precise Gregorian calendar day math. It calculates the delta between birth year, month, and day against the reference date, accurately borrowing the exact day-count from the previous calendar month (accounting for 28, 29, 30, or 31 days) to deliver an exact chronological record."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is age eligibility determined for UPSC Civil Services Examination?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For UPSC CSE, a candidate must have attained the age of 21 years and must not have exceeded 32 years on August 1st of the examination year for general category candidates. Upper age relaxations apply for OBC (3 years) and SC/ST (5 years)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the legal age for marriage in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under prevailing Indian statutes, the legal minimum age for marriage is 18 years for females and 21 years for males."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "At what age do you become a Senior Citizen in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In India, an individual becomes a Senior Citizen upon reaching 60 years of age, qualifying for elevated income tax exemption thresholds and bank fixed deposit interest bonuses (+0.50%). A Super Senior Citizen is classified at 80 years of age."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I calculate my age as of a future or specific historical date?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our tool provides an 'Age as on Date' input. You can select any target cutoff date (such as an application deadline date or job notification date) to verify your exact age on that specific date."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is the next birthday countdown determined?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The calculator compares your birth month and day against the current year. If that date has passed, it projects forward to the subsequent year and computes the exact difference in calendar days."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Ad Slot -->
+  <aside class="ad-wrapper top-banner" aria-label="Sponsored Content">
+    <div class="container">
+      <span class="ad-label">Advertisement</span>
+      <div id="ad-slot-1" class="ad-slot leaderboard">
+        <span>Leaderboard Ad Placement (728x90)</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">
+        <img src="/images/logo.svg" alt="Indian Calculator Hub Logo" width="220" height="38">
+      </a>
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/emi-calculator" class="nav-link">EMI Calculator</a></li>
+          <li><a href="/percentage-calculator" class="nav-link">Percentage Calculator</a></li>
+          <li><a href="/age-calculator" class="nav-link active">Age Calculator</a></li>
+          <li><a href="/bmi-calculator" class="nav-link">BMI Calculator</a></li>
+          <li><a href="/about" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav-menu">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/emi-calculator">EMI Calculator</a></li>
+        <li><a href="/sip-calculator">SIP Calculator</a></li>
+        <li><a href="/fd-calculator">FD Calculator</a></li>
+        <li><a href="/gst-calculator">GST Calculator</a></li>
+        <li><a href="/percentage-calculator">Percentage Calculator</a></li>
+        <li><a href="/cgpa-calculator">CGPA Calculator</a></li>
+        <li><a href="/age-calculator">Age Calculator</a></li>
+        <li><a href="/bmi-calculator">BMI Calculator</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <div class="calc-page-header">
+    <div class="container">
+      <ul class="breadcrumbs">
+        <li><a href="/">Home</a></li>
+        <li>/</li>
+        <li><a href="/#calculators">Daily Life</a></li>
+        <li>/</li>
+        <li><span class="current">Age Calculator</span></li>
+      </ul>
+      <h1 class="calc-page-title">Chronological Age Calculator</h1>
+      <p class="calc-page-subtitle">
+        Find your exact age in years, months, days, hours, and minutes with next birthday countdown and Indian exam cutoff checks.
+      </p>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="calc-page-layout">
+      
+      <!-- Main Content -->
+      <div class="calc-main-content">
+        
+        <!-- Interactive Age Calculator Card -->
+        <section class="calculator-card" aria-label="Age Calculator Interface">
+          <div class="calc-widget-grid">
+            
+            <!-- Inputs -->
+            <div class="calc-inputs-col">
+              
+              <!-- Date of Birth -->
+              <div class="input-field-group">
+                <label for="birth-date" class="input-label">Date of Birth (DOB)</label>
+                <input type="date" id="birth-date" class="calc-text-input" value="1998-08-15" style="font-weight: 700;">
+              </div>
+
+              <!-- Age As On Date -->
+              <div class="input-field-group">
+                <label for="as-of-date" class="input-label">Age As On Date (Defaults to Today)</label>
+                <input type="date" id="as-of-date" class="calc-text-input" style="font-weight: 700;">
+              </div>
+
+              <!-- Indian Legal & Milestone Badges -->
+              <div style="background: #F8FAFC; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.25rem;">
+                <div style="font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.75rem;">
+                  Indian Civic & Legal Milestones
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
+                  <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <span>Voter ID & Driving License (18+ Yrs):</span>
+                    <strong id="badge-milestone-18" class="feature-pill" style="color: #059669; background: #DCFCE7;">Eligible</strong>
+                  </div>
+                  <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <span>UPSC / Civil Services Entry (21+ Yrs):</span>
+                    <strong id="badge-milestone-21" class="feature-pill" style="color: #059669; background: #DCFCE7;">Eligible</strong>
+                  </div>
+                  <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <span>Senior Citizen Concessions (60+ Yrs):</span>
+                    <strong id="badge-milestone-60" class="feature-pill" style="color: #64748B; background: #E2E8F0;">Not Reached</strong>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Results -->
+            <div class="calc-results-col">
+              <div class="result-main-card">
+                <div class="result-label">Your Exact Chronological Age</div>
+                <div id="res-age-primary" class="result-primary-value" style="font-size: 1.85rem;">28 Years, 0 Months, 22 Days</div>
+                <div id="res-age-bday-day" class="result-subtext">Born on a Saturday</div>
+              </div>
+
+              <!-- Breakdown Rows -->
+              <div class="result-breakdown-list">
+                <div class="breakdown-row">
+                  <span class="breakdown-label">
+                    <span class="breakdown-dot dot-accent"></span>
+                    Next Birthday Countdown
+                  </span>
+                  <span id="res-next-bday" class="breakdown-val">343 Days Away</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-label">
+                    <span class="breakdown-dot dot-primary"></span>
+                    Total Days Lived
+                  </span>
+                  <span id="res-total-days" class="breakdown-val">10,249 Days</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-label">
+                    <span class="breakdown-dot dot-neutral"></span>
+                    Total Weeks Lived
+                  </span>
+                  <span id="res-total-weeks" class="breakdown-val">1,464 Weeks</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-label">
+                    <span class="breakdown-dot dot-neutral"></span>
+                    Total Hours Lived
+                  </span>
+                  <span id="res-total-hours" class="breakdown-val">2,45,976 Hours</span>
+                </div>
+              </div>
+
+              <!-- Action buttons -->
+              <div class="calc-actions">
+                <button type="button" id="btn-copy-age" class="btn-primary" style="font-size: 0.875rem; padding: 0.6rem 1rem;">
+                  Copy Age Summary
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- In-Content Ad -->
+        <aside class="ad-wrapper in-content" aria-label="Sponsored Content">
+          <span class="ad-label">Advertisement</span>
+          <div id="ad-slot-2" class="ad-slot responsive-banner">
+            <span>In-Content Ad Slot (Responsive Display)</span>
+          </div>
+        </aside>
+
+        <!-- 400-600 Word Explanatory Content -->
+        <article class="content-article">
+          <h2>Precision Chronological Age Calculation for Indian Examinations & Life Events</h2>
+          <p>
+            An <strong>Age Calculator</strong> determines the exact interval elapsed between a person's moment of birth and a specified date. In India, precise age verification down to the exact day is a mandatory statutory prerequisite for filling government recruitment forms (UPSC, SSC CGL, State PSCs, IBPS Banking), processing passport applications, establishing voter registration, and evaluating insurance underwriting premiums.
+          </p>
+
+          <h3>The Mathematics of Gregorian Calendar Date Arithmetic</h3>
+          <p>
+            Calculating chronological age is more intricate than simple subtraction because months have variable day counts (28, 29 in leap years, 30, and 31 days). The calendar borrow algorithm operates as follows:
+          </p>
+          <ol>
+            <li><strong>Days Subtraction:</strong> If the target day is smaller than the birth day, 1 month is borrowed from the target month, and the exact number of days in the previous calendar month is added to the target day before subtracting.</li>
+            <li><strong>Months Subtraction:</strong> If the target month is less than the birth month, 1 year (12 months) is borrowed from the target year.</li>
+            <li><strong>Years Subtraction:</strong> The adjusted birth year is subtracted from the adjusted target year.</li>
+          </ol>
+
+          <div class="formula-box">
+            <div class="formula-title">Gregorian Calendar Age Algorithm</div>
+            <code class="formula-math">Chronological Age = (Target Date - Date of Birth) [Adjusted for Month Lengths]</code>
+            <div class="formula-legend">Ensures leap years (February 29) and differing month durations do not distort elapsed time.</div>
+          </div>
+
+          <h3>Major Government Exam Age Eligibility Cutoffs in India</h3>
+          <div class="data-table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Examination / Post</th>
+                  <th>Minimum Age</th>
+                  <th>Maximum Age (General)</th>
+                  <th>Statutory Cutoff Reference Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>UPSC Civil Services (IAS/IPS)</strong></td>
+                  <td>21 Years</td>
+                  <td>32 Years (+3 OBC / +5 SC/ST)</td>
+                  <td>August 1st of Exam Year</td>
+                </tr>
+                <tr>
+                  <td><strong>SSC CGL (Combined Graduate Level)</strong></td>
+                  <td>18 / 20 Years</td>
+                  <td>27 / 30 / 32 Years (By post)</td>
+                  <td>August 1st / January 1st</td>
+                </tr>
+                <tr>
+                  <td><strong>IBPS PO (Probationary Officer)</strong></td>
+                  <td>20 Years</td>
+                  <td>30 Years</td>
+                  <td>Date specified in official notification</td>
+                </tr>
+                <tr>
+                  <td><strong>NDA (National Defence Academy)</strong></td>
+                  <td>16.5 Years</td>
+                  <td>19.5 Years</td>
+                  <td>Exact day cutoff stipulated by UPSC</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Key Life Milestones Recognized by Indian Law</h3>
+          <ul>
+            <li><strong>Age 18 (Majority):</strong> Universal adult suffrage to cast ballots in Indian General and Assembly elections, apply for permanent driver's licenses, and execute legally binding contracts.</li>
+            <li><strong>Age 21 (Civil Eligibility):</strong> Minimum marriage age for males under the Hindu Marriage Act and Special Marriage Act, and minimum threshold to contest municipal/Panchayat elections.</li>
+            <li><strong>Age 60 (Senior Citizen Status):</strong> Eligibility for enhanced Indian Income Tax basic exemption slabs, special concession fares, and senior citizen bank FD rate increments (+0.50%).</li>
+          </ul>
+        </article>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" aria-label="Frequently Asked Questions">
+          <div class="faq-header">
+            <h2>Frequently Asked Questions on Age Calculations</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary class="faq-question">How does this tool calculate exact chronological age with leap years?</summary>
+              <div class="faq-answer">
+                The calculator uses precise Gregorian calendar day math. It calculates the delta between birth year, month, and day against the reference date, accurately borrowing the exact day-count from the previous calendar month (accounting for 28, 29, 30, or 31 days) to deliver an exact chronological record.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">How is age eligibility determined for UPSC Civil Services Examination?</summary>
+              <div class="faq-answer">
+                For UPSC CSE, a candidate must have attained the age of 21 years and must not have exceeded 32 years on August 1st of the examination year for general category candidates. Upper age relaxations apply for OBC (3 years) and SC/ST (5 years).
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">What is the legal age for marriage in India?</summary>
+              <div class="faq-answer">
+                Under prevailing Indian statutes, the legal minimum age for marriage is 18 years for females and 21 years for males.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">At what age do you become a Senior Citizen in India?</summary>
+              <div class="faq-answer">
+                In India, an individual becomes a Senior Citizen upon reaching 60 years of age, qualifying for elevated income tax exemption thresholds and bank fixed deposit interest bonuses (+0.50%). A Super Senior Citizen is classified at 80 years of age.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">Can I calculate my age as of a future or specific historical date?</summary>
+              <div class="faq-answer">
+                Yes, our tool provides an 'Age as on Date' input. You can select any target cutoff date (such as an application deadline date or job notification date) to verify your exact age on that specific date.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">How is the next birthday countdown determined?</summary>
+              <div class="faq-answer">
+                The calculator compares your birth month and day against the current year. If that date has passed, it projects forward to the subsequent year and computes the exact difference in calendar days.
+              </div>
+            </details>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="calc-sidebar">
+        
+        <!-- Sidebar Ad -->
+        <div class="sidebar-box" style="padding: 1rem; text-align: center;">
+          <span class="ad-label">Advertisement</span>
+          <div id="ad-slot-3" class="ad-slot rectangle">
+            <span>Sidebar Ad (300x250)</span>
+          </div>
+        </div>
+
+        <!-- Related Calculators -->
+        <div class="sidebar-box">
+          <h3 class="sidebar-title">Related Calculators</h3>
+          <ul class="sidebar-links">
+            <li>
+              <a href="/bmi-calculator">
+                <span>Asian Indian BMI</span>
+                <span>→</span>
+              </a>
+            </li>
+            <li>
+              <a href="/percentage-calculator">
+                <span>Percentage Calculator</span>
+                <span>→</span>
+              </a>
+            </li>
+            <li>
+              <a href="/cgpa-calculator">
+                <span>CGPA to %</span>
+                <span>→</span>
+              </a>
+            </li>
+            <li>
+              <a href="/emi-calculator">
+                <span>Loan EMI Calculator</span>
+                <span>→</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="site-logo" style="color: #FFFFFF;">
+            <img src="/images/logo.svg" alt="Indian Calculator Hub" width="200" height="34" style="filter: brightness(0) invert(1);">
+          </a>
+          <p>
+            Indian Calculator Hub provides free financial and mathematical tools engineered for Indian citizens.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Finance Tools</h4>
+          <ul class="footer-links">
+            <li><a href="/emi-calculator">EMI Calculator</a></li>
+            <li><a href="/sip-calculator">SIP Calculator</a></li>
+            <li><a href="/fd-calculator">FD Calculator</a></li>
+            <li><a href="/gst-calculator">GST Calculator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Academic & Life</h4>
+          <ul class="footer-links">
+            <li><a href="/percentage-calculator">Percentage Calculator</a></li>
+            <li><a href="/cgpa-calculator">CGPA to %</a></li>
+            <li><a href="/age-calculator">Age Calculator</a></li>
+            <li><a href="/bmi-calculator">Asian Indian BMI</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Legal & Trust</h4>
+          <ul class="footer-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact Support</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms-of-use">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Indian Calculator Hub. All rights reserved.</div>
+        <div>
+          <a href="/privacy-policy" style="color: #94A3B8; margin-right: 1rem;">Privacy Policy</a>
+          <a href="/terms-of-use" style="color: #94A3B8;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculators.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    // Age Calculator Wiring
+    const birthDateInput = document.getElementById('birth-date');
+    const asOfDateInput = document.getElementById('as-of-date');
+
+    const resAgePrimary = document.getElementById('res-age-primary');
+    const resAgeBdayDay = document.getElementById('res-age-bday-day');
+    const resNextBday = document.getElementById('res-next-bday');
+    const resTotalDays = document.getElementById('res-total-days');
+    const resTotalWeeks = document.getElementById('res-total-weeks');
+    const resTotalHours = document.getElementById('res-total-hours');
+
+    const badge18 = document.getElementById('badge-milestone-18');
+    const badge21 = document.getElementById('badge-milestone-21');
+    const badge60 = document.getElementById('badge-milestone-60');
+
+    // Default today's date in local ISO
+    const todayStr = new Date().toISOString().split('T')[0];
+    asOfDateInput.value = todayStr;
+
+    function updateAge() {
+      const bDate = birthDateInput.value;
+      const tDate = asOfDateInput.value;
+
+      const res = IndianCalc.calculateAge(bDate, tDate);
+      if (!res) {
+        resAgePrimary.textContent = 'Please enter a valid DOB';
+        return;
+      }
+
+      resAgePrimary.textContent = `${res.years} Years, ${res.months} Months, ${res.days} Days`;
+      resAgeBdayDay.textContent = `Born on a ${res.birthDayName}`;
+      resNextBday.textContent = `${res.daysUntilNextBday} Days Away`;
+      resTotalDays.textContent = `${res.totalDays.toLocaleString('en-IN')} Days`;
+      resTotalWeeks.textContent = `${res.totalWeeks.toLocaleString('en-IN')} Weeks`;
+      resTotalHours.textContent = `${res.totalHours.toLocaleString('en-IN')} Hours`;
+
+      // Milestones
+      if (res.years >= 18) {
+        badge18.textContent = 'Eligible';
+        badge18.style.color = '#059669';
+        badge18.style.background = '#DCFCE7';
+      } else {
+        badge18.textContent = 'Underage';
+        badge18.style.color = '#D97706';
+        badge18.style.background = '#FEF3C7';
+      }
+
+      if (res.years >= 21) {
+        badge21.textContent = 'Eligible';
+        badge21.style.color = '#059669';
+        badge21.style.background = '#DCFCE7';
+      } else {
+        badge21.textContent = 'Underage';
+        badge21.style.color = '#D97706';
+        badge21.style.background = '#FEF3C7';
+      }
+
+      if (res.years >= 60) {
+        badge60.textContent = 'Senior Citizen';
+        badge60.style.color = '#059669';
+        badge60.style.background = '#DCFCE7';
+      } else {
+        badge60.textContent = 'Not Reached';
+        badge60.style.color = '#64748B';
+        badge60.style.background = '#E2E8F0';
+      }
+    }
+
+    birthDateInput.addEventListener('change', updateAge);
+    asOfDateInput.addEventListener('change', updateAge);
+
+    document.getElementById('btn-copy-age').addEventListener('click', () => {
+      const text = `Age Calculation:\nExact Age: ${resAgePrimary.textContent}\nBirth Day: ${resAgeBdayDay.textContent}\nTotal Days: ${resTotalDays.textContent}\nNext Birthday: ${resNextBday.textContent}\nCalculated via Indian Calculator Hub (https://roaring-boba-b53db8.netlify.app/age-calculator)`;
+      window.copyToClipboard(text, 'Age Details copied to clipboard!');
+    });
+
+    updateAge();
+  </script>
+</body>
+</html>

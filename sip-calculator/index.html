@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KWSFTNW1VF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KWSFTNW1VF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIP Calculator India - Mutual Fund Wealth & Return Calculator (2026)</title>
+  <meta name="description" content="Calculate expected returns and wealth creation on monthly Systematic Investment Plans (SIP) in Indian mutual funds. Compounding interest formula, inflation projections, and visual wealth gains in INR.">
+  <meta name="keywords" content="sip calculator, mutual fund sip calculator india, nifty 50 returns, monthly investment calculator, sip compounding formula, best mutual fund sip 2026">
+  <link rel="canonical" href="https://roaring-boba-b53db8.netlify.app/sip-calculator">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://roaring-boba-b53db8.netlify.app/sip-calculator">
+  <meta property="og:title" content="SIP Calculator India - Mutual Fund Returns & Wealth Planner">
+  <meta property="og:description" content="Calculate your mutual fund SIP wealth growth with power of compounding in Indian Rupees.">
+  <meta property="og:image" content="https://roaring-boba-b53db8.netlify.app/images/logo.svg">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SIP Calculator India - Mutual Fund Returns Tool">
+  <meta name="twitter:description" content="Project your monthly SIP returns and capital growth across equity mutual funds in India.">
+  
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/calculators.css">
+
+  <!-- Schema.org FAQPage Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a Systematic Investment Plan (SIP)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Systematic Investment Plan (SIP) is an investment route provided by Indian Mutual Funds where an investor deposits a predetermined, fixed sum of money into a selected scheme at regular monthly or quarterly intervals, instilling financial discipline and rupee cost averaging."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What average return can I realistically expect from equity SIPs in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Historically, Indian broad market indices like the Nifty 50 and BSE Sensex have delivered long-term Compound Annual Growth Rates (CAGR) between 12% and 14% over 10 to 15 year rolling periods. Mid-cap and small-cap schemes have historically achieved 14% to 17%, though with higher volatility."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Rupee Cost Averaging in an Indian SIP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rupee cost averaging allows you to automatically purchase more mutual fund units when market prices (Net Asset Value or NAV) are low and fewer units when NAV is high. Over multi-year market cycles, this lowers your average acquisition cost without requiring market timing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How are equity mutual fund returns taxed in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Following the Union Budget updates, long-term capital gains (LTCG on equity units held for more than 12 months) exceeding ₹1.25 Lakh per financial year are taxed at 12.5% without indexation. Short-term capital gains (STCG on units sold within 12 months) are taxed at 20%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I pause, stop, or change my SIP amount midway?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Indian mutual fund regulations allow complete flexibility. You can pause your SIP installments, increase the monthly contribution using a Step-Up mandate, or cancel the SIP at any time without any financial penalty or forfeiture of accumulated units."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a Step-Up SIP and why is it beneficial?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Step-Up (or Top-Up) SIP allows you to automatically increase your monthly investment by a fixed percentage (such as 10%) each year as your salary increases. This dramatically accelerates wealth accumulation compared to keeping your contribution flat."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Ad Slot -->
+  <aside class="ad-wrapper top-banner" aria-label="Sponsored Content">
+    <div class="container">
+      <span class="ad-label">Advertisement</span>
+      <div id="ad-slot-1" class="ad-slot leaderboard">
+        <span>Leaderboard Ad Placement (728x90)</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">
+        <img src="/images/logo.svg" alt="Indian Calculator Hub Logo" width="220" height="38">
+      </a>
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/emi-calculator" class="nav-link">EMI Calculator</a></li>
+          <li><a href="/sip-calculator" class="nav-link active">SIP Calculator</a></li>
+          <li><a href="/fd-calculator" class="nav-link">FD Calculator</a></li>
+          <li><a href="/gst-calculator" class="nav-link">GST Calculator</a></li>
+          <li><a href="/about" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav-menu">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/emi-calculator">EMI Calculator</a></li>
+        <li><a href="/sip-calculator">SIP Calculator</a></li>
+        <li><a href="/fd-calculator">FD Calculator</a></li>
+        <li><a href="/gst-calculator">GST Calculator</a></li>
+        <li><a href="/percentage-calculator">Percentage Calculator</a></li>
+        <li><a href="/cgpa-calculator">CGPA Calculator</a></li>
+        <li><a href="/age-calculator">Age Calculator</a></li>
+        <li><a href="/bmi-calculator">BMI Calculator</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <div class="calc-page-header">
+    <div class="container">
+      <ul class="breadcrumbs">
+        <li><a href="/">Home</a></li>
+        <li>/</li>
+        <li><a href="/#calculators">Finance</a></li>
+        <li>/</li>
+        <li><span class="current">SIP Calculator</span></li>
+      </ul>
+      <h1 class="calc-page-title">Mutual Fund SIP Calculator India</h1>
+      <p class="calc-page-subtitle">
+        Forecast your wealth accumulation and compounding returns on monthly mutual fund investments in Indian Rupees.
+      </p>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="calc-page-layout">
+      
+      <!-- Main Content -->
+      <div class="calc-main-content">
+        
+        <!-- Interactive SIP Calculator Card -->
+        <section class="calculator-card" aria-label="SIP Calculator Interface">
+          <div class="calc-widget-grid">
+            
+            <!-- Inputs -->
+            <div class="calc-inputs-col">
+              
+              <!-- Monthly Investment -->
+              <div class="input-field-group">
+                <div class="input-header-row">
+                  <label for="sip-amount" class="input-label">Monthly Investment Amount</label>
+                  <span id="sip-amount-badge" class="input-value-badge">₹ 10,000</span>
+                </div>
+                <div class="input-number-wrapper has-prefix">
+                  <span class="input-affix-prefix">₹</span>
+                  <input type="number" id="sip-amount" class="calc-text-input" value="10000" min="500" max="1000000" step="500">
+                </div>
+                <input type="range" id="sip-amount-slider" class="calc-range-slider" min="500" max="100000" step="500" value="10000" aria-label="Monthly Investment Slider">
+                <div class="slider-scale-row">
+                  <span>₹ 500</span>
+                  <span>₹ 50,000</span>
+                  <span>₹ 1 Lakh</span>
+                </div>
+              </div>
+
+              <!-- Expected Return Rate -->
+              <div class="input-field-group">
+                <div class="input-header-row">
+                  <label for="sip-rate" class="input-label">Expected Annual Return (CAGR)</label>
+                  <span id="sip-rate-badge" class="input-value-badge">12.0 %</span>
+                </div>
+                <div class="input-number-wrapper has-suffix">
+                  <input type="number" id="sip-rate" class="calc-text-input" value="12" min="1" max="30" step="0.5">
+                  <span class="input-affix-suffix">%</span>
+                </div>
+                <input type="range" id="sip-rate-slider" class="calc-range-slider" min="5" max="25" step="0.5" value="12" aria-label="Return Rate Slider">
+                <div class="slider-scale-row">
+                  <span>5% (Debt)</span>
+                  <span>12% (Index)</span>
+                  <span>25% (Equity)</span>
+                </div>
+              </div>
+
+              <!-- Investment Period -->
+              <div class="input-field-group">
+                <div class="input-header-row">
+                  <label for="sip-tenure" class="input-label">Investment Horizon (Years)</label>
+                  <span id="sip-tenure-badge" class="input-value-badge">15 Years</span>
+                </div>
+                <div class="input-number-wrapper has-suffix">
+                  <input type="number" id="sip-tenure" class="calc-text-input" value="15" min="1" max="35" step="1">
+                  <span class="input-affix-suffix">Yr</span>
+                </div>
+                <input type="range" id="sip-tenure-slider" class="calc-range-slider" min="1" max="35" step="1" value="15" aria-label="Tenure Slider">
+                <div class="slider-scale-row">
+                  <span>1 Year</span>
+                  <span>15 Years</span>
+                  <span>35 Years</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Results -->
+            <div class="calc-results-col">
+              <div class="result-main-card">
+                <div class="result-label">Total Expected Corpus</div>
+                <div id="res-maturity" class="result-primary-value">₹ 50,45,760</div>
+                <div id="res-maturity-words" class="result-subtext">(₹ 50.46 Lakh)</div>
+              </div>
+
+              <!-- Visual Proportion Bar -->
+              <div class="visual-bar-wrapper">
+                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #64748B; margin-bottom: 0.25rem;">
+                  <span>Invested: <strong id="lbl-inv-pct">35.7%</strong></span>
+                  <span>Wealth Gain: <strong id="lbl-gain-pct">64.3%</strong></span>
+                </div>
+                <div class="visual-progress-bar">
+                  <div id="bar-invested" class="bar-segment seg-neutral" style="width: 35.7%;"></div>
+                  <div id="bar-gain" class="bar-segment seg-primary" style="width: 64.3%;"></div>
+                </div>
+              </div>
+
+              <!-- Breakdown Rows -->
+              <div class="result-breakdown-list">
+                <div class="breakdown-row">
+                  <span class="breakdown-label">
+                    <span class="breakdown-dot dot-neutral"></span>
+                    Total Invested Capital
+                  </span>
+                  <span id="res-invested" class="breakdown-val">₹ 18,00,000</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-label">
+                    <span class="breakdown-dot dot-primary"></span>
+                    Estimated Wealth Gain
+                  </span>
+                  <span id="res-returns" class="breakdown-val">₹ 32,45,760</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-label">
+                    <span class="breakdown-dot dot-accent"></span>
+                    Wealth Multiplier
+                  </span>
+                  <span id="res-multiplier" class="breakdown-val">2.8x</span>
+                </div>
+              </div>
+
+              <!-- Action buttons -->
+              <div class="calc-actions">
+                <button type="button" id="btn-copy-sip" class="btn-primary" style="font-size: 0.875rem; padding: 0.6rem 1rem;">
+                  Copy SIP Projection
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- In-Content Ad -->
+        <aside class="ad-wrapper in-content" aria-label="Sponsored Content">
+          <span class="ad-label">Advertisement</span>
+          <div id="ad-slot-2" class="ad-slot responsive-banner">
+            <span>In-Content Ad Slot (Responsive Display)</span>
+          </div>
+        </aside>
+
+        <!-- 400-600 Word Explanatory Content -->
+        <article class="content-article">
+          <h2>How Systematic Investment Plans (SIPs) Build Wealth in India</h2>
+          <p>
+            A <strong>Systematic Investment Plan (SIP)</strong> is a disciplined investment methodology offered by Indian Asset Management Companies (AMCs) that empowers retail investors to allocate a fixed monetary sum into mutual fund schemes at pre-scheduled monthly intervals. Recognized by the Association of Mutual Funds in India (AMFI), SIPs have democratized investing for millions of Indian households by replacing the unpredictable anxiety of timing market peaks and troughs with steady compounding.
+          </p>
+
+          <h3>The Mathematical Formula Behind SIP Compounding</h3>
+          <p>
+            Unlike a lump-sum fixed deposit where principal compounds as a single block, an SIP continuously injects fresh liquidity every 30 days. Each installment experiences a distinct compounding window. The standard mathematical formula for calculating future maturity value is:
+          </p>
+
+          <div class="formula-box">
+            <div class="formula-title">Mutual Fund SIP Maturity Formula</div>
+            <code class="formula-math">M = P × [((1 + r)^n - 1) / r] × (1 + r)</code>
+            <div class="formula-legend">
+              <strong>Where:</strong><br>
+              • <strong>M</strong> = Final maturity wealth accumulated in Rupees (₹)<br>
+              • <strong>P</strong> = Monthly investment sum (e.g., ₹5,000 or ₹10,000)<br>
+              • <strong>r</strong> = Periodic monthly interest rate, computed as (Annual Return Rate / 12) / 100<br>
+              • <strong>n</strong> = Total number of monthly contributions (Years × 12)
+            </div>
+          </div>
+
+          <h3>How To Use The SIP Calculator Effectively</h3>
+          <ol>
+            <li><strong>Select Monthly Investment Amount:</strong> Start with an amount that comfortably fits your monthly post-tax savings budget. Many schemes permit entries starting from ₹500/month.</li>
+            <li><strong>Set Your Target Expected Return:</strong> Benchmark equity funds against historical indices. A 12% to 13% CAGR represents diversified large-cap and Nifty 50 benchmarks, while 14% to 15% is common for flexi-cap or mid-cap funds over 10+ years.</li>
+            <li><strong>Determine Time Horizon:</strong> Long-term horizons unlock exponential growth. The true acceleration of compounding typically reveals itself after year 7 to 10.</li>
+            <li><strong>Analyze Wealth Split:</strong> Observe how the blue "Wealth Gain" bar gradually overtakes the initial principal invested.</li>
+          </ol>
+
+          <h3>Real-World Indian Example: The Power of 15 Years of Compounding</h3>
+          <p>
+            Let us explore the financial journey of Priya, a 28-year-old software engineer in Bengaluru. Priya starts a monthly SIP of <strong>₹10,000</strong> in a low-cost Nifty 50 Index Fund. Assuming an annualized return of <strong>12.5%</strong> over a 15-year tenure:
+          </p>
+
+          <div class="example-box">
+            <h4>Case Study: Priya's 15-Year SIP Journey</h4>
+            <ul>
+              <li>Total Months Invested: <strong>180 months (15 Years)</strong></li>
+              <li>Priya's Out-of-Pocket Capital: <strong>₹ 18,00,000</strong></li>
+              <li>Compounded Capital Gains Generated: <strong>₹ 35,84,320</strong></li>
+              <li>Estimated Total Corpus: <strong>₹ 53,84,320 (₹ 53.84 Lakh)</strong></li>
+              <li>Effective Wealth Multiplier: <strong>Nearly 3.0x her total investment!</strong></li>
+            </ul>
+            <p style="margin-top: 0.5rem; font-weight: 700; color: #854D0E;">
+              Critical Takeaway: Priya's pure returns (₹35.84 Lakh) almost double her entire 15-year out-of-pocket investment capital, demonstrating the mathematical law of compounding.
+            </p>
+          </div>
+
+          <h3>Key Rules for Successful SIP Investing in India</h3>
+          <ul>
+            <li><strong>Never Pause During Market Corrections:</strong> When the Sensex or Nifty drops 10% to 15%, your monthly SIP acquires higher unit quantities at discounted NAVs, triggering massive long-term outperformance during recovery.</li>
+            <li><strong>Step-Up Your SIP Regularly:</strong> Raising your SIP contribution by 10% every appraisal cycle can elevate your 20-year corpus by up to 60%.</li>
+            <li><strong>Mind the Tax Guidelines:</strong> Under Section 112A of the Income Tax Act, equity capital gains up to ₹1.25 Lakh per financial year enjoy 0% tax, with amounts beyond taxed at a favorable 12.5% rate.</li>
+          </ul>
+        </article>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" aria-label="Frequently Asked Questions">
+          <div class="faq-header">
+            <h2>Frequently Asked Questions on Mutual Fund SIPs</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary class="faq-question">What is a Systematic Investment Plan (SIP)?</summary>
+              <div class="faq-answer">
+                A Systematic Investment Plan (SIP) is an investment route provided by Indian Mutual Funds where an investor deposits a predetermined, fixed sum of money into a selected scheme at regular monthly or quarterly intervals, instilling financial discipline and rupee cost averaging.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">What average return can I realistically expect from equity SIPs in India?</summary>
+              <div class="faq-answer">
+                Historically, Indian broad market indices like the Nifty 50 and BSE Sensex have delivered long-term Compound Annual Growth Rates (CAGR) between 12% and 14% over 10 to 15 year rolling periods. Mid-cap and small-cap schemes have historically achieved 14% to 17%, though with higher volatility.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">What is Rupee Cost Averaging in an Indian SIP?</summary>
+              <div class="faq-answer">
+                Rupee cost averaging allows you to automatically purchase more mutual fund units when market prices (Net Asset Value or NAV) are low and fewer units when NAV is high. Over multi-year market cycles, this lowers your average acquisition cost without requiring market timing.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">How are equity mutual fund returns taxed in India?</summary>
+              <div class="faq-answer">
+                Following the Union Budget updates, long-term capital gains (LTCG on equity units held for more than 12 months) exceeding ₹1.25 Lakh per financial year are taxed at 12.5% without indexation. Short-term capital gains (STCG on units sold within 12 months) are taxed at 20%.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">Can I pause, stop, or change my SIP amount midway?</summary>
+              <div class="faq-answer">
+                Yes, Indian mutual fund regulations allow complete flexibility. You can pause your SIP installments, increase the monthly contribution using a Step-Up mandate, or cancel the SIP at any time without any financial penalty or forfeiture of accumulated units.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">What is a Step-Up SIP and why is it beneficial?</summary>
+              <div class="faq-answer">
+                A Step-Up (or Top-Up) SIP allows you to automatically increase your monthly investment by a fixed percentage (such as 10%) each year as your salary increases. This dramatically accelerates wealth accumulation compared to keeping your contribution flat.
+              </div>
+            </details>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="calc-sidebar">
+        
+        <!-- Sidebar Ad -->
+        <div class="sidebar-box" style="padding: 1rem; text-align: center;">
+          <span class="ad-label">Advertisement</span>
+          <div id="ad-slot-3" class="ad-slot rectangle">
+            <span>Sidebar Ad (300x250)</span>
+          </div>
+        </div>
+
+        <!-- Related Calculators -->
+        <div class="sidebar-box">
+          <h3 class="sidebar-title">Related Calculators</h3>
+          <ul class="sidebar-links">
+            <li>
+              <a href="/emi-calculator">
+                <span>Loan EMI Calculator</span>
+                <span>→</span>
+              </a>
+            </li>
+            <li>
+              <a href="/fd-calculator">
+                <span>Fixed Deposit (FD)</span>
+                <span>→</span>
+              </a>
+            </li>
+            <li>
+              <a href="/gst-calculator">
+                <span>GST Tax Calculator</span>
+                <span>→</span>
+              </a>
+            </li>
+            <li>
+              <a href="/percentage-calculator">
+                <span>Percentage Calculator</span>
+                <span>→</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tip Box -->
+        <div class="sidebar-box" style="background: #ECFDF5; border-color: #A7F3D0;">
+          <h3 class="sidebar-title" style="color: #065F46; border-bottom-color: #D1FAE5;">Rule of 72</h3>
+          <p style="font-size: 0.875rem; color: #047857; line-height: 1.6;">
+            Divide 72 by your expected annual rate of return to see how many years it takes to double your money. At <strong>12% CAGR</strong>, your invested capital doubles every <strong>6 years</strong> (72 / 12 = 6).
+          </p>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="site-logo" style="color: #FFFFFF;">
+            <img src="/images/logo.svg" alt="Indian Calculator Hub" width="200" height="34" style="filter: brightness(0) invert(1);">
+          </a>
+          <p>
+            Indian Calculator Hub provides free financial and mathematical tools engineered for Indian citizens.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Finance Tools</h4>
+          <ul class="footer-links">
+            <li><a href="/emi-calculator">EMI Calculator</a></li>
+            <li><a href="/sip-calculator">SIP Calculator</a></li>
+            <li><a href="/fd-calculator">FD Calculator</a></li>
+            <li><a href="/gst-calculator">GST Calculator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Academic & Life</h4>
+          <ul class="footer-links">
+            <li><a href="/percentage-calculator">Percentage Calculator</a></li>
+            <li><a href="/cgpa-calculator">CGPA to %</a></li>
+            <li><a href="/age-calculator">Age Calculator</a></li>
+            <li><a href="/bmi-calculator">Asian Indian BMI</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Legal & Trust</h4>
+          <ul class="footer-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact Support</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms-of-use">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Indian Calculator Hub. All rights reserved.</div>
+        <div>
+          <a href="/privacy-policy" style="color: #94A3B8; margin-right: 1rem;">Privacy Policy</a>
+          <a href="/terms-of-use" style="color: #94A3B8;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculators.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    // SIP Calculator Real-time Wiring
+    const sipAmtInput = document.getElementById('sip-amount');
+    const sipAmtSlider = document.getElementById('sip-amount-slider');
+    const sipAmtBadge = document.getElementById('sip-amount-badge');
+
+    const sipRateInput = document.getElementById('sip-rate');
+    const sipRateSlider = document.getElementById('sip-rate-slider');
+    const sipRateBadge = document.getElementById('sip-rate-badge');
+
+    const sipTenureInput = document.getElementById('sip-tenure');
+    const sipTenureSlider = document.getElementById('sip-tenure-slider');
+    const sipTenureBadge = document.getElementById('sip-tenure-badge');
+
+    const resMaturity = document.getElementById('res-maturity');
+    const resMaturityWords = document.getElementById('res-maturity-words');
+    const resInvested = document.getElementById('res-invested');
+    const resReturns = document.getElementById('res-returns');
+    const resMultiplier = document.getElementById('res-multiplier');
+
+    const barInvested = document.getElementById('bar-invested');
+    const barGain = document.getElementById('bar-gain');
+    const lblInvPct = document.getElementById('lbl-inv-pct');
+    const lblGainPct = document.getElementById('lbl-gain-pct');
+
+    function updateSIP() {
+      const p = parseFloat(sipAmtInput.value) || 0;
+      const r = parseFloat(sipRateInput.value) || 0;
+      const t = parseFloat(sipTenureInput.value) || 0;
+
+      sipAmtBadge.textContent = IndianCalc.formatINR(p);
+      sipRateBadge.textContent = r + ' %';
+      sipTenureBadge.textContent = t + ' Years';
+
+      const res = IndianCalc.calculateSIP(p, r, t);
+
+      resMaturity.textContent = IndianCalc.formatINR(res.maturityValue);
+      resMaturityWords.textContent = IndianCalc.formatIndianWords(res.maturityValue);
+      resInvested.textContent = IndianCalc.formatINR(res.invested);
+      resReturns.textContent = IndianCalc.formatINR(res.totalReturns);
+
+      const multiplier = res.invested > 0 ? (res.maturityValue / res.invested).toFixed(1) : '1.0';
+      resMultiplier.textContent = multiplier + 'x';
+
+      barInvested.style.width = res.investedPercent + '%';
+      barGain.style.width = res.gainPercent + '%';
+      lblInvPct.textContent = res.investedPercent + '%';
+      lblGainPct.textContent = res.gainPercent + '%';
+    }
+
+    sipAmtInput.addEventListener('input', () => {
+      sipAmtSlider.value = sipAmtInput.value;
+      updateSIP();
+    });
+    sipAmtSlider.addEventListener('input', () => {
+      sipAmtInput.value = sipAmtSlider.value;
+      updateSIP();
+    });
+
+    sipRateInput.addEventListener('input', () => {
+      sipRateSlider.value = sipRateInput.value;
+      updateSIP();
+    });
+    sipRateSlider.addEventListener('input', () => {
+      sipRateInput.value = sipRateSlider.value;
+      updateSIP();
+    });
+
+    sipTenureInput.addEventListener('input', () => {
+      sipTenureSlider.value = sipTenureInput.value;
+      updateSIP();
+    });
+    sipTenureSlider.addEventListener('input', () => {
+      sipTenureInput.value = sipTenureSlider.value;
+      updateSIP();
+    });
+
+    document.getElementById('btn-copy-sip').addEventListener('click', () => {
+      const p = sipAmtInput.value;
+      const r = sipRateInput.value;
+      const t = sipTenureInput.value;
+      const mat = resMaturity.textContent;
+      const text = `Mutual Fund SIP Projection:\nMonthly SIP: ${IndianCalc.formatINR(p)}\nExpected CAGR: ${r}%\nHorizon: ${t} Years\nProjected Wealth: ${mat} ${IndianCalc.formatIndianWords(mat)}\nCalculated via Indian Calculator Hub (https://roaring-boba-b53db8.netlify.app/sip-calculator)`;
+      window.copyToClipboard(text, 'SIP Details copied to clipboard!');
+    });
+
+    updateSIP();
+  </script>
+</body>
+</html>

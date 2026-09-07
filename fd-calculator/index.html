@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KWSFTNW1VF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KWSFTNW1VF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FD Calculator India - Fixed Deposit Interest & Maturity Calculator (2026)</title>
+  <meta name="description" content="Calculate SBI, HDFC, Post Office, and ICICI Bank Fixed Deposit (FD) maturity values, quarterly compound interest, senior citizen rates, and TDS threshold alerts.">
+  <meta name="keywords" content="fd calculator, fixed deposit calculator india, sbi fd interest rates, hdfc fd calculator, senior citizen fd rates, post office time deposit, quarterly compounding fd">
+  <link rel="canonical" href="https://roaring-boba-b53db8.netlify.app/fd-calculator">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://roaring-boba-b53db8.netlify.app/fd-calculator">
+  <meta property="og:title" content="FD Calculator India - Fixed Deposit Interest & Maturity">
+  <meta property="og:description" content="Calculate quarterly compounding interest, senior citizen rates, and TDS alerts for Indian bank FDs.">
+  <meta property="og:image" content="https://roaring-boba-b53db8.netlify.app/images/logo.svg">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FD Calculator India - Fixed Deposit Tool">
+  <meta name="twitter:description" content="Instant Fixed Deposit maturity calculations with senior citizen interest benefits and TDS rules.">
+  
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/calculators.css">
+
+  <!-- Schema.org FAQPage Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is Fixed Deposit interest compounded in Indian commercial banks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most scheduled commercial banks in India (including SBI, HDFC, ICICI, and Punjab National Bank) calculate and compound FD interest on a quarterly basis (every 3 months), which is then credited upon maturity or reinvested."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What extra interest do senior citizens receive on Indian bank FDs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Indian banks traditionally offer an additional 0.50% (50 basis points) interest rate premium to senior citizens (individuals aged 60 years and above). Some lenders provide an extra 0.25% to 0.30% for super senior citizens (aged 80+)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the TDS threshold limit on Fixed Deposit interest in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under Section 194A of the Income Tax Act, banks deduct Tax Deducted at Source (TDS) at 10% if total interest earned exceeds ₹40,000 in a financial year for regular citizens, or ₹50,000 for senior citizens. If PAN is not provided, TDS is deducted at 20%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I prevent TDS deduction on my fixed deposit interest?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If your total annual taxable income falls below the basic exemption threshold, you can submit Form 15G (for individuals below 60 years) or Form 15H (for senior citizens aged 60+) to your bank at the start of each financial year."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are my bank deposits insured and guaranteed safe in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, deposits across scheduled commercial and cooperative banks in India are insured up to ₹5,00,000 (Rupees Five Lakh) per depositor per bank by the Deposit Insurance and Credit Guarantee Corporation (DICGC), an RBI subsidiary."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I break or withdraw a Fixed Deposit before maturity?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, premature withdrawal is permitted for standard fixed deposits, but banks typically charge a penalty of 0.5% to 1.0% on the applicable interest rate for the period the deposit was maintained. Note that 5-Year Tax Saver FDs cannot be prematurely withdrawn."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Ad Slot -->
+  <aside class="ad-wrapper top-banner" aria-label="Sponsored Content">
+    <div class="container">
+      <span class="ad-label">Advertisement</span>
+      <div id="ad-slot-1" class="ad-slot leaderboard">
+        <span>Leaderboard Ad Placement (728x90)</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">
+        <img src="/images/logo.svg" alt="Indian Calculator Hub Logo" width="220" height="38">
+      </a>
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/emi-calculator" class="nav-link">EMI Calculator</a></li>
+          <li><a href="/sip-calculator" class="nav-link">SIP Calculator</a></li>
+          <li><a href="/fd-calculator" class="nav-link active">FD Calculator</a></li>
+          <li><a href="/gst-calculator" class="nav-link">GST Calculator</a></li>
+          <li><a href="/about" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav-menu">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/emi-calculator">EMI Calculator</a></li>
+        <li><a href="/sip-calculator">SIP Calculator</a></li>
+        <li><a href="/fd-calculator">FD Calculator</a></li>
+        <li><a href="/gst-calculator">GST Calculator</a></li>
+        <li><a href="/percentage-calculator">Percentage Calculator</a></li>
+        <li><a href="/cgpa-calculator">CGPA Calculator</a></li>
+        <li><a href="/age-calculator">Age Calculator</a></li>
+        <li><a href="/bmi-calculator">BMI Calculator</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <div class="calc-page-header">
+    <div class="container">
+      <ul class="breadcrumbs">
+        <li><a href="/">Home</a></li>
+        <li>/</li>
+        <li><a href="/#calculators">Finance</a></li>
+        <li>/</li>
+        <li><span class="current">FD Calculator</span></li>
+      </ul>
+      <h1 class="calc-page-title">Bank Fixed Deposit (FD) Calculator</h1>
+      <p class="calc-page-subtitle">
+        Calculate your maturity amount, compound interest, senior citizen booster (+0.50%), and TDS liability across Indian banks and post offices.
+      </p>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="calc-page-layout">
+      
+      <!-- Main Content -->
+      <div class="calc-main-content">
+        
+        <!-- Interactive FD Calculator Card -->
+        <section class="calculator-card" aria-label="FD Calculator Interface">
+          <div class="calc-widget-grid">
+            
+            <!-- Inputs -->
+            <div class="calc-inputs-col">
+              
+              <!-- Total Investment -->
+              <div class="input-field-group">
+                <div class="input-header-row">
+                  <label for="fd-amount" class="input-label">Deposit Amount (Principal)</label>
+                  <span id="fd-amount-badge" class="input-value-badge">₹ 5,00,000</span>
+                </div>
+                <div class="input-number-wrapper has-prefix">
+                  <span class="input-affix-prefix">₹</span>
+                  <input type="number" id="fd-amount" class="calc-text-input" value="500000" min="5000" max="10000000" step="5000">
+                </div>
+                <input type="range" id="fd-amount-slider" class="calc-range-slider" min="10000" max="5000000" step="10000" value="500000" aria-label="Deposit Slider">
+                <div class="slider-scale-row">
+                  <span>₹ 10,000</span>
+                  <span>₹ 25 Lakh</span>
+                  <span>₹ 50 Lakh</span>
+                </div>
+              </div>
+
+              <!-- Interest Rate -->
+              <div class="input-field-group">
+                <div class="input-header-row">
+                  <label for="fd-rate" class="input-label">Annual Interest Rate (% p.a.)</label>
+                  <span id="fd-rate-badge" class="input-value-badge">7.10 %</span>
+                </div>
+                <div class="input-number-wrapper has-suffix">
+                  <input type="number" id="fd-rate" class="calc-text-input" value="7.10" min="3" max="15" step="0.05">
+                  <span class="input-affix-suffix">%</span>
+                </div>
+                <input type="range" id="fd-rate-slider" class="calc-range-slider" min="3.0" max="12.0" step="0.05" value="7.10" aria-label="FD Rate Slider">
+                <div class="slider-scale-row">
+                  <span>3%</span>
+                  <span>7.5%</span>
+                  <span>12%</span>
+                </div>
+              </div>
+
+              <!-- Time Horizon -->
+              <div class="input-field-group">
+                <div class="input-header-row">
+                  <label for="fd-tenure" class="input-label">Tenure (Years)</label>
+                  <span id="fd-tenure-badge" class="input-value-badge">5 Years</span>
+                </div>
+                <div class="input-number-wrapper has-suffix">
+                  <input type="number" id="fd-tenure" class="calc-text-input" value="5" min="1" max="10" step="1">
+                  <span class="input-affix-suffix">Yr</span>
+                </div>
+                <input type="range" id="fd-tenure-slider" class="calc-range-slider" min="1" max="10" step="1" value="5" aria-label="Tenure Slider">
+                <div class="slider-scale-row">
+                  <span>1 Year</span>
+                  <span>5 Years</span>
+                  <span>10 Years</span>
+                </div>
+              </div>
+
+              <!-- Senior Citizen Switch -->
+              <div class="input-field-group">
+                <div class="input-header-row">
+                  <label class="input-label" for="fd-senior-toggle">Senior Citizen Rates (+0.50% Extra)</label>
+                </div>
+                <div class="segmented-control" role="group">
+                  <button type="button" id="btn-citizen-regular" class="active">Regular Citizen</button>
+                  <button type="button" id="btn-citizen-senior">Senior Citizen (60+ Yrs)</button>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Results -->
+            <div class="calc-results-col">
+              <div class="result-main-card">
+                <div class="result-label">Total Maturity Value</div>
+                <div id="res-fd-maturity" class="result-primary-value">₹ 7,10,344</div>
+                <div id="res-fd-words" class="result-subtext">(₹ 7.10 Lakh)</div>
+              </div>
+
+              <!-- TDS Alert Banner -->
+              <div id="fd-tds-box" style="background: #FEF3C7; border: 1px solid #F59E0B; border-radius: var(--radius-sm); padding: 0.65rem 0.85rem; font-size: 0.8125rem; color: #92400E; display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <span><strong>TDS Threshold Alert:</strong> Estimated annual interest exceeds limit. Bank may deduct 10% TDS unless Form 15G/15H is filed.</span>
+              </div>
+
+              <!-- Breakdown Rows -->
+              <div class="result-breakdown-list">
+                <div class="breakdown-row">
+                  <span class="breakdown-label">
+                    <span class="breakdown-dot dot-neutral"></span>
+                    Principal Invested
+                  </span>
+                  <span id="res-fd-principal" class="breakdown-val">₹ 5,00,000</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-label">
+                    <span class="breakdown-dot dot-primary"></span>
+                    Total Compound Interest
+                  </span>
+                  <span id="res-fd-interest" class="breakdown-val">₹ 2,10,344</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-label">
+                    <span class="breakdown-dot dot-accent"></span>
+                    Effective Annual Yield
+                  </span>
+                  <span id="res-fd-yield" class="breakdown-val">8.41% p.a.</span>
+                </div>
+              </div>
+
+              <!-- Action buttons -->
+              <div class="calc-actions">
+                <button type="button" id="btn-copy-fd" class="btn-primary" style="font-size: 0.875rem; padding: 0.6rem 1rem;">
+                  Copy FD Details
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- In-Content Ad -->
+        <aside class="ad-wrapper in-content" aria-label="Sponsored Content">
+          <span class="ad-label">Advertisement</span>
+          <div id="ad-slot-2" class="ad-slot responsive-banner">
+            <span>In-Content Ad Slot (Responsive Display)</span>
+          </div>
+        </aside>
+
+        <!-- 400-600 Word Explanatory Content -->
+        <article class="content-article">
+          <h2>Understanding Fixed Deposits (FDs) in Indian Banking</h2>
+          <p>
+            A <strong>Fixed Deposit (FD)</strong> is a trusted investment instrument provided by Indian public and private sector banks, non-banking financial companies (NBFCs), and the Department of Posts (Post Office Time Deposit). By locking in your surplus funds for a predetermined tenure ranging from 7 days up to 10 years, investors secure guaranteed capital protection and fixed interest payouts unaffected by equity market fluctuations.
+          </p>
+
+          <h3>The Mathematical Formula for FD Compounding</h3>
+          <p>
+            Unlike simple savings accounts, Indian commercial banks compound term deposit interest quarterly (every three months). The official formula for cumulative fixed deposits is:
+          </p>
+
+          <div class="formula-box">
+            <div class="formula-title">Quarterly Compounding Formula</div>
+            <code class="formula-math">A = P × (1 + r / n)^(n × t)</code>
+            <div class="formula-legend">
+              <strong>Where:</strong><br>
+              • <strong>A</strong> = Maturity Amount received at the end of the tenure<br>
+              • <strong>P</strong> = Principal amount deposited in INR (₹)<br>
+              • <strong>r</strong> = Annual interest rate in decimal format (e.g., 7.10% = 0.071)<br>
+              • <strong>n</strong> = Compounding frequency per annum (For quarterly compounding, n = 4)<br>
+              • <strong>t</strong> = Number of years the deposit is maintained
+            </div>
+          </div>
+
+          <h3>How To Use The Indian Calculator Hub FD Tool</h3>
+          <ol>
+            <li><strong>Enter Deposit Capital:</strong> Enter your lump-sum deposit amount into the principal box or adjust the slider.</li>
+            <li><strong>Input Contracted Interest Rate:</strong> Check the latest card rate published by your bank (e.g., SBI Amrit Kalash, HDFC, or ICICI special tenure buckets).</li>
+            <li><strong>Select Tenure:</strong> Set your deposit horizon between 1 and 10 years.</li>
+            <li><strong>Toggle Senior Citizen Status:</strong> Click "Senior Citizen" if the account holder is aged 60 or above to automatically integrate the standard 0.50% interest bonus.</li>
+            <li><strong>Review TDS Advisory:</strong> If estimated annual interest exceeds statutory limits (₹40,000 for regular, ₹50,000 for seniors), our system will immediately notify you.</li>
+          </ol>
+
+          <h3>Real-World Indian Case Study: ₹10 Lakh in SBI for 5 Years</h3>
+          <p>
+            Consider a family comparing an investment of <strong>₹10,00,000</strong> for 5 years in an Indian commercial bank offering a baseline <strong>7.00%</strong> interest rate:
+          </p>
+
+          <div class="example-box">
+            <h4>Case Comparison: Regular vs Senior Citizen FD</h4>
+            <p><strong>Regular Citizen (Son, 35 Years Old):</strong></p>
+            <ul>
+              <li>Annual Interest Rate: <strong>7.00% p.a. (Quarterly Compounded)</strong></li>
+              <li>Total Interest Accrued: <strong>₹ 4,14,778</strong></li>
+              <li>Maturity Payout: <strong>₹ 14,14,778</strong></li>
+            </ul>
+            <p style="margin-top: 0.75rem;"><strong>Senior Citizen (Father, 64 Years Old):</strong></p>
+            <ul>
+              <li>Annual Interest Rate: <strong>7.50% p.a. (0.50% Senior Booster)</strong></li>
+              <li>Total Interest Accrued: <strong>₹ 4,49,948</strong></li>
+              <li>Maturity Payout: <strong>₹ 14,49,948</strong></li>
+            </ul>
+            <p style="margin-top: 0.5rem; font-weight: 700; color: #854D0E;">
+              Result: By booking the fixed deposit in the senior citizen parent's name, the family secures an additional <strong>₹ 35,170</strong> in pure interest profit!
+            </p>
+          </div>
+
+          <h3>Crucial Rules Regarding Bank FD Taxation & Safety</h3>
+          <ul>
+            <li><strong>DICGC Insurance:</strong> Each depositor is insured up to ₹5 Lakh across principal and interest by the Deposit Insurance and Credit Guarantee Corporation (DICGC).</li>
+            <li><strong>Tax Saving 5-Year FDs:</strong> Deposits placed under 5-year tax-saver schemes qualify for deductions up to ₹1.5 Lakh under Section 80C of the Income Tax Act (old regime), with a mandatory 5-year lock-in.</li>
+            <li><strong>Submitting Form 15G / 15H:</strong> To prevent a 10% TDS deduction at source by the bank, submit Form 15G (for citizens under 60) or Form 15H (for seniors) at the beginning of each financial year if your total taxable income is below basic exemption limits.</li>
+          </ul>
+        </article>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" aria-label="Frequently Asked Questions">
+          <div class="faq-header">
+            <h2>Frequently Asked Questions on Fixed Deposits</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary class="faq-question">How is Fixed Deposit interest compounded in Indian commercial banks?</summary>
+              <div class="faq-answer">
+                Most scheduled commercial banks in India (including SBI, HDFC, ICICI, and Punjab National Bank) calculate and compound FD interest on a quarterly basis (every 3 months), which is then credited upon maturity or reinvested.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">What extra interest do senior citizens receive on Indian bank FDs?</summary>
+              <div class="faq-answer">
+                Indian banks traditionally offer an additional 0.50% (50 basis points) interest rate premium to senior citizens (individuals aged 60 years and above). Some lenders provide an extra 0.25% to 0.30% for super senior citizens (aged 80+).
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">What is the TDS threshold limit on Fixed Deposit interest in India?</summary>
+              <div class="faq-answer">
+                Under Section 194A of the Income Tax Act, banks deduct Tax Deducted at Source (TDS) at 10% if total interest earned exceeds ₹40,000 in a financial year for regular citizens, or ₹50,000 for senior citizens. If PAN is not provided, TDS is deducted at 20%.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">How can I prevent TDS deduction on my fixed deposit interest?</summary>
+              <div class="faq-answer">
+                If your total annual taxable income falls below the basic exemption threshold, you can submit Form 15G (for individuals below 60 years) or Form 15H (for senior citizens aged 60+) to your bank at the start of each financial year.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">Are my bank deposits insured and guaranteed safe in India?</summary>
+              <div class="faq-answer">
+                Yes, deposits across scheduled commercial and cooperative banks in India are insured up to ₹5,00,000 (Rupees Five Lakh) per depositor per bank by the Deposit Insurance and Credit Guarantee Corporation (DICGC), an RBI subsidiary.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">Can I break or withdraw a Fixed Deposit before maturity?</summary>
+              <div class="faq-answer">
+                Yes, premature withdrawal is permitted for standard fixed deposits, but banks typically charge a penalty of 0.5% to 1.0% on the applicable interest rate for the period the deposit was maintained. Note that 5-Year Tax Saver FDs cannot be prematurely withdrawn.
+              </div>
+            </details>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="calc-sidebar">
+        
+        <!-- Sidebar Ad -->
+        <div class="sidebar-box" style="padding: 1rem; text-align: center;">
+          <span class="ad-label">Advertisement</span>
+          <div id="ad-slot-3" class="ad-slot rectangle">
+            <span>Sidebar Ad (300x250)</span>
+          </div>
+        </div>
+
+        <!-- Related Calculators -->
+        <div class="sidebar-box">
+          <h3 class="sidebar-title">Related Calculators</h3>
+          <ul class="sidebar-links">
+            <li>
+              <a href="/emi-calculator">
+                <span>Loan EMI Calculator</span>
+                <span>→</span>
+              </a>
+            </li>
+            <li>
+              <a href="/sip-calculator">
+                <span>SIP Mutual Fund</span>
+                <span>→</span>
+              </a>
+            </li>
+            <li>
+              <a href="/gst-calculator">
+                <span>GST Tax Calculator</span>
+                <span>→</span>
+              </a>
+            </li>
+            <li>
+              <a href="/percentage-calculator">
+                <span>Percentage Calculator</span>
+                <span>→</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="site-logo" style="color: #FFFFFF;">
+            <img src="/images/logo.svg" alt="Indian Calculator Hub" width="200" height="34" style="filter: brightness(0) invert(1);">
+          </a>
+          <p>
+            Indian Calculator Hub provides free financial and mathematical tools engineered for Indian citizens.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Finance Tools</h4>
+          <ul class="footer-links">
+            <li><a href="/emi-calculator">EMI Calculator</a></li>
+            <li><a href="/sip-calculator">SIP Calculator</a></li>
+            <li><a href="/fd-calculator">FD Calculator</a></li>
+            <li><a href="/gst-calculator">GST Calculator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Academic & Life</h4>
+          <ul class="footer-links">
+            <li><a href="/percentage-calculator">Percentage Calculator</a></li>
+            <li><a href="/cgpa-calculator">CGPA to %</a></li>
+            <li><a href="/age-calculator">Age Calculator</a></li>
+            <li><a href="/bmi-calculator">Asian Indian BMI</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Legal & Trust</h4>
+          <ul class="footer-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact Support</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms-of-use">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Indian Calculator Hub. All rights reserved.</div>
+        <div>
+          <a href="/privacy-policy" style="color: #94A3B8; margin-right: 1rem;">Privacy Policy</a>
+          <a href="/terms-of-use" style="color: #94A3B8;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculators.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    // FD Calculator Real-time Wiring
+    const fdAmtInput = document.getElementById('fd-amount');
+    const fdAmtSlider = document.getElementById('fd-amount-slider');
+    const fdAmtBadge = document.getElementById('fd-amount-badge');
+
+    const fdRateInput = document.getElementById('fd-rate');
+    const fdRateSlider = document.getElementById('fd-rate-slider');
+    const fdRateBadge = document.getElementById('fd-rate-badge');
+
+    const fdTenureInput = document.getElementById('fd-tenure');
+    const fdTenureSlider = document.getElementById('fd-tenure-slider');
+    const fdTenureBadge = document.getElementById('fd-tenure-badge');
+
+    const btnCitizenRegular = document.getElementById('btn-citizen-regular');
+    const btnCitizenSenior = document.getElementById('btn-citizen-senior');
+
+    const resFdMaturity = document.getElementById('res-fd-maturity');
+    const resFdWords = document.getElementById('res-fd-words');
+    const resFdPrincipal = document.getElementById('res-fd-principal');
+    const resFdInterest = document.getElementById('res-fd-interest');
+    const resFdYield = document.getElementById('res-fd-yield');
+    const fdTdsBox = document.getElementById('fd-tds-box');
+
+    let isSeniorCitizen = false;
+
+    function updateFD() {
+      const p = parseFloat(fdAmtInput.value) || 0;
+      let r = parseFloat(fdRateInput.value) || 0;
+      const t = parseFloat(fdTenureInput.value) || 0;
+
+      fdAmtBadge.textContent = IndianCalc.formatINR(p);
+      fdRateBadge.textContent = r + ' %';
+      fdTenureBadge.textContent = t + ' Years';
+
+      const res = IndianCalc.calculateFD(p, r, t, 4, isSeniorCitizen);
+
+      resFdMaturity.textContent = IndianCalc.formatINR(res.maturity);
+      resFdWords.textContent = IndianCalc.formatIndianWords(res.maturity);
+      resFdPrincipal.textContent = IndianCalc.formatINR(res.principal);
+      resFdInterest.textContent = IndianCalc.formatINR(res.interest);
+      resFdYield.textContent = res.effectiveRate + '% p.a.';
+
+      if (res.tdsAlert) {
+        fdTdsBox.style.display = 'flex';
+      } else {
+        fdTdsBox.style.display = 'none';
+      }
+    }
+
+    fdAmtInput.addEventListener('input', () => {
+      fdAmtSlider.value = fdAmtInput.value;
+      updateFD();
+    });
+    fdAmtSlider.addEventListener('input', () => {
+      fdAmtInput.value = fdAmtSlider.value;
+      updateFD();
+    });
+
+    fdRateInput.addEventListener('input', () => {
+      fdRateSlider.value = fdRateInput.value;
+      updateFD();
+    });
+    fdRateSlider.addEventListener('input', () => {
+      fdRateInput.value = fdRateSlider.value;
+      updateFD();
+    });
+
+    fdTenureInput.addEventListener('input', () => {
+      fdTenureSlider.value = fdTenureInput.value;
+      updateFD();
+    });
+    fdTenureSlider.addEventListener('input', () => {
+      fdTenureInput.value = fdTenureSlider.value;
+      updateFD();
+    });
+
+    btnCitizenRegular.addEventListener('click', () => {
+      btnCitizenRegular.classList.add('active');
+      btnCitizenSenior.classList.remove('active');
+      isSeniorCitizen = false;
+      updateFD();
+    });
+
+    btnCitizenSenior.addEventListener('click', () => {
+      btnCitizenSenior.classList.add('active');
+      btnCitizenRegular.classList.remove('active');
+      isSeniorCitizen = true;
+      updateFD();
+    });
+
+    document.getElementById('btn-copy-fd').addEventListener('click', () => {
+      const p = fdAmtInput.value;
+      const r = fdRateInput.value;
+      const t = fdTenureInput.value;
+      const mat = resFdMaturity.textContent;
+      const text = `Fixed Deposit (FD) Calculation:\nPrincipal: ${IndianCalc.formatINR(p)}\nRate: ${r}% (${isSeniorCitizen ? 'Senior Citizen' : 'Regular'})\nTenure: ${t} Years\nMaturity Value: ${mat} ${IndianCalc.formatIndianWords(mat)}\nCalculated via Indian Calculator Hub (https://roaring-boba-b53db8.netlify.app/fd-calculator)`;
+      window.copyToClipboard(text, 'FD Details copied to clipboard!');
+    });
+
+    updateFD();
+  </script>
+</body>
+</html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KWSFTNW1VF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KWSFTNW1VF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asian Indian BMI Calculator - Specific Cutoffs for Indian Adults</title>
+  <meta name="description" content="Calculate your Body Mass Index (BMI) using WHO & Ministry of Health Asian Indian specific cutoffs. Discover ideal weight range in kg, metabolic disease risk, and healthy living guidelines.">
+  <meta name="keywords" content="bmi calculator india, asian indian bmi cutoffs, who bmi south asian, ideal weight calculator kg, icmr bmi guidelines, thin fat indian phenomenon, visceral fat bmi">
+  <link rel="canonical" href="https://roaring-boba-b53db8.netlify.app/bmi-calculator">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://roaring-boba-b53db8.netlify.app/bmi-calculator">
+  <meta property="og:title" content="Asian Indian BMI Calculator - Official WHO & ICMR Cutoffs">
+  <meta property="og:description" content="Calculate BMI calibrated for Indian body compositions with ideal weight ranges and health insights.">
+  <meta property="og:image" content="https://roaring-boba-b53db8.netlify.app/images/logo.svg">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Asian Indian BMI Calculator - Health & Weight Tool">
+  <meta name="twitter:description" content="Check your BMI using revised Indian health guidelines (overweight begins at 23+).">
+  
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/calculators.css">
+
+  <!-- Schema.org FAQPage Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why are BMI cutoffs lower for Indians compared to Western standards?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "South Asians and Indians possess a unique body composition phenotype known as the 'Thin-Fat Indian' profile: higher percentage body fat and abdominal visceral adipose tissue at lower body weights. Research by the WHO and ICMR confirmed that metabolic risks (such as Type 2 diabetes and hypertension) trigger in Indians at a BMI of 23, whereas for Caucasians they trigger at 25."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the official Asian Indian BMI categories?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under guidelines formulated by the Indian Ministry of Health and Family Welfare and ICMR: Underweight is below 18.5, Normal / Healthy is 18.5 to 22.9, Overweight is 23.0 to 24.9, and Obese is 25.0 and above."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the mathematical formula to calculate BMI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "BMI is calculated by dividing weight in kilograms (kg) by the square of height in meters (m): BMI = Weight (kg) / [Height (m) × Height (m)]."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is my ideal body weight for my height in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your ideal body weight is the weight range that keeps your BMI within the healthy Indian range of 18.5 to 22.9. For example, for an individual with a height of 170 cm (1.70 m), the ideal weight is between 53.5 kg and 66.2 kg."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does BMI differentiate between muscle mass and body fat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, traditional BMI does not directly measure muscle mass versus fat. Highly muscular athletes may register as 'overweight' on BMI charts despite low body fat. Complementary assessments like waist circumference (below 90 cm for Indian men, below 80 cm for Indian women) provide deeper clarity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does visceral fat elevate heart attack risks in Indians?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Visceral fat surrounds vital internal abdominal organs like the liver and pancreas, releasing pro-inflammatory cytokines and free fatty acids directly into the portal circulation, accelerating arterial plaque formation and premature coronary heart disease."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Ad Slot -->
+  <aside class="ad-wrapper top-banner" aria-label="Sponsored Content">
+    <div class="container">
+      <span class="ad-label">Advertisement</span>
+      <div id="ad-slot-1" class="ad-slot leaderboard">
+        <span>Leaderboard Ad Placement (728x90)</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">
+        <img src="/images/logo.svg" alt="Indian Calculator Hub Logo" width="220" height="38">
+      </a>
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/emi-calculator" class="nav-link">EMI Calculator</a></li>
+          <li><a href="/percentage-calculator" class="nav-link">Percentage Calculator</a></li>
+          <li><a href="/age-calculator" class="nav-link">Age Calculator</a></li>
+          <li><a href="/bmi-calculator" class="nav-link active">BMI Calculator</a></li>
+          <li><a href="/about" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav-menu">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/emi-calculator">EMI Calculator</a></li>
+        <li><a href="/sip-calculator">SIP Calculator</a></li>
+        <li><a href="/fd-calculator">FD Calculator</a></li>
+        <li><a href="/gst-calculator">GST Calculator</a></li>
+        <li><a href="/percentage-calculator">Percentage Calculator</a></li>
+        <li><a href="/cgpa-calculator">CGPA Calculator</a></li>
+        <li><a href="/age-calculator">Age Calculator</a></li>
+        <li><a href="/bmi-calculator">BMI Calculator</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <div class="calc-page-header">
+    <div class="container">
+      <ul class="breadcrumbs">
+        <li><a href="/">Home</a></li>
+        <li>/</li>
+        <li><a href="/#calculators">Daily Life</a></li>
+        <li>/</li>
+        <li><span class="current">BMI Calculator</span></li>
+      </ul>
+      <h1 class="calc-page-title">Asian Indian BMI Calculator</h1>
+      <p class="calc-page-subtitle">
+        Calculate your Body Mass Index using official WHO & ICMR guidelines tailored for Indian South Asian phenotypes.
+      </p>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="calc-page-layout">
+      
+      <!-- Main Content -->
+      <div class="calc-main-content">
+        
+        <!-- Interactive BMI Calculator Card -->
+        <section class="calculator-card" aria-label="BMI Calculator Interface">
+          <div class="calc-widget-grid">
+            
+            <!-- Inputs -->
+            <div class="calc-inputs-col">
+              
+              <!-- Height Input -->
+              <div class="input-field-group">
+                <div class="input-header-row">
+                  <label for="bmi-height" class="input-label">Height (in Centimeters)</label>
+                  <span id="bmi-height-badge" class="input-value-badge">170 cm (5' 7")</span>
+                </div>
+                <div class="input-number-wrapper has-suffix">
+                  <input type="number" id="bmi-height" class="calc-text-input" value="170" min="90" max="230" step="1">
+                  <span class="input-affix-suffix">cm</span>
+                </div>
+                <input type="range" id="bmi-height-slider" class="calc-range-slider" min="120" max="210" step="1" value="170" aria-label="Height Slider">
+                <div class="slider-scale-row">
+                  <span>120 cm (4' 0")</span>
+                  <span>165 cm (5' 5")</span>
+                  <span>210 cm (6' 11")</span>
+                </div>
+              </div>
+
+              <!-- Weight Input -->
+              <div class="input-field-group">
+                <div class="input-header-row">
+                  <label for="bmi-weight" class="input-label">Body Weight (in Kilograms)</label>
+                  <span id="bmi-weight-badge" class="input-value-badge">65.0 kg</span>
+                </div>
+                <div class="input-number-wrapper has-suffix">
+                  <input type="number" id="bmi-weight" class="calc-text-input" value="65" min="20" max="200" step="0.5">
+                  <span class="input-affix-suffix">kg</span>
+                </div>
+                <input type="range" id="bmi-weight-slider" class="calc-range-slider" min="30" max="140" step="0.5" value="65" aria-label="Weight Slider">
+                <div class="slider-scale-row">
+                  <span>30 kg</span>
+                  <span>80 kg</span>
+                  <span>140 kg</span>
+                </div>
+              </div>
+
+              <!-- Indian Classification Summary Note -->
+              <div style="background: #ECFDF5; border: 1px solid #A7F3D0; border-radius: var(--radius-md); padding: 1rem; font-size: 0.875rem; color: #065F46;">
+                <strong>Indian Guidelines Note:</strong> For South Asians, overweight classification begins at <strong>23.0 BMI</strong> (not 25.0) and obesity begins at <strong>25.0 BMI</strong> (not 30.0).
+              </div>
+
+            </div>
+
+            <!-- Results -->
+            <div class="calc-results-col">
+              <div class="result-main-card">
+                <div class="result-label">Your Body Mass Index (BMI)</div>
+                <div id="res-bmi-val" class="result-primary-value">22.5</div>
+                <div id="res-bmi-category" class="result-subtext" style="font-weight: 700; color: #059669;">
+                  Healthy Normal (Indian Standard)
+                </div>
+              </div>
+
+              <!-- Visual BMI Gauge -->
+              <div class="visual-bar-wrapper">
+                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #64748B; margin-bottom: 0.25rem;">
+                  <span>Underweight (&lt;18.5)</span>
+                  <span>Normal (18.5-22.9)</span>
+                  <span>Overweight (23+)</span>
+                </div>
+                <div class="visual-progress-bar">
+                  <div class="bar-segment" style="width: 25%; background: #38BDF8;" title="Underweight"></div>
+                  <div class="bar-segment" style="width: 35%; background: #10B981;" title="Healthy Normal"></div>
+                  <div class="bar-segment" style="width: 20%; background: #F59E0B;" title="Overweight"></div>
+                  <div class="bar-segment" style="width: 20%; background: #EF4444;" title="Obese"></div>
+                </div>
+              </div>
+
+              <!-- Breakdown Rows -->
+              <div class="result-breakdown-list">
+                <div class="breakdown-row">
+                  <span class="breakdown-label">
+                    <span class="breakdown-dot dot-primary"></span>
+                    Ideal Weight for Height
+                  </span>
+                  <span id="res-bmi-ideal" class="breakdown-val">53.5 kg – 66.2 kg</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-label">
+                    <span class="breakdown-dot dot-neutral"></span>
+                    Current Weight
+                  </span>
+                  <span id="res-bmi-current" class="breakdown-val">65.0 kg</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-label">
+                    <span class="breakdown-dot dot-accent"></span>
+                    Weight Adjustment Needed
+                  </span>
+                  <span id="res-bmi-diff" class="breakdown-val" style="color: #059669;">Within Target Range</span>
+                </div>
+              </div>
+
+              <!-- Action buttons -->
+              <div class="calc-actions">
+                <button type="button" id="btn-copy-bmi" class="btn-primary" style="font-size: 0.875rem; padding: 0.6rem 1rem;">
+                  Copy Health Assessment
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- In-Content Ad -->
+        <aside class="ad-wrapper in-content" aria-label="Sponsored Content">
+          <span class="ad-label">Advertisement</span>
+          <div id="ad-slot-2" class="ad-slot responsive-banner">
+            <span>In-Content Ad Slot (Responsive Display)</span>
+          </div>
+        </aside>
+
+        <!-- 400-600 Word Explanatory Content -->
+        <article class="content-article">
+          <h2>Why Standard BMI Charts Fail Indians: The "Thin-Fat" Phenotype Explained</h2>
+          <p>
+            For decades, global healthcare practitioners calculated <strong>Body Mass Index (BMI)</strong> using Western criteria developed primarily on Caucasian populations, where a BMI below 24.9 was deemed healthy and overweight began at 25.0. However, extensive clinical research spearheaded by the Indian Council of Medical Research (ICMR) and the World Health Organization (WHO) revealed that South Asians suffer from disproportionately high rates of early-onset Type 2 diabetes, coronary artery disease, and fatty liver disease at significantly lower body weights.
+          </p>
+
+          <h3>The "Thin-Fat Indian" Physiological Profile</h3>
+          <p>
+            Indians naturally possess lower muscle mass and bone mineral density, coupled with higher visceral abdominal fat (fat stored around internal organs rather than just under the skin). Consequently, an Indian with a conventional "normal" BMI of 24.0 can carry the metabolic health risks of an obese individual in the West.
+          </p>
+
+          <div class="formula-box">
+            <div class="formula-title">Quetelet's BMI Equation</div>
+            <code class="formula-math">BMI = Weight (kg) / [Height (m)]^2</code>
+            <div class="formula-legend">
+              <strong>Calculation:</strong> Convert height in centimeters to meters (divide by 100). Square the meters value, and divide body weight in kilograms by this squared height.
+            </div>
+          </div>
+
+          <h3>Official Asian Indian vs Western BMI Cutoffs Comparison</h3>
+          <div class="data-table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Indian Cutoff (ICMR / WHO Asian)</th>
+                  <th>Standard Western Cutoff</th>
+                  <th>Cardiometabolic Risk Profile</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Underweight</strong></td>
+                  <td>&lt; 18.5</td>
+                  <td>&lt; 18.5</td>
+                  <td>Nutritional deficiency & weakened immunity</td>
+                </tr>
+                <tr>
+                  <td><strong>Healthy / Normal</strong></td>
+                  <td><strong>18.5 – 22.9</strong></td>
+                  <td>18.5 – 24.9</td>
+                  <td>Lowest risk profile for diabetes & stroke</td>
+                </tr>
+                <tr>
+                  <td><strong>Overweight (Pre-obese)</strong></td>
+                  <td><strong>23.0 – 24.9</strong></td>
+                  <td>25.0 – 29.9</td>
+                  <td>Elevated insulin resistance & high triglycerides</td>
+                </tr>
+                <tr>
+                  <td><strong>Obese (Class I & II)</strong></td>
+                  <td><strong>≥ 25.0</strong></td>
+                  <td>≥ 30.0</td>
+                  <td>High risk of hypertension, cardiovascular disease</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Real-World Indian Case Study</h3>
+          <p>
+            Consider Rajesh, a 34-year-old corporate professional in Mumbai standing <strong>172 cm (5' 8")</strong> tall and weighing <strong>71 kg</strong>:
+          </p>
+
+          <div class="example-box">
+            <h4>Clinical Assessment: Rajesh's BMI</h4>
+            <ul>
+              <li>Calculated BMI: <strong>71 / (1.72 × 1.72) = 24.0</strong></li>
+              <li>Western Assessment: <em>"Normal weight" (under 25.0)</em></li>
+              <li>Official Indian Medical Assessment: <strong>Overweight / Pre-obese (23.0 to 24.9 bracket)</strong></li>
+              <li>Ideal Healthy Weight for 172 cm: <strong>Between 54.7 kg and 67.7 kg</strong></li>
+            </ul>
+            <p style="margin-top: 0.5rem; font-weight: 700; color: #854D0E;">
+              Action Plan: Rajesh needs to reduce approximately 3.5 to 4 kg of weight and focus on resistance training to build lean muscle mass while lowering visceral fat.
+            </p>
+          </div>
+
+          <h3>Holistic Health Metrics Beyond BMI</h3>
+          <ul>
+            <li><strong>Waist Circumference:</strong> Measure at the navel. Men should maintain a waist below 90 cm (35.4 inches); women below 80 cm (31.5 inches).</li>
+            <li><strong>Waist-to-Hip Ratio (WHR):</strong> A ratio above 0.90 in men or 0.85 in women indicates harmful central abdominal fat concentration.</li>
+            <li><strong>Dietary Balance:</strong> Transition away from excessive refined carbohydrates (white rice, maida) toward protein-rich lentils, paneer, sprouts, and 30 minutes of daily aerobic movement.</li>
+          </ul>
+        </article>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" aria-label="Frequently Asked Questions">
+          <div class="faq-header">
+            <h2>Frequently Asked Questions on Asian Indian BMI</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary class="faq-question">Why are BMI cutoffs lower for Indians compared to Western standards?</summary>
+              <div class="faq-answer">
+                South Asians and Indians possess a unique body composition phenotype known as the 'Thin-Fat Indian' profile: higher percentage body fat and abdominal visceral adipose tissue at lower body weights. Research by the WHO and ICMR confirmed that metabolic risks (such as Type 2 diabetes and hypertension) trigger in Indians at a BMI of 23, whereas for Caucasians they trigger at 25.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">What are the official Asian Indian BMI categories?</summary>
+              <div class="faq-answer">
+                Under guidelines formulated by the Indian Ministry of Health and Family Welfare and ICMR: Underweight is below 18.5, Normal / Healthy is 18.5 to 22.9, Overweight is 23.0 to 24.9, and Obese is 25.0 and above.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">What is the mathematical formula to calculate BMI?</summary>
+              <div class="faq-answer">
+                BMI is calculated by dividing weight in kilograms (kg) by the square of height in meters (m): BMI = Weight (kg) / [Height (m) × Height (m)].
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">What is my ideal body weight for my height in India?</summary>
+              <div class="faq-answer">
+                Your ideal body weight is the weight range that keeps your BMI within the healthy Indian range of 18.5 to 22.9. For example, for an individual with a height of 170 cm (1.70 m), the ideal weight is between 53.5 kg and 66.2 kg.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">Does BMI differentiate between muscle mass and body fat?</summary>
+              <div class="faq-answer">
+                No, traditional BMI does not directly measure muscle mass versus fat. Highly muscular athletes may register as 'overweight' on BMI charts despite low body fat. Complementary assessments like waist circumference (below 90 cm for Indian men, below 80 cm for Indian women) provide deeper clarity.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">How does visceral fat elevate heart attack risks in Indians?</summary>
+              <div class="faq-answer">
+                Visceral fat surrounds vital internal abdominal organs like the liver and pancreas, releasing pro-inflammatory cytokines and free fatty acids directly into the portal circulation, accelerating arterial plaque formation and premature coronary heart disease.
+              </div>
+            </details>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="calc-sidebar">
+        
+        <!-- Sidebar Ad -->
+        <div class="sidebar-box" style="padding: 1rem; text-align: center;">
+          <span class="ad-label">Advertisement</span>
+          <div id="ad-slot-3" class="ad-slot rectangle">
+            <span>Sidebar Ad (300x250)</span>
+          </div>
+        </div>
+
+        <!-- Related Calculators -->
+        <div class="sidebar-box">
+          <h3 class="sidebar-title">Related Calculators</h3>
+          <ul class="sidebar-links">
+            <li>
+              <a href="/age-calculator">
+                <span>Age Calculator</span>
+                <span>→</span>
+              </a>
+            </li>
+            <li>
+              <a href="/percentage-calculator">
+                <span>Percentage Calculator</span>
+                <span>→</span>
+              </a>
+            </li>
+            <li>
+              <a href="/emi-calculator">
+                <span>Loan EMI Calculator</span>
+                <span>→</span>
+              </a>
+            </li>
+            <li>
+              <a href="/sip-calculator">
+                <span>SIP Mutual Fund</span>
+                <span>→</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="site-logo" style="color: #FFFFFF;">
+            <img src="/images/logo.svg" alt="Indian Calculator Hub" width="200" height="34" style="filter: brightness(0) invert(1);">
+          </a>
+          <p>
+            Indian Calculator Hub provides free financial and mathematical tools engineered for Indian citizens.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Finance Tools</h4>
+          <ul class="footer-links">
+            <li><a href="/emi-calculator">EMI Calculator</a></li>
+            <li><a href="/sip-calculator">SIP Calculator</a></li>
+            <li><a href="/fd-calculator">FD Calculator</a></li>
+            <li><a href="/gst-calculator">GST Calculator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Academic & Life</h4>
+          <ul class="footer-links">
+            <li><a href="/percentage-calculator">Percentage Calculator</a></li>
+            <li><a href="/cgpa-calculator">CGPA to %</a></li>
+            <li><a href="/age-calculator">Age Calculator</a></li>
+            <li><a href="/bmi-calculator">Asian Indian BMI</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Legal & Trust</h4>
+          <ul class="footer-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact Support</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms-of-use">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Indian Calculator Hub. All rights reserved.</div>
+        <div>
+          <a href="/privacy-policy" style="color: #94A3B8; margin-right: 1rem;">Privacy Policy</a>
+          <a href="/terms-of-use" style="color: #94A3B8;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculators.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    // BMI Calculator Wiring
+    const bmiHeightInput = document.getElementById('bmi-height');
+    const bmiHeightSlider = document.getElementById('bmi-height-slider');
+    const bmiHeightBadge = document.getElementById('bmi-height-badge');
+
+    const bmiWeightInput = document.getElementById('bmi-weight');
+    const bmiWeightSlider = document.getElementById('bmi-weight-slider');
+    const bmiWeightBadge = document.getElementById('bmi-weight-badge');
+
+    const resBmiVal = document.getElementById('res-bmi-val');
+    const resBmiCategory = document.getElementById('res-bmi-category');
+    const resBmiIdeal = document.getElementById('res-bmi-ideal');
+    const resBmiCurrent = document.getElementById('res-bmi-current');
+    const resBmiDiff = document.getElementById('res-bmi-diff');
+
+    function cmToFeetInches(cm) {
+      const inches = cm / 2.54;
+      const feet = Math.floor(inches / 12);
+      const remInches = Math.round(inches % 12);
+      return `${feet}' ${remInches}"`;
+    }
+
+    function updateBMI() {
+      const h = parseFloat(bmiHeightInput.value) || 0;
+      const w = parseFloat(bmiWeightInput.value) || 0;
+
+      bmiHeightBadge.textContent = `${h} cm (${cmToFeetInches(h)})`;
+      bmiWeightBadge.textContent = `${w.toFixed(1)} kg`;
+
+      const res = IndianCalc.calculateBMI(w, h);
+
+      resBmiVal.textContent = res.bmi;
+      resBmiCategory.textContent = res.category;
+      resBmiIdeal.textContent = `${res.idealWeightMin} kg – ${res.idealWeightMax} kg`;
+      resBmiCurrent.textContent = `${w.toFixed(1)} kg`;
+
+      if (res.bmi < 18.5) {
+        resBmiCategory.style.color = '#0284C7';
+        const gain = (res.idealWeightMin - w).toFixed(1);
+        resBmiDiff.textContent = `Gain ~${gain} kg to reach normal range`;
+        resBmiDiff.style.color = '#0284C7';
+      } else if (res.bmi <= 22.9) {
+        resBmiCategory.style.color = '#059669';
+        resBmiDiff.textContent = 'Within Target Healthy Range';
+        resBmiDiff.style.color = '#059669';
+      } else if (res.bmi <= 24.9) {
+        resBmiCategory.style.color = '#D97706';
+        const lose = (w - res.idealWeightMax).toFixed(1);
+        resBmiDiff.textContent = `Lose ~${lose} kg to reach healthy bracket`;
+        resBmiDiff.style.color = '#D97706';
+      } else {
+        resBmiCategory.style.color = '#DC2626';
+        const lose = (w - res.idealWeightMax).toFixed(1);
+        resBmiDiff.textContent = `Lose ~${lose} kg to reduce metabolic risk`;
+        resBmiDiff.style.color = '#DC2626';
+      }
+    }
+
+    bmiHeightInput.addEventListener('input', () => {
+      bmiHeightSlider.value = bmiHeightInput.value;
+      updateBMI();
+    });
+    bmiHeightSlider.addEventListener('input', () => {
+      bmiHeightInput.value = bmiHeightSlider.value;
+      updateBMI();
+    });
+
+    bmiWeightInput.addEventListener('input', () => {
+      bmiWeightSlider.value = bmiWeightInput.value;
+      updateBMI();
+    });
+    bmiWeightSlider.addEventListener('input', () => {
+      bmiWeightInput.value = bmiWeightSlider.value;
+      updateBMI();
+    });
+
+    document.getElementById('btn-copy-bmi').addEventListener('click', () => {
+      const h = bmiHeightInput.value;
+      const w = bmiWeightInput.value;
+      const text = `Asian Indian BMI Report:\nHeight: ${h} cm\nWeight: ${w} kg\nBMI Score: ${resBmiVal.textContent}\nCategory: ${resBmiCategory.textContent}\nIdeal Weight: ${resBmiIdeal.textContent}\nAssessment: ${resBmiDiff.textContent}\nCalculated via Indian Calculator Hub (https://roaring-boba-b53db8.netlify.app/bmi-calculator)`;
+      window.copyToClipboard(text, 'BMI Details copied to clipboard!');
+    });
+
+    updateBMI();
+  </script>
+</body>
+</html>

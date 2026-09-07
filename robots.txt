@@ -1,0 +1,6 @@
+# Robots.txt for Indian Calculator Hub
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://roaring-boba-b53db8.netlify.app/sitemap.xml

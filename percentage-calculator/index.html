@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KWSFTNW1VF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KWSFTNW1VF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percentage Calculator - 4-in-1 Online Percentage & Marks Tool</title>
+  <meta name="description" content="Calculate X% of Y, find what percentage X is of Y, percentage increase/decrease, and school/board exam marks to percentage with step-by-step arithmetic.">
+  <meta name="keywords" content="percentage calculator, marks to percentage, exam percentage calculator, percent increase decrease, discount percentage, cbse marks percent, math percentage formula">
+  <link rel="canonical" href="https://roaring-boba-b53db8.netlify.app/percentage-calculator">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://roaring-boba-b53db8.netlify.app/percentage-calculator">
+  <meta property="og:title" content="Percentage Calculator - 4-in-1 Marks & Percentage Solver">
+  <meta property="og:description" content="Instant percentage calculation for exam marks, price discounts, and percentage difference.">
+  <meta property="og:image" content="https://roaring-boba-b53db8.netlify.app/images/logo.svg">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Percentage Calculator - Free Multi-Mode Tool">
+  <meta name="twitter:description" content="Solve percentage of numbers, board exam marks, and discount changes instantly.">
+  
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/calculators.css">
+
+  <!-- Schema.org FAQPage Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate my exam marks percentage for 500 or 600 total marks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To calculate your exam percentage, divide your total marks obtained across all subjects by the maximum aggregate marks, then multiply by 100. For instance, scoring 465 marks out of 500 gives: (465 / 500) × 100 = 93.00%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the formula to calculate percentage increase or salary hike?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The percentage increase formula is: [(New Value - Old Value) / Old Value] × 100. For example, if your salary rises from ₹6,00,000 to ₹7,50,000, your hike is: [(7,50,000 - 6,00,000) / 6,00,000] × 100 = 25.00%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I find a discount percentage during festive sales in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To calculate discount savings: Discount Amount = (Original MRP × Discount %) / 100. Final Price = Original MRP - Discount Amount. For a ₹2,500 shoe with a 30% discount, savings are ₹750, leaving ₹1,750 payable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between percentage and percentile in Indian competitive exams?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Percentage represents the proportion of marks you scored out of the maximum total marks. Percentile (used in JEE, NEET, and CAT) represents the proportion of candidate test-takers who scored equal to or less than your score."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate what percentage one number is of another?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Divide the partial number (X) by the reference base number (Y) and multiply by 100: (X / Y) × 100. For example, 45 out of 180 is: (45 / 180) × 100 = 25.00%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the passing percentage benchmark in Indian board examinations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In CBSE, CISCE (ICSE), and most state secondary boards, students must achieve a minimum of 33% marks (or 35% in certain state boards like Maharashtra SSC) in each subject including theory and practicals to pass."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Ad Slot -->
+  <aside class="ad-wrapper top-banner" aria-label="Sponsored Content">
+    <div class="container">
+      <span class="ad-label">Advertisement</span>
+      <div id="ad-slot-1" class="ad-slot leaderboard">
+        <span>Leaderboard Ad Placement (728x90)</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">
+        <img src="/images/logo.svg" alt="Indian Calculator Hub Logo" width="220" height="38">
+      </a>
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/emi-calculator" class="nav-link">EMI Calculator</a></li>
+          <li><a href="/sip-calculator" class="nav-link">SIP Calculator</a></li>
+          <li><a href="/percentage-calculator" class="nav-link active">Percentage Calculator</a></li>
+          <li><a href="/cgpa-calculator" class="nav-link">CGPA Calculator</a></li>
+          <li><a href="/about" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav-menu">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/emi-calculator">EMI Calculator</a></li>
+        <li><a href="/sip-calculator">SIP Calculator</a></li>
+        <li><a href="/fd-calculator">FD Calculator</a></li>
+        <li><a href="/gst-calculator">GST Calculator</a></li>
+        <li><a href="/percentage-calculator">Percentage Calculator</a></li>
+        <li><a href="/cgpa-calculator">CGPA Calculator</a></li>
+        <li><a href="/age-calculator">Age Calculator</a></li>
+        <li><a href="/bmi-calculator">BMI Calculator</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <div class="calc-page-header">
+    <div class="container">
+      <ul class="breadcrumbs">
+        <li><a href="/">Home</a></li>
+        <li>/</li>
+        <li><a href="/#calculators">Student</a></li>
+        <li>/</li>
+        <li><span class="current">Percentage Calculator</span></li>
+      </ul>
+      <h1 class="calc-page-title">4-in-1 Percentage Calculator</h1>
+      <p class="calc-page-subtitle">
+        Calculate school exam marks %, find X% of any number, calculate price discounts, and measure salary increment percentage.
+      </p>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="calc-page-layout">
+      
+      <!-- Main Content -->
+      <div class="calc-main-content">
+        
+        <!-- Interactive Multi-Mode Percentage Calculator -->
+        <section class="calculator-card" aria-label="Percentage Calculator Interface">
+          
+          <!-- Mode Tabs -->
+          <div class="segmented-control" style="margin-bottom: 1.5rem;" role="tablist">
+            <button type="button" id="tab-mode-marks" class="active">Exam Marks %</button>
+            <button type="button" id="tab-mode-percentof">What is X% of Y?</button>
+            <button type="button" id="tab-mode-iswhat">X is what % of Y?</button>
+            <button type="button" id="tab-mode-change">% Change / Hike</button>
+          </div>
+
+          <div class="calc-widget-grid">
+            
+            <!-- Inputs Column -->
+            <div class="calc-inputs-col">
+              
+              <!-- Dynamic Field 1 -->
+              <div class="input-field-group">
+                <div class="input-header-row">
+                  <label for="pct-input-1" id="lbl-pct-1" class="input-label">Marks Obtained</label>
+                  <span id="badge-pct-1" class="input-value-badge">465</span>
+                </div>
+                <input type="number" id="pct-input-1" class="calc-text-input" value="465" min="0" step="1">
+              </div>
+
+              <!-- Dynamic Field 2 -->
+              <div class="input-field-group">
+                <div class="input-header-row">
+                  <label for="pct-input-2" id="lbl-pct-2" class="input-label">Maximum Total Marks</label>
+                  <span id="badge-pct-2" class="input-value-badge">500</span>
+                </div>
+                <input type="number" id="pct-input-2" class="calc-text-input" value="500" min="1" step="1">
+              </div>
+
+              <!-- Step-by-Step Mathematical Explanation Box -->
+              <div style="background: #F8FAFC; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem; font-size: 0.875rem;">
+                <div style="font-weight: 700; color: var(--text-main); margin-bottom: 0.25rem;">Calculation Formula Applied:</div>
+                <div id="step-formula" style="font-family: var(--font-mono); color: var(--primary); font-weight: 600;">(465 ÷ 500) × 100 = 93.00%</div>
+              </div>
+
+            </div>
+
+            <!-- Results Column -->
+            <div class="calc-results-col">
+              <div class="result-main-card">
+                <div class="result-label" id="lbl-pct-res-title">Calculated Percentage</div>
+                <div id="res-pct-main" class="result-primary-value">93.00%</div>
+                <div id="res-pct-sub" class="result-subtext">Distinction / First Class</div>
+              </div>
+
+              <!-- Breakdown Rows -->
+              <div class="result-breakdown-list">
+                <div class="breakdown-row">
+                  <span class="breakdown-label">
+                    <span class="breakdown-dot dot-primary"></span>
+                    Primary Value (Numerator)
+                  </span>
+                  <span id="res-val-1" class="breakdown-val">465</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-label">
+                    <span class="breakdown-dot dot-neutral"></span>
+                    Reference Base (Denominator)
+                  </span>
+                  <span id="res-val-2" class="breakdown-val">500</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-label">
+                    <span class="breakdown-dot dot-accent"></span>
+                    Difference / Remainder
+                  </span>
+                  <span id="res-val-diff" class="breakdown-val">35 Marks Lost</span>
+                </div>
+              </div>
+
+              <!-- Action buttons -->
+              <div class="calc-actions">
+                <button type="button" id="btn-copy-pct" class="btn-primary" style="font-size: 0.875rem; padding: 0.6rem 1rem;">
+                  Copy Result
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- In-Content Ad -->
+        <aside class="ad-wrapper in-content" aria-label="Sponsored Content">
+          <span class="ad-label">Advertisement</span>
+          <div id="ad-slot-2" class="ad-slot responsive-banner">
+            <span>In-Content Ad Slot (Responsive Display)</span>
+          </div>
+        </aside>
+
+        <!-- 400-600 Word Explanatory Content -->
+        <article class="content-article">
+          <h2>Everything You Need to Know About Percentage Calculations in India</h2>
+          <p>
+            The term <strong>percentage</strong> originates from the Latin <em>per centum</em>, meaning "by the hundred." In our daily lives across India, percentages govern everything from student board examinations (CBSE, ICSE, state boards) and university entrance cutoffs to festive shopping discounts, income tax slabs, and corporate salary hike revisions.
+          </p>
+
+          <h3>Core Mathematical Formulas Explained</h3>
+          <p>
+            Our 4-in-1 calculator unifies four standard percentage scenarios into one seamless tool:
+          </p>
+
+          <div class="formula-box">
+            <div class="formula-title">1. Student Exam Marks to Percentage</div>
+            <code class="formula-math">Percentage (%) = (Marks Obtained / Total Maximum Marks) × 100</code>
+            <div class="formula-legend">Used for Class 10, Class 12, and college semester marks card aggregate calculation.</div>
+          </div>
+
+          <div class="formula-box">
+            <div class="formula-title">2. Value of Percentage (What is X% of Y?)</div>
+            <code class="formula-math">Result = (X × Y) / 100</code>
+            <div class="formula-legend">Used to compute discount values (e.g. 30% off ₹2,000) or tax percentages.</div>
+          </div>
+
+          <div class="formula-box">
+            <div class="formula-title">3. Proportion (X is what % of Y?)</div>
+            <code class="formula-math">Percentage (%) = (X / Y) × 100</code>
+            <div class="formula-legend">Find what fraction of a total budget or quota has been achieved.</div>
+          </div>
+
+          <div class="formula-box">
+            <div class="formula-title">4. Percentage Change / Increment (Hike & Drop)</div>
+            <code class="formula-math">Percentage Change (%) = ((New Value - Initial Value) / Initial Value) × 100</code>
+            <div class="formula-legend">Calculate annual salary hikes, inflation increases, or price inflation.</div>
+          </div>
+
+          <h3>Real-World Indian Academic & Shopping Examples</h3>
+          
+          <div class="example-box">
+            <h4>Case 1: Class 12 Board Exam Aggregate</h4>
+            <p>
+              Ananya sits for her CBSE Class 12 exams with five subjects: English (88), Mathematics (92), Physics (89), Chemistry (94), and Computer Science (97).
+            </p>
+            <ul>
+              <li>Total Marks Obtained: <strong>460</strong></li>
+              <li>Maximum Aggregate Marks: <strong>500</strong></li>
+              <li>Aggregate Percentage: <strong>(460 ÷ 500) × 100 = 92.00%</strong></li>
+              <li>Academic Classification: <strong>First Division with Distinction</strong></li>
+            </ul>
+          </div>
+
+          <div class="example-box" style="background: #EFF6FF; border-color: #BFDBFE;">
+            <h4 style="color: #1E40AF;">Case 2: Annual Corporate Salary Appraisal</h4>
+            <p style="color: #1E3A8A;">
+              Vikram works as an analyst in Gurgaon with an initial Cost-to-Company (CTC) of <strong>₹8,00,000</strong>. Following his annual performance review, his compensation is revised to <strong>₹9,60,000</strong>:
+            </p>
+            <ul style="color: #1E3A8A;">
+              <li>Absolute Increment: <strong>₹ 1,60,000</strong></li>
+              <li>Percentage Hike: <strong>[(9,60,000 - 8,00,000) / 8,00,000] × 100 = 20.00%</strong></li>
+            </ul>
+          </div>
+
+          <h3>Distinction Between Percentage and Percentile in India</h3>
+          <p>
+            Indian students frequently confuse <em>percentage</em> with <em>percentile</em> when appearing for national examinations such as JEE Main, NEET UG, CAT, or CUET:
+          </p>
+          <ul>
+            <li><strong>Percentage:</strong> Reflects absolute performance (e.g. answering 70% of questions correctly).</li>
+            <li><strong>Percentile:</strong> Reflects rank relative to other examinees. A 99 percentile score in CAT signifies that you scored higher than 99% of all registered candidates, irrespective of whether the exam was tough or easy.</li>
+          </ul>
+        </article>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" aria-label="Frequently Asked Questions">
+          <div class="faq-header">
+            <h2>Frequently Asked Questions on Percentages</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary class="faq-question">How do I calculate my exam marks percentage for 500 or 600 total marks?</summary>
+              <div class="faq-answer">
+                To calculate your exam percentage, divide your total marks obtained across all subjects by the maximum aggregate marks, then multiply by 100. For instance, scoring 465 marks out of 500 gives: (465 / 500) × 100 = 93.00%.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">What is the formula to calculate percentage increase or salary hike?</summary>
+              <div class="faq-answer">
+                The percentage increase formula is: [(New Value - Old Value) / Old Value] × 100. For example, if your salary rises from ₹6,00,000 to ₹7,50,000, your hike is: [(7,50,000 - 6,00,000) / 6,00,000] × 100 = 25.00%.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">How do I find a discount percentage during festive sales in India?</summary>
+              <div class="faq-answer">
+                To calculate discount savings: Discount Amount = (Original MRP × Discount %) / 100. Final Price = Original MRP - Discount Amount. For a ₹2,500 shoe with a 30% discount, savings are ₹750, leaving ₹1,750 payable.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">What is the difference between percentage and percentile in Indian competitive exams?</summary>
+              <div class="faq-answer">
+                Percentage represents the proportion of marks you scored out of the maximum total marks. Percentile (used in JEE, NEET, and CAT) represents the proportion of candidate test-takers who scored equal to or less than your score.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">How do I calculate what percentage one number is of another?</summary>
+              <div class="faq-answer">
+                Divide the partial number (X) by the reference base number (Y) and multiply by 100: (X / Y) × 100. For example, 45 out of 180 is: (45 / 180) × 100 = 25.00%.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">What is the passing percentage benchmark in Indian board examinations?</summary>
+              <div class="faq-answer">
+                In CBSE, CISCE (ICSE), and most state secondary boards, students must achieve a minimum of 33% marks (or 35% in certain state boards like Maharashtra SSC) in each subject including theory and practicals to pass.
+              </div>
+            </details>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="calc-sidebar">
+        
+        <!-- Sidebar Ad -->
+        <div class="sidebar-box" style="padding: 1rem; text-align: center;">
+          <span class="ad-label">Advertisement</span>
+          <div id="ad-slot-3" class="ad-slot rectangle">
+            <span>Sidebar Ad (300x250)</span>
+          </div>
+        </div>
+
+        <!-- Related Calculators -->
+        <div class="sidebar-box">
+          <h3 class="sidebar-title">Related Calculators</h3>
+          <ul class="sidebar-links">
+            <li>
+              <a href="/cgpa-calculator">
+                <span>CGPA to % (CBSE)</span>
+                <span>→</span>
+              </a>
+            </li>
+            <li>
+              <a href="/gst-calculator">
+                <span>GST Tax Calculator</span>
+                <span>→</span>
+              </a>
+            </li>
+            <li>
+              <a href="/emi-calculator">
+                <span>Loan EMI Calculator</span>
+                <span>→</span>
+              </a>
+            </li>
+            <li>
+              <a href="/age-calculator">
+                <span>Age Calculator</span>
+                <span>→</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="site-logo" style="color: #FFFFFF;">
+            <img src="/images/logo.svg" alt="Indian Calculator Hub" width="200" height="34" style="filter: brightness(0) invert(1);">
+          </a>
+          <p>
+            Indian Calculator Hub provides free financial and mathematical tools engineered for Indian citizens.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Finance Tools</h4>
+          <ul class="footer-links">
+            <li><a href="/emi-calculator">EMI Calculator</a></li>
+            <li><a href="/sip-calculator">SIP Calculator</a></li>
+            <li><a href="/fd-calculator">FD Calculator</a></li>
+            <li><a href="/gst-calculator">GST Calculator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Academic & Life</h4>
+          <ul class="footer-links">
+            <li><a href="/percentage-calculator">Percentage Calculator</a></li>
+            <li><a href="/cgpa-calculator">CGPA to %</a></li>
+            <li><a href="/age-calculator">Age Calculator</a></li>
+            <li><a href="/bmi-calculator">Asian Indian BMI</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Legal & Trust</h4>
+          <ul class="footer-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact Support</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms-of-use">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Indian Calculator Hub. All rights reserved.</div>
+        <div>
+          <a href="/privacy-policy" style="color: #94A3B8; margin-right: 1rem;">Privacy Policy</a>
+          <a href="/terms-of-use" style="color: #94A3B8;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculators.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    // Percentage Calculator Multi-mode Wiring
+    let activeMode = 'marks'; // 'marks' | 'percentof' | 'iswhat' | 'change'
+
+    const tabMarks = document.getElementById('tab-mode-marks');
+    const tabPercentOf = document.getElementById('tab-mode-percentof');
+    const tabIsWhat = document.getElementById('tab-mode-iswhat');
+    const tabChange = document.getElementById('tab-mode-change');
+
+    const lblPct1 = document.getElementById('lbl-pct-1');
+    const lblPct2 = document.getElementById('lbl-pct-2');
+    const inputPct1 = document.getElementById('pct-input-1');
+    const inputPct2 = document.getElementById('pct-input-2');
+    const badgePct1 = document.getElementById('badge-pct-1');
+    const badgePct2 = document.getElementById('badge-pct-2');
+
+    const stepFormula = document.getElementById('step-formula');
+    const lblPctResTitle = document.getElementById('lbl-pct-res-title');
+    const resPctMain = document.getElementById('res-pct-main');
+    const resPctSub = document.getElementById('res-pct-sub');
+    const resVal1 = document.getElementById('res-val-1');
+    const resVal2 = document.getElementById('res-val-2');
+    const resValDiff = document.getElementById('res-val-diff');
+
+    function setMode(mode) {
+      activeMode = mode;
+      [tabMarks, tabPercentOf, tabIsWhat, tabChange].forEach(t => t.classList.remove('active'));
+
+      if (mode === 'marks') {
+        tabMarks.classList.add('active');
+        lblPct1.textContent = 'Marks Obtained';
+        lblPct2.textContent = 'Maximum Total Marks';
+        inputPct1.value = '465';
+        inputPct2.value = '500';
+        lblPctResTitle.textContent = 'Exam Percentage';
+      } else if (mode === 'percentof') {
+        tabPercentOf.classList.add('active');
+        lblPct1.textContent = 'Percentage (%)';
+        lblPct2.textContent = 'Of Total Number (Y)';
+        inputPct1.value = '25';
+        inputPct2.value = '4000';
+        lblPctResTitle.textContent = 'Calculated Value';
+      } else if (mode === 'iswhat') {
+        tabIsWhat.classList.add('active');
+        lblPct1.textContent = 'Number (X)';
+        lblPct2.textContent = 'Total Reference Number (Y)';
+        inputPct1.value = '75';
+        inputPct2.value = '300';
+        lblPctResTitle.textContent = 'Proportion Percentage';
+      } else if (mode === 'change') {
+        tabChange.classList.add('active');
+        lblPct1.textContent = 'Initial Old Value';
+        lblPct2.textContent = 'New Final Value';
+        inputPct1.value = '50000';
+        inputPct2.value = '65000';
+        lblPctResTitle.textContent = 'Percentage Change';
+      }
+      calculatePercentage();
+    }
+
+    function calculatePercentage() {
+      const v1 = parseFloat(inputPct1.value) || 0;
+      const v2 = parseFloat(inputPct2.value) || 0;
+      badgePct1.textContent = v1;
+      badgePct2.textContent = v2;
+      resVal1.textContent = v1;
+      resVal2.textContent = v2;
+
+      if (activeMode === 'marks') {
+        const pct = v2 > 0 ? ((v1 / v2) * 100).toFixed(2) : '0.00';
+        resPctMain.textContent = pct + '%';
+        stepFormula.textContent = `(${v1} ÷ ${v2}) × 100 = ${pct}%`;
+        const diff = v2 - v1;
+        resValDiff.textContent = `${diff} Marks from 100%`;
+        if (pct >= 75) resPctSub.textContent = 'Distinction (First Class with Distinction)';
+        else if (pct >= 60) resPctSub.textContent = 'First Division';
+        else if (pct >= 50) resPctSub.textContent = 'Second Division';
+        else if (pct >= 33) resPctSub.textContent = 'Third Division (Passed)';
+        else resPctSub.textContent = 'Essential Repeat (Failed)';
+      } else if (activeMode === 'percentof') {
+        const val = IndianCalc.calculatePercentage.percentOf(v1, v2);
+        resPctMain.textContent = val.toLocaleString('en-IN');
+        stepFormula.textContent = `(${v1} × ${v2}) ÷ 100 = ${val}`;
+        resValDiff.textContent = `Balance: ${(v2 - val).toLocaleString('en-IN')}`;
+        resPctSub.textContent = `${v1}% of ${v2}`;
+      } else if (activeMode === 'iswhat') {
+        const pct = IndianCalc.calculatePercentage.isWhatPercent(v1, v2).toFixed(2);
+        resPctMain.textContent = pct + '%';
+        stepFormula.textContent = `(${v1} ÷ ${v2}) × 100 = ${pct}%`;
+        resValDiff.textContent = `Remainder: ${(v2 - v1).toLocaleString('en-IN')}`;
+        resPctSub.textContent = `${v1} parts out of ${v2}`;
+      } else if (activeMode === 'change') {
+        const changeRes = IndianCalc.calculatePercentage.percentChange(v1, v2);
+        const sign = changeRes.type === 'increase' ? '+' : '-';
+        resPctMain.textContent = `${sign}${changeRes.change}%`;
+        resPctSub.textContent = changeRes.type === 'increase' ? 'Net Increase / Positive Growth' : 'Net Decrease / Decline';
+        stepFormula.textContent = `((${v2} - ${v1}) ÷ ${v1}) × 100 = ${sign}${changeRes.change}%`;
+        resValDiff.textContent = `Absolute Difference: ${changeRes.diff}`;
+      }
+    }
+
+    tabMarks.addEventListener('click', () => setMode('marks'));
+    tabPercentOf.addEventListener('click', () => setMode('percentof'));
+    tabIsWhat.addEventListener('click', () => setMode('iswhat'));
+    tabChange.addEventListener('click', () => setMode('change'));
+
+    inputPct1.addEventListener('input', calculatePercentage);
+    inputPct2.addEventListener('input', calculatePercentage);
+
+    document.getElementById('btn-copy-pct').addEventListener('click', () => {
+      const text = `Percentage Calculation:\nResult: ${resPctMain.textContent}\nFormula: ${stepFormula.textContent}\nCalculated via Indian Calculator Hub (https://roaring-boba-b53db8.netlify.app/percentage-calculator)`;
+      window.copyToClipboard(text, 'Percentage copied to clipboard!');
+    });
+
+    calculatePercentage();
+  </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48" height="48" fill="none">
+  <rect width="44" height="44" y="2" rx="10" fill="#0F766E"/>
+  <path d="M14 14h16M14 19h11M18 14c0 5-4 8-4 8h12M20 24l6 8" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="31" cy="27" r="3" fill="#F59E0B"/>
+  <text x="54" y="26" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#0F172A" letter-spacing="-0.02em">
+    Indian<tspan fill="#0F766E">Calc</tspan><tspan fill="#D97706">Hub</tspan>
+  </text>
+  <text x="55" y="39" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#64748B" letter-spacing="0.04em">
+    FAST • RELIABLE • FREE TOOLS
+  </text>
+</svg>

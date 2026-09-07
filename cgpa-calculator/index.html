@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KWSFTNW1VF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KWSFTNW1VF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CGPA to Percentage Calculator - Official CBSE 9.5 & University Standards</title>
+  <meta name="description" content="Convert 10-point CGPA into percentage using CBSE's official 9.5 multiplier, VTU, Mumbai University, Anna University, and AICTE engineering scales with division and grade breakdown.">
+  <meta name="keywords" content="cgpa to percentage, cbse 9.5 multiplier, convert cgpa to percent, vtu cgpa calculator, mumbai university cgpa to percentage, aicte cgpa formula">
+  <link rel="canonical" href="https://roaring-boba-b53db8.netlify.app/cgpa-calculator">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://roaring-boba-b53db8.netlify.app/cgpa-calculator">
+  <meta property="og:title" content="CGPA to Percentage Calculator - CBSE 9.5 & Engineering Standards">
+  <meta property="og:description" content="Instant 10-point CGPA to percentage conversion with CBSE 9.5 multiplier and university formulas.">
+  <meta property="og:image" content="https://roaring-boba-b53db8.netlify.app/images/logo.svg">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CGPA to Percentage Calculator - Official Indian Grading">
+  <meta name="twitter:description" content="Accurately convert your CGPA to percentage for CAT, UPSC, campus placements, and foreign universities.">
+  
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/calculators.css">
+
+  <!-- Schema.org FAQPage Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why does CBSE multiply CGPA by 9.5 to calculate percentage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Central Board of Secondary Education (CBSE) calculated 9.5 by analyzing the average percentage of marks obtained by the top 500 candidates who scored grade points of 10 over the preceding five academic years. This statistical benchmark showed 9.5 as the most accurate linear equivalence."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the formula for converting CGPA to percentage for engineering universities under AICTE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under All India Council for Technical Education (AICTE) norms, universities utilize either: Percentage = (CGPA - 0.75) × 10 or standard direct multiplication Percentage = (CGPA - 0.5) × 10, depending on individual university ordinances."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Mumbai University convert 10-point CGPA to percentage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mumbai University uses the formula: Percentage = (7.1 × CGPA) + 11 for students with a CGPA of 7.0 and above. For students with a CGPA below 7.0, the formula is Percentage = (7.25 × CGPA) + 11."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the VTU (Visvesvaraya Technological University) CGPA to percentage formula?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "VTU Karnataka officially prescribes the formula: Percentage = (CGPA - 0.75) × 10. For instance, an 8.25 CGPA at VTU converts to: (8.25 - 0.75) × 10 = 75.00%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is 8.0 CGPA considered First Class in Indian universities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, an 8.0 CGPA in CBSE equates to 76.0% (8.0 × 9.5), which comfortably surpasses the 60.0% benchmark for First Class, and qualifies as 'First Class with Distinction' across most state and central universities."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate subject-wise percentage from Grade Points?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Multiply your individual subject Grade Point (GP) by 9.5. For example, if you scored a GP of 9 in Mathematics, your estimated percentage is 9 × 9.5 = 85.5%."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Ad Slot -->
+  <aside class="ad-wrapper top-banner" aria-label="Sponsored Content">
+    <div class="container">
+      <span class="ad-label">Advertisement</span>
+      <div id="ad-slot-1" class="ad-slot leaderboard">
+        <span>Leaderboard Ad Placement (728x90)</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">
+        <img src="/images/logo.svg" alt="Indian Calculator Hub Logo" width="220" height="38">
+      </a>
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/emi-calculator" class="nav-link">EMI Calculator</a></li>
+          <li><a href="/sip-calculator" class="nav-link">SIP Calculator</a></li>
+          <li><a href="/percentage-calculator" class="nav-link">Percentage Calculator</a></li>
+          <li><a href="/cgpa-calculator" class="nav-link active">CGPA to %</a></li>
+          <li><a href="/about" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav-menu">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/emi-calculator">EMI Calculator</a></li>
+        <li><a href="/sip-calculator">SIP Calculator</a></li>
+        <li><a href="/fd-calculator">FD Calculator</a></li>
+        <li><a href="/gst-calculator">GST Calculator</a></li>
+        <li><a href="/percentage-calculator">Percentage Calculator</a></li>
+        <li><a href="/cgpa-calculator">CGPA Calculator</a></li>
+        <li><a href="/age-calculator">Age Calculator</a></li>
+        <li><a href="/bmi-calculator">BMI Calculator</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <div class="calc-page-header">
+    <div class="container">
+      <ul class="breadcrumbs">
+        <li><a href="/">Home</a></li>
+        <li>/</li>
+        <li><a href="/#calculators">Student</a></li>
+        <li>/</li>
+        <li><span class="current">CGPA to Percentage</span></li>
+      </ul>
+      <h1 class="calc-page-title">CGPA to Percentage Calculator</h1>
+      <p class="calc-page-subtitle">
+        Convert your 10-point Cumulative Grade Point Average into percentage for CBSE, Mumbai University, VTU Karnataka, and AICTE.
+      </p>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="calc-page-layout">
+      
+      <!-- Main Content -->
+      <div class="calc-main-content">
+        
+        <!-- Interactive CGPA Calculator Card -->
+        <section class="calculator-card" aria-label="CGPA Calculator Interface">
+          <div class="calc-widget-grid">
+            
+            <!-- Inputs -->
+            <div class="calc-inputs-col">
+              
+              <!-- Scale Selector -->
+              <div class="input-field-group">
+                <label for="cgpa-scale" class="input-label">Grading Standard / University</label>
+                <select id="cgpa-scale" class="form-select" style="font-weight: 600;">
+                  <option value="cbse" selected>CBSE Standard (CGPA × 9.5)</option>
+                  <option value="aicte">Standard 10x Scale (CGPA × 10)</option>
+                  <option value="vtu">VTU Karnataka [(CGPA - 0.75) × 10]</option>
+                  <option value="mumbai">Mumbai University [(7.1 × CGPA) + 11]</option>
+                </select>
+              </div>
+
+              <!-- CGPA Score Input -->
+              <div class="input-field-group">
+                <div class="input-header-row">
+                  <label for="cgpa-score" class="input-label">Your Cumulative CGPA</label>
+                  <span id="cgpa-score-badge" class="input-value-badge">8.40 CGPA</span>
+                </div>
+                <input type="number" id="cgpa-score" class="calc-text-input" value="8.4" min="0" max="10" step="0.05">
+                <input type="range" id="cgpa-slider" class="calc-range-slider" min="4.0" max="10.0" step="0.05" value="8.4" aria-label="CGPA Slider">
+                <div class="slider-scale-row">
+                  <span>4.0 (Pass)</span>
+                  <span>7.0 (First Class)</span>
+                  <span>10.0 (Perfect)</span>
+                </div>
+              </div>
+
+              <!-- Formula Box -->
+              <div style="background: #F8FAFC; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem; font-size: 0.875rem;">
+                <div style="font-weight: 700; color: var(--text-main); margin-bottom: 0.25rem;">Active Formula:</div>
+                <div id="cgpa-formula-display" style="font-family: var(--font-mono); color: var(--primary); font-weight: 600;">Percentage = 8.40 × 9.5 = 79.80%</div>
+              </div>
+
+            </div>
+
+            <!-- Results -->
+            <div class="calc-results-col">
+              <div class="result-main-card">
+                <div class="result-label">Equivalent Percentage</div>
+                <div id="res-cgpa-percent" class="result-primary-value">79.80%</div>
+                <div id="res-cgpa-class" class="result-subtext">First Class with Distinction</div>
+              </div>
+
+              <!-- Breakdown Rows -->
+              <div class="result-breakdown-list">
+                <div class="breakdown-row">
+                  <span class="breakdown-label">
+                    <span class="breakdown-dot dot-primary"></span>
+                    Entered CGPA
+                  </span>
+                  <span id="res-cgpa-val" class="breakdown-val">8.40 / 10.0</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-label">
+                    <span class="breakdown-dot dot-neutral"></span>
+                    Letter Grade
+                  </span>
+                  <span id="res-cgpa-letter" class="breakdown-val">A+</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-label">
+                    <span class="breakdown-dot dot-accent"></span>
+                    Academic Division
+                  </span>
+                  <span id="res-cgpa-division" class="breakdown-val">Distinction</span>
+                </div>
+              </div>
+
+              <!-- Action buttons -->
+              <div class="calc-actions">
+                <button type="button" id="btn-copy-cgpa" class="btn-primary" style="font-size: 0.875rem; padding: 0.6rem 1rem;">
+                  Copy Result
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- In-Content Ad -->
+        <aside class="ad-wrapper in-content" aria-label="Sponsored Content">
+          <span class="ad-label">Advertisement</span>
+          <div id="ad-slot-2" class="ad-slot responsive-banner">
+            <span>In-Content Ad Slot (Responsive Display)</span>
+          </div>
+        </aside>
+
+        <!-- 400-600 Word Explanatory Content -->
+        <article class="content-article">
+          <h2>Understanding CGPA to Percentage Conversion in Indian Education</h2>
+          <p>
+            The <strong>Cumulative Grade Point Average (CGPA)</strong> is the standardized educational grading metric implemented by the Central Board of Secondary Education (CBSE), Indian institutes of technology (IITs), national institutes of technology (NITs), and premier engineering universities across India. Instead of releasing raw percentage scores, marks cards report performance on a 10-point scale.
+          </p>
+
+          <h3>The Official CBSE 9.5 Multiplier Rationale</h3>
+          <p>
+            Students regularly ask: <em>"Why does CBSE multiply CGPA by 9.5 instead of 10?"</em> When CBSE introduced the Continuous and Comprehensive Evaluation (CCE) pattern, its examination committee analyzed historical scoring distributions across previous board batches:
+          </p>
+          <ul>
+            <li>The statistical average percentage of students who attained an A1 grade (Grade Point 10) was <strong>95%</strong>, not 100%.</li>
+            <li>Consequently, establishing 10 Grade Points equal to 95% established the calibration constant: <strong>95 / 10 = 9.5</strong>.</li>
+            <li>Therefore: <strong>Percentage of Marks = CGPA × 9.5</strong>.</li>
+          </ul>
+
+          <div class="formula-box">
+            <div class="formula-title">CBSE Conversion Standard</div>
+            <code class="formula-math">Subject Percentage (%) = Subject Grade Point (GP) × 9.5</code>
+            <code class="formula-math">Overall Aggregate Percentage (%) = Overall CGPA × 9.5</code>
+          </div>
+
+          <h3>CBSE 10-Point Grading Scale Matrix</h3>
+          <div class="data-table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Marks Range</th>
+                  <th>Grade Letter</th>
+                  <th>Grade Point (GP)</th>
+                  <th>CBSE Percentage Equivalence</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>91 - 100</td>
+                  <td>A1</td>
+                  <td>10.0</td>
+                  <td>95.0%</td>
+                </tr>
+                <tr>
+                  <td>81 - 90</td>
+                  <td>A2</td>
+                  <td>9.0</td>
+                  <td>85.5%</td>
+                </tr>
+                <tr>
+                  <td>71 - 80</td>
+                  <td>B1</td>
+                  <td>8.0</td>
+                  <td>76.0%</td>
+                </tr>
+                <tr>
+                  <td>61 - 70</td>
+                  <td>B2</td>
+                  <td>7.0</td>
+                  <td>66.5%</td>
+                </tr>
+                <tr>
+                  <td>51 - 60</td>
+                  <td>C1</td>
+                  <td>6.0</td>
+                  <td>57.0%</td>
+                </tr>
+                <tr>
+                  <td>41 - 50</td>
+                  <td>C2</td>
+                  <td>5.0</td>
+                  <td>47.5%</td>
+                </tr>
+                <tr>
+                  <td>33 - 40</td>
+                  <td>D</td>
+                  <td>4.0</td>
+                  <td>38.0%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>University & Competitive Exam Requirements</h3>
+          <p>
+            When applying for higher education applications in India—including the <strong>Common Admission Test (CAT)</strong> for IIMs, <strong>UPSC Civil Services</strong>, or campus recruitment drives (TCS, Infosys, Wipro)—candidates are strictly required to convert their collegiate CGPA into an equivalent percentage. Unless an applicant's university transcript specifies a custom formula, standard AICTE or CBSE rules must be utilized as authorized proof.
+          </p>
+        </article>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" aria-label="Frequently Asked Questions">
+          <div class="faq-header">
+            <h2>Frequently Asked Questions on CGPA Conversion</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary class="faq-question">Why does CBSE multiply CGPA by 9.5 to calculate percentage?</summary>
+              <div class="faq-answer">
+                The Central Board of Secondary Education (CBSE) calculated 9.5 by analyzing the average percentage of marks obtained by the top 500 candidates who scored grade points of 10 over the preceding five academic years. This statistical benchmark showed 9.5 as the most accurate linear equivalence.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">What is the formula for converting CGPA to percentage for engineering universities under AICTE?</summary>
+              <div class="faq-answer">
+                Under All India Council for Technical Education (AICTE) norms, universities utilize either: Percentage = (CGPA - 0.75) × 10 or standard direct multiplication Percentage = (CGPA - 0.5) × 10, depending on individual university ordinances.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">How does Mumbai University convert 10-point CGPA to percentage?</summary>
+              <div class="faq-answer">
+                Mumbai University uses the formula: Percentage = (7.1 × CGPA) + 11 for students with a CGPA of 7.0 and above. For students with a CGPA below 7.0, the formula is Percentage = (7.25 × CGPA) + 11.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">What is the VTU (Visvesvaraya Technological University) CGPA to percentage formula?</summary>
+              <div class="faq-answer">
+                VTU Karnataka officially prescribes the formula: Percentage = (CGPA - 0.75) × 10. For instance, an 8.25 CGPA at VTU converts to: (8.25 - 0.75) × 10 = 75.00%.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">Is 8.0 CGPA considered First Class in Indian universities?</summary>
+              <div class="faq-answer">
+                Yes, an 8.0 CGPA in CBSE equates to 76.0% (8.0 × 9.5), which comfortably surpasses the 60.0% benchmark for First Class, and qualifies as 'First Class with Distinction' across most state and central universities.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">How do I calculate subject-wise percentage from Grade Points?</summary>
+              <div class="faq-answer">
+                Multiply your individual subject Grade Point (GP) by 9.5. For example, if you scored a GP of 9 in Mathematics, your estimated percentage is 9 × 9.5 = 85.5%.
+              </div>
+            </details>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="calc-sidebar">
+        
+        <!-- Sidebar Ad -->
+        <div class="sidebar-box" style="padding: 1rem; text-align: center;">
+          <span class="ad-label">Advertisement</span>
+          <div id="ad-slot-3" class="ad-slot rectangle">
+            <span>Sidebar Ad (300x250)</span>
+          </div>
+        </div>
+
+        <!-- Related Calculators -->
+        <div class="sidebar-box">
+          <h3 class="sidebar-title">Related Calculators</h3>
+          <ul class="sidebar-links">
+            <li>
+              <a href="/percentage-calculator">
+                <span>Percentage Calculator</span>
+                <span>→</span>
+              </a>
+            </li>
+            <li>
+              <a href="/age-calculator">
+                <span>Age Calculator</span>
+                <span>→</span>
+              </a>
+            </li>
+            <li>
+              <a href="/emi-calculator">
+                <span>Loan EMI Calculator</span>
+                <span>→</span>
+              </a>
+            </li>
+            <li>
+              <a href="/gst-calculator">
+                <span>GST Tax Calculator</span>
+                <span>→</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="site-logo" style="color: #FFFFFF;">
+            <img src="/images/logo.svg" alt="Indian Calculator Hub" width="200" height="34" style="filter: brightness(0) invert(1);">
+          </a>
+          <p>
+            Indian Calculator Hub provides free financial and mathematical tools engineered for Indian citizens.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Finance Tools</h4>
+          <ul class="footer-links">
+            <li><a href="/emi-calculator">EMI Calculator</a></li>
+            <li><a href="/sip-calculator">SIP Calculator</a></li>
+            <li><a href="/fd-calculator">FD Calculator</a></li>
+            <li><a href="/gst-calculator">GST Calculator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Academic & Life</h4>
+          <ul class="footer-links">
+            <li><a href="/percentage-calculator">Percentage Calculator</a></li>
+            <li><a href="/cgpa-calculator">CGPA to %</a></li>
+            <li><a href="/age-calculator">Age Calculator</a></li>
+            <li><a href="/bmi-calculator">Asian Indian BMI</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Legal & Trust</h4>
+          <ul class="footer-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact Support</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms-of-use">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Indian Calculator Hub. All rights reserved.</div>
+        <div>
+          <a href="/privacy-policy" style="color: #94A3B8; margin-right: 1rem;">Privacy Policy</a>
+          <a href="/terms-of-use" style="color: #94A3B8;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/calculators.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    // CGPA Calculator Wiring
+    const cgpaScoreInput = document.getElementById('cgpa-score');
+    const cgpaSlider = document.getElementById('cgpa-slider');
+    const cgpaBadge = document.getElementById('cgpa-score-badge');
+    const cgpaScale = document.getElementById('cgpa-scale');
+    const cgpaFormulaDisplay = document.getElementById('cgpa-formula-display');
+
+    const resPercent = document.getElementById('res-cgpa-percent');
+    const resClass = document.getElementById('res-cgpa-class');
+    const resVal = document.getElementById('res-cgpa-val');
+    const resLetter = document.getElementById('res-cgpa-letter');
+    const resDivision = document.getElementById('res-cgpa-division');
+
+    function updateCGPA() {
+      const score = parseFloat(cgpaScoreInput.value) || 0;
+      const formula = cgpaScale.value;
+
+      cgpaBadge.textContent = score.toFixed(2) + ' CGPA';
+
+      const res = IndianCalc.calculateCGPA(score, formula);
+
+      resPercent.textContent = res.percentage + '%';
+      resClass.textContent = res.classification;
+      resVal.textContent = score.toFixed(2) + ' / 10.0';
+      resLetter.textContent = res.gradeLetter;
+      resDivision.textContent = res.classification;
+
+      if (formula === 'cbse') {
+        cgpaFormulaDisplay.textContent = `Percentage = ${score.toFixed(2)} × 9.5 = ${res.percentage}%`;
+      } else if (formula === 'mumbai') {
+        cgpaFormulaDisplay.textContent = `Percentage = (7.1 × ${score.toFixed(2)}) + 11 = ${res.percentage}%`;
+      } else if (formula === 'vtu') {
+        cgpaFormulaDisplay.textContent = `Percentage = (${score.toFixed(2)} - 0.75) × 10 = ${res.percentage}%`;
+      } else {
+        cgpaFormulaDisplay.textContent = `Percentage = ${score.toFixed(2)} × 10 = ${res.percentage}%`;
+      }
+    }
+
+    cgpaScoreInput.addEventListener('input', () => {
+      cgpaSlider.value = cgpaScoreInput.value;
+      updateCGPA();
+    });
+    cgpaSlider.addEventListener('input', () => {
+      cgpaScoreInput.value = cgpaSlider.value;
+      updateCGPA();
+    });
+    cgpaScale.addEventListener('change', updateCGPA);
+
+    document.getElementById('btn-copy-cgpa').addEventListener('click', () => {
+      const s = cgpaScoreInput.value;
+      const text = `CGPA Conversion:\nCGPA: ${s} / 10.0\nEquivalent Percentage: ${resPercent.textContent}\nDivision: ${resClass.textContent}\nFormula: ${cgpaFormulaDisplay.textContent}\nCalculated via Indian Calculator Hub (https://roaring-boba-b53db8.netlify.app/cgpa-calculator)`;
+      window.copyToClipboard(text, 'CGPA Result copied to clipboard!');
+    });
+
+    updateCGPA();
+  </script>
+</body>
+</html>
