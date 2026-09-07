@@ -5,44 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EPF Calculator - Employee Provident Fund</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google FAQ Schema Markup for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Employee Provident Fund (EPF)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EPF is a government-backed retirement savings scheme for salaried employees in India, managed by the Employees' Provident Fund Organisation (EPFO)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the EPF contribution split between employee and employer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The employee contributes 12% of Basic Salary + DA to EPF. The employer matches 12%, which is split as 3.67% to EPF and 8.33% to EPS (Employee Pension Scheme, capped at ₹1,250/month)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the current EPF interest rate for 2025-26?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The EPFO sets the annual interest rate, which is currently 8.25% per annum. Interest is calculated monthly but credited annually."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is EPF maturity amount completely tax-free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, EPF falls under the Exempt-Exempt-Exempt (EEE) status. Contributions, interest earned, and final maturity withdrawal are fully tax-exempt if completed after 5 years of continuous service."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I withdraw my EPF balance before retirement at age 58?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Partial withdrawals are allowed for specific needs such as home buying, medical emergencies, higher education, or marriage after fulfilling minimum service requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does annual salary increment impact the EPF corpus?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An annual salary increment increases your base salary, thereby raising your monthly 12% contribution. Over 20-30 years, compounding dramatically inflates your final retirement corpus."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="bg-gray-50 text-gray-800">
     <div class="max-w-4xl mx-auto px-4 py-8">
         <h1 class="text-3xl font-bold text-center text-gray-800 mb-2">EPF Calculator</h1>
         <p class="text-center text-gray-600 mb-8">Calculate your retirement corpus and interest earned on EPF.</p>
 
-        <div class="grid md:grid-cols-2 gap-8 bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+        <!-- Calculator Section -->
+        <div class="grid md:grid-cols-2 gap-8 bg-white p-6 rounded-2xl shadow-lg border border-gray-100 mb-12">
             <div class="space-y-4">
                 <div>
-                    <label class="block text-sm font-medium">Monthly Basic Salary + DA (₹)</label>
-                    <input type="number" id="basicSalary" value="25000" class="mt-1 w-full p-3 border rounded-xl" oninput="calculateEPF()">
+                    <label class="block text-sm font-medium text-gray-700">Monthly Basic Salary + DA (₹)</label>
+                    <input type="number" id="basicSalary" value="25000" class="mt-1 w-full p-3 border rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none" oninput="calculateEPF()">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium">Your Current Age (Years)</label>
-                    <input type="number" id="age" value="25" class="mt-1 w-full p-3 border rounded-xl" oninput="calculateEPF()">
+                    <label class="block text-sm font-medium text-gray-700">Your Current Age (Years)</label>
+                    <input type="number" id="age" value="25" class="mt-1 w-full p-3 border rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none" oninput="calculateEPF()">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium">Annual Increment (%)</label>
-                    <input type="number" id="increment" value="5" class="mt-1 w-full p-3 border rounded-xl" oninput="calculateEPF()">
+                    <label class="block text-sm font-medium text-gray-700">Annual Increment (%)</label>
+                    <input type="number" id="increment" value="5" class="mt-1 w-full p-3 border rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none" oninput="calculateEPF()">
                 </div>
                 <div>
-                    <label class="block text-sm font-medium">EPF Interest Rate (%)</label>
-                    <input type="number" id="rate" value="8.25" class="mt-1 w-full p-3 border rounded-xl" oninput="calculateEPF()">
+                    <label class="block text-sm font-medium text-gray-700">EPF Interest Rate (%)</label>
+                    <input type="number" id="rate" value="8.25" class="mt-1 w-full p-3 border rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none" oninput="calculateEPF()">
                 </div>
             </div>
 
             <div class="bg-emerald-50 p-6 rounded-xl flex flex-col justify-between border border-emerald-100">
                 <div class="space-y-3">
                     <h3 class="text-lg font-semibold text-emerald-900 mb-4">Retirement Summary (Age 58)</h3>
-                    <div class="flex justify-between text-sm">
+                    <div class="flex justify-between text-sm text-gray-700">
                         <span>Employee Contribution:</span>
                         <span id="empTotal" class="font-semibold">₹0</span>
                     </div>
-                    <div class="flex justify-between text-sm">
+                    <div class="flex justify-between text-sm text-gray-700">
                         <span>Employer Contribution:</span>
                         <span id="emprTotal" class="font-semibold">₹0</span>
                     </div>
-                    <div class="flex justify-between text-sm">
+                    <div class="flex justify-between text-sm text-gray-700">
                         <span>Total Interest Earned:</span>
                         <span id="interestEarned" class="font-semibold text-emerald-600">₹0</span>
                     </div>
@@ -53,6 +112,55 @@
                 </div>
             </div>
         </div>
+
+        <!-- 6 High-Quality SEO FAQs Section -->
+        <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 space-y-6">
+            <h2 class="text-2xl font-bold text-gray-900 border-b pb-3">Frequently Asked Questions (FAQs)</h2>
+            
+            <div class="space-y-4">
+                <div class="border-b pb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-1">1. What is Employee Provident Fund (EPF)?</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        EPF is a government-backed mandatory retirement savings scheme for salaried employees in India, managed by the Employees' Provident Fund Organisation (EPFO).
+                    </p>
+                </div>
+
+                <div class="border-b pb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-1">2. How is the EPF contribution split between employee and employer?</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        The employee contributes 12% of Basic Salary + DA to EPF. The employer matches 12%, which is split as 3.67% to the EPF account and 8.33% towards the EPS (Employee Pension Scheme, capped at ₹1,250/month).
+                    </p>
+                </div>
+
+                <div class="border-b pb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-1">3. What is the current EPF interest rate for 2025–2026?</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        The EPFO sets the annual interest rate, which currently stands at 8.25% per annum. Interest is calculated on a monthly compounding basis and credited at the end of every financial year.
+                    </p>
+                </div>
+
+                <div class="border-b pb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-1">4. Is the EPF maturity amount completely tax-free?</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Yes, EPF enjoys Exempt-Exempt-Exempt (EEE) status in India. Contributions, interest accumulated, and final maturity withdrawals are completely tax-free if withdrawn after 5 continuous years of service.
+                    </p>
+                </div>
+
+                <div class="border-b pb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-1">5. Can I withdraw my EPF balance before retirement at age 58?</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Partial withdrawals are allowed for specific events such as buying/constructing a home, major medical treatments, higher education, or marriage after completing specified tenure requirements.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-1">6. How does annual salary increment impact the EPF corpus?</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        An annual salary increment raises your basic pay, automatically increasing monthly EPF contributions. Over a 20-30 year career, this compounding effect drastically inflates your final retirement balance.
+                    </p>
+                </div>
+            </div>
+        </section>
     </div>
 
     <script>
@@ -64,6 +172,7 @@
 
             let totalBalance = 0, empContrib = 0, emprContrib = 0;
             let years = 58 - age;
+            if (years <= 0) years = 1;
             let monthlyRate = rate / 12 / 100;
 
             for (let i = 0; i < years; i++) {
