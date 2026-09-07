@@ -1,197 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EPF Calculator - Employee Provident Fund</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+<!-- Accordion FAQ Section -->
+<section class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-4">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
     
-    <!-- Google FAQ Schema Markup for Rich Snippets -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is Employee Provident Fund (EPF)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "EPF is a government-backed retirement savings scheme for salaried employees in India, managed by the Employees' Provident Fund Organisation (EPFO)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is the EPF contribution split between employee and employer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The employee contributes 12% of Basic Salary + DA to EPF. The employer matches 12%, which is split as 3.67% to EPF and 8.33% to EPS (Employee Pension Scheme, capped at ₹1,250/month)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the current EPF interest rate for 2025-26?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The EPFO sets the annual interest rate, which is currently 8.25% per annum. Interest is calculated monthly but credited annually."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is EPF maturity amount completely tax-free?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, EPF falls under the Exempt-Exempt-Exempt (EEE) status. Contributions, interest earned, and final maturity withdrawal are fully tax-exempt if completed after 5 years of continuous service."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I withdraw my EPF balance before retirement at age 58?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Partial withdrawals are allowed for specific needs such as home buying, medical emergencies, higher education, or marriage after fulfilling minimum service requirements."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does annual salary increment impact the EPF corpus?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "An annual salary increment increases your base salary, thereby raising your monthly 12% contribution. Over 20-30 years, compounding dramatically inflates your final retirement corpus."
-          }
-        }
-      ]
-    }
-    </script>
-</head>
-<body class="bg-gray-50 text-gray-800">
-    <div class="max-w-4xl mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold text-center text-gray-800 mb-2">EPF Calculator</h1>
-        <p class="text-center text-gray-600 mb-8">Calculate your retirement corpus and interest earned on EPF.</p>
-
-        <!-- Calculator Section -->
-        <div class="grid md:grid-cols-2 gap-8 bg-white p-6 rounded-2xl shadow-lg border border-gray-100 mb-12">
-            <div class="space-y-4">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700">Monthly Basic Salary + DA (₹)</label>
-                    <input type="number" id="basicSalary" value="25000" class="mt-1 w-full p-3 border rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none" oninput="calculateEPF()">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700">Your Current Age (Years)</label>
-                    <input type="number" id="age" value="25" class="mt-1 w-full p-3 border rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none" oninput="calculateEPF()">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700">Annual Increment (%)</label>
-                    <input type="number" id="increment" value="5" class="mt-1 w-full p-3 border rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none" oninput="calculateEPF()">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700">EPF Interest Rate (%)</label>
-                    <input type="number" id="rate" value="8.25" class="mt-1 w-full p-3 border rounded-xl focus:ring-2 focus:ring-emerald-500 outline-none" oninput="calculateEPF()">
-                </div>
-            </div>
-
-            <div class="bg-emerald-50 p-6 rounded-xl flex flex-col justify-between border border-emerald-100">
-                <div class="space-y-3">
-                    <h3 class="text-lg font-semibold text-emerald-900 mb-4">Retirement Summary (Age 58)</h3>
-                    <div class="flex justify-between text-sm text-gray-700">
-                        <span>Employee Contribution:</span>
-                        <span id="empTotal" class="font-semibold">₹0</span>
-                    </div>
-                    <div class="flex justify-between text-sm text-gray-700">
-                        <span>Employer Contribution:</span>
-                        <span id="emprTotal" class="font-semibold">₹0</span>
-                    </div>
-                    <div class="flex justify-between text-sm text-gray-700">
-                        <span>Total Interest Earned:</span>
-                        <span id="interestEarned" class="font-semibold text-emerald-600">₹0</span>
-                    </div>
-                </div>
-                <div class="pt-4 border-t border-emerald-200 mt-4">
-                    <span class="text-sm text-emerald-800 block">Total Corpus</span>
-                    <span id="maturityAmount" class="text-3xl font-extrabold text-emerald-700">₹0</span>
-                </div>
+    <div class="space-y-3">
+        <!-- FAQ Item 1 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden">
+            <button class="w-full p-4 text-left font-semibold text-gray-800 flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition" onclick="toggleFaq(1)">
+                <span>What is Employee Provident Fund (EPF)?</span>
+                <span id="icon-1" class="text-xl font-bold text-gray-500">+</span>
+            </button>
+            <div id="faq-1" class="hidden p-4 text-sm text-gray-600 bg-white border-t border-gray-100">
+                EPF is a government-backed mandatory retirement savings scheme for salaried employees in India, managed by the Employees' Provident Fund Organisation (EPFO).
             </div>
         </div>
 
-        <!-- 6 High-Quality SEO FAQs Section -->
-        <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 space-y-6">
-            <h2 class="text-2xl font-bold text-gray-900 border-b pb-3">Frequently Asked Questions (FAQs)</h2>
-            
-            <div class="space-y-4">
-                <div class="border-b pb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-1">1. What is Employee Provident Fund (EPF)?</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        EPF is a government-backed mandatory retirement savings scheme for salaried employees in India, managed by the Employees' Provident Fund Organisation (EPFO).
-                    </p>
-                </div>
-
-                <div class="border-b pb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-1">2. How is the EPF contribution split between employee and employer?</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        The employee contributes 12% of Basic Salary + DA to EPF. The employer matches 12%, which is split as 3.67% to the EPF account and 8.33% towards the EPS (Employee Pension Scheme, capped at ₹1,250/month).
-                    </p>
-                </div>
-
-                <div class="border-b pb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-1">3. What is the current EPF interest rate for 2025–2026?</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        The EPFO sets the annual interest rate, which currently stands at 8.25% per annum. Interest is calculated on a monthly compounding basis and credited at the end of every financial year.
-                    </p>
-                </div>
-
-                <div class="border-b pb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-1">4. Is the EPF maturity amount completely tax-free?</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Yes, EPF enjoys Exempt-Exempt-Exempt (EEE) status in India. Contributions, interest accumulated, and final maturity withdrawals are completely tax-free if withdrawn after 5 continuous years of service.
-                    </p>
-                </div>
-
-                <div class="border-b pb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-1">5. Can I withdraw my EPF balance before retirement at age 58?</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Partial withdrawals are allowed for specific events such as buying/constructing a home, major medical treatments, higher education, or marriage after completing specified tenure requirements.
-                    </p>
-                </div>
-
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-800 mb-1">6. How does annual salary increment impact the EPF corpus?</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        An annual salary increment raises your basic pay, automatically increasing monthly EPF contributions. Over a 20-30 year career, this compounding effect drastically inflates your final retirement balance.
-                    </p>
-                </div>
+        <!-- FAQ Item 2 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden">
+            <button class="w-full p-4 text-left font-semibold text-gray-800 flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition" onclick="toggleFaq(2)">
+                <span>How is the EPF contribution split between employee and employer?</span>
+                <span id="icon-2" class="text-xl font-bold text-gray-500">+</span>
+            </button>
+            <div id="faq-2" class="hidden p-4 text-sm text-gray-600 bg-white border-t border-gray-100">
+                The employee contributes 12% of Basic Salary + DA to EPF. The employer matches 12%, which is split as 3.67% to EPF and 8.33% to EPS (Employee Pension Scheme, capped at ₹1,250/month).
             </div>
-        </section>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden">
+            <button class="w-full p-4 text-left font-semibold text-gray-800 flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition" onclick="toggleFaq(3)">
+                <span>What is the current EPF interest rate for 2025–2026?</span>
+                <span id="icon-3" class="text-xl font-bold text-gray-500">+</span>
+            </button>
+            <div id="faq-3" class="hidden p-4 text-sm text-gray-600 bg-white border-t border-gray-100">
+                The EPFO sets the annual interest rate, which currently stands at 8.25% per annum. Interest is calculated monthly and credited annually.
+            </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden">
+            <button class="w-full p-4 text-left font-semibold text-gray-800 flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition" onclick="toggleFaq(4)">
+                <span>Is the EPF maturity amount completely tax-free?</span>
+                <span id="icon-4" class="text-xl font-bold text-gray-500">+</span>
+            </button>
+            <div id="faq-4" class="hidden p-4 text-sm text-gray-600 bg-white border-t border-gray-100">
+                Yes, EPF enjoys Exempt-Exempt-Exempt (EEE) status. Contributions, interest, and withdrawals are fully tax-exempt after 5 years of continuous service.
+            </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden">
+            <button class="w-full p-4 text-left font-semibold text-gray-800 flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition" onclick="toggleFaq(5)">
+                <span>Can I withdraw my EPF balance before retirement at age 58?</span>
+                <span id="icon-5" class="text-xl font-bold text-gray-500">+</span>
+            </button>
+            <div id="faq-5" class="hidden p-4 text-sm text-gray-600 bg-white border-t border-gray-100">
+                Partial withdrawals are allowed for home purchase, medical emergencies, higher education, or marriage after meeting minimum tenure rules.
+            </div>
+        </div>
+
+        <!-- FAQ Item 6 -->
+        <div class="border border-gray-200 rounded-xl overflow-hidden">
+            <button class="w-full p-4 text-left font-semibold text-gray-800 flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition" onclick="toggleFaq(6)">
+                <span>How does annual salary increment impact the EPF corpus?</span>
+                <span id="icon-6" class="text-xl font-bold text-gray-500">+</span>
+            </button>
+            <div id="faq-6" class="hidden p-4 text-sm text-gray-600 bg-white border-t border-gray-100">
+                Salary increments automatically increase your monthly 12% contribution, accelerating your retirement savings compounding significantly.
+            </div>
+        </div>
     </div>
+</section>
 
-    <script>
-        function calculateEPF() {
-            let basicSalary = Number(document.getElementById('basicSalary').value);
-            let age = Number(document.getElementById('age').value);
-            let increment = Number(document.getElementById('increment').value);
-            let rate = Number(document.getElementById('rate').value);
-
-            let totalBalance = 0, empContrib = 0, emprContrib = 0;
-            let years = 58 - age;
-            if (years <= 0) years = 1;
-            let monthlyRate = rate / 12 / 100;
-
-            for (let i = 0; i < years; i++) {
-                for (let m = 0; m < 12; m++) {
-                    let empMonthly = basicSalary * 0.12;
-                    let emprMonthly = basicSalary * 0.0367;
-                    empContrib += empMonthly;
-                    emprContrib += emprMonthly;
-                    totalBalance = (totalBalance + empMonthly + emprMonthly) * (1 + monthlyRate);
-                }
-                basicSalary += basicSalary * (increment / 100);
-            }
-
-            document.getElementById('empTotal').innerText = '₹' + Math.round(empContrib).toLocaleString('en-IN');
-            document.getElementById('emprTotal').innerText = '₹' + Math.round(emprContrib).toLocaleString('en-IN');
-            document.getElementById('interestEarned').innerText = '₹' + Math.round(totalBalance - (empContrib + emprContrib)).toLocaleString('en-IN');
-            document.getElementById('maturityAmount').innerText = '₹' + Math.round(totalBalance).toLocaleString('en-IN');
+<!-- JavaScript Function for Accordion Plus Toggle -->
+<script>
+    function toggleFaq(id) {
+        let content = document.getElementById('faq-' + id);
+        let icon = document.getElementById('icon-' + id);
+        
+        if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            icon.innerText = '−';
+        } else {
+            content.classList.add('hidden');
+            icon.innerText = '+';
         }
-        calculateEPF();
-    </script>
-</body>
-</html>
+    }
+</script>
