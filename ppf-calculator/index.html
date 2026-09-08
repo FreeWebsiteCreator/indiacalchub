@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPF Calculator Online | Calculate Public Provident Fund Maturity</title>
+    <meta name="description" content="Free online PPF Calculator to compute Public Provident Fund maturity value, total interest earned, and year-by-year investment growth over 15 years in India.">
+    <meta name="keywords" content="ppf calculator, public provident fund calculator, ppf maturity calculation, ppf interest rate, ppf return calculator india">
+    <link rel="canonical" href="https://indiancalchub.online/ppf-calculator/" />
+
+    <!-- Schema Structured Data for Fast Google Indexing & Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PPF Calculator India",
+      "url": "https://indiancalchub.online/ppf-calculator/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "description": "Calculate Public Provident Fund (PPF) maturity returns and interest compounding online."
+    }
+    </script>
+
+    <!-- All-in-One CSS Styling -->
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; line-height: 1.6; padding: 20px; }
+        .calc-container { max-width: 800px; margin: 20px auto; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        h1 { text-align: center; color: #0d6efd; font-size: 26px; margin-bottom: 8px; }
+        .subtitle { text-align: center; color: #6c757d; margin-bottom: 25px; font-size: 15px; }
+        
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-weight: 600; margin-bottom: 6px; color: #212529; }
+        input[type="number"], select { width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; font-size: 16px; outline: none; transition: border-color 0.2s; }
+        input[type="number"]:focus, select:focus { border-color: #0d6efd; }
+        .note-text { font-size: 12px; color: #6c757d; margin-top: 4px; }
+
+        .calc-btn { width: 100%; padding: 14px; background-color: #0d6efd; color: #ffffff; font-size: 16px; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.3s; }
+        .calc-btn:hover { background-color: #0b5ed7; }
+
+        .results-box { display: none; margin-top: 25px; padding: 20px; background: #f0f7ff; border: 1px solid #cfe2ff; border-radius: 8px; }
+        .results-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; text-align: center; margin-top: 10px; }
+        .res-card { background: #ffffff; padding: 15px; border-radius: 6px; border: 1px solid #e2e8f0; }
+        .res-card label { font-size: 13px; color: #6c757d; font-weight: normal; }
+        .res-card .val { font-size: 20px; font-weight: bold; color: #0d6efd; margin-top: 4px; }
+        .res-card .val.highlight { color: #198754; }
+
+        .seo-section { margin-top: 35px; border-top: 1px solid #e9ecef; padding-top: 25px; }
+        .seo-section h2 { color: #0d6efd; font-size: 20px; margin-bottom: 12px; margin-top: 20px; }
+        .seo-section p, .seo-section ul { color: #495057; font-size: 15px; }
+        .seo-section ul { margin-left: 20px; margin-top: 8px; }
+        .faq-item { margin-top: 15px; }
+        .faq-item h4 { color: #212529; font-weight: 600; font-size: 15px; }
+        .faq-item p { color: #495057; font-size: 14px; }
+
+        @media (max-width: 650px) { .results-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<main class="calc-container">
+    <h1>PPF Calculator (Public Provident Fund)</h1>
+    <p class="subtitle">Calculate guaranteed returns, interest growth, and 15-year maturity value</p>
+
+    <div class="form-group">
+        <label for="yearDeposit">Yearly Investment Amount (₹)</label>
+        <input type="number" id="yearDeposit" placeholder="e.g. 150000" min="500" max="150000" value="150000">
+        <div class="note-text">Min deposit: ₹500/year | Max tax-exempt deposit: ₹1,50,000/year (Sec 80C)</div>
+    </div>
+
+    <div class="form-group">
+        <label for="interestRate">Current Interest Rate (% per annum)</label>
+        <input type="number" id="interestRate" value="7.1" step="0.1" min="1" max="15">
+        <div class="note-text">Govt of India benchmark rate (compounded annually)</div>
+    </div>
+
+    <div class="form-group">
+        <label for="tenureYears">Investment Tenure (Years)</label>
+        <select id="tenureYears">
+            <option value="15" selected>15 Years (Standard Lock-in Period)</option>
+            <option value="20">20 Years (1 Extension Block)</option>
+            <option value="25">25 Years (2 Extension Blocks)</option>
+            <option value="30">30 Years (3 Extension Blocks)</option>
+        </select>
+    </div>
+
+    <button class="calc-btn" onclick="calculatePPF()">Calculate Returns</button>
+
+    <div class="results-box" id="resultsBox">
+        <div class="results-grid">
+            <div class="res-card">
+                <label>Total Invested</label>
+                <div class="val" id="totalInvestedVal">₹0</div>
+            </div>
+            <div class="res-card">
+                <label>Total Interest Earned</label>
+                <div class="val highlight" id="totalInterestVal">₹0</div>
+            </div>
+            <div class="res-card">
+                <label>Maturity Corpus</label>
+                <div class="val" id="maturityVal">₹0</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEO Content, Explanation, & FAQs -->
+    <section class="seo-section">
+        <h2>What is Public Provident Fund (PPF)?</h2>
+        <p>The <strong>Public Provident Fund (PPF)</strong> is one of India's most trusted long-term government-backed savings schemes. It falls under the prestigious <strong>EEE (Exempt-Exempt-Exempt) tax category</strong>, meaning your initial investment, earned interest, and ultimate maturity amount are completely exempt from Income Tax.</p>
+
+        <h2>PPF Rules & Calculation Mechanism</h2>
+        <ul>
+            <li><strong>Interest Calculation:</strong> Interest is calculated monthly on the lowest balance available in the account between the 5th and the last day of each month, but credited annually on March 31st.</li>
+            <li><strong>Lock-in Period:</strong> Default maturity is 15 financial years. Post-maturity, it can be extended infinitely in blocks of 5 years with or without fresh contributions.</li>
+            <li><strong>Tax Benefit:</strong> Deposits up to ₹1,50,000 per financial year qualify for deduction under Section 80C of the Income Tax Act.</li>
+        </ul>
+
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <div class="faq-item">
+            <h4>Q1. What is the best date in a month to deposit money in PPF?</h4>
+            <p>To maximize your interest payout, always deposit money on or before the <strong>5th of any month</strong>. Deposits made after the 5th will not earn interest for that specific month.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Q2. Is PPF interest tax-free in India?</h4>
+            <p>Yes, all interest accumulated in a PPF account is 100% tax-free under Section 10(11) of the Indian Income Tax Act.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Q3. Can I extend my PPF account after 15 years?</h4>
+            <p>Yes, you can extend your account in blocks of 5 years indefinitely by submitting Form H at your post office or bank before completing 1 year from maturity.</p>
+        </div>
+    </section>
+</main>
+
+<!-- Embedded Client-Side JavaScript Logic -->
+<script>
+function calculatePPF() {
+    const deposit = parseFloat(document.getElementById('yearDeposit').value) || 0;
+    const rate = parseFloat(document.getElementById('interestRate').value) || 0;
+    const years = parseInt(document.getElementById('tenureYears').value) || 15;
+
+    if (deposit < 500) {
+        alert("Minimum yearly investment in PPF is ₹500.");
+        return;
+    }
+    if (deposit > 150000) {
+        alert("Maximum yearly tax-exempt investment allowed in PPF is ₹1,50,000.");
+        return;
+    }
+
+    let currentBalance = 0;
+    let totalInvested = 0;
+    const r = rate / 100;
+
+    for (let i = 1; i <= years; i++) {
+        totalInvested += deposit;
+        currentBalance = (currentBalance + deposit) * (1 + r);
+    }
+
+    const totalInterest = currentBalance - totalInvested;
+
+    document.getElementById('resultsBox').style.display = 'block';
+    document.getElementById('totalInvestedVal').innerText = "₹" + Math.round(totalInvested).toLocaleString('en-IN');
+    document.getElementById('totalInterestVal').innerText = "₹" + Math.round(totalInterest).toLocaleString('en-IN');
+    document.getElementById('maturityVal').innerText = "₹" + Math.round(currentBalance).toLocaleString('en-IN');
+}
+</script>
+
+</body>
+</html>
