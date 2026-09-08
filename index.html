@@ -1,559 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KWSFTNW1VF"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-KWSFTNW1VF');
   </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Indian Calculator Hub - Free Finance, Student & Daily Online Calculators</title>
-  <meta name="description" content="Calculate EMI, SIP, FD interest, GST, Percentage, CGPA to %, exact Age, and BMI instantly. Free, accurate, and customized for Indian financial and educational standards.">
-  <meta name="keywords" content="indian calculators, emi calculator, sip calculator india, fd calculator, gst calculator online, percentage calculator, cbse cgpa calculator, age calculator, bmi calculator india">
-  <link rel="canonical" href="https://roaring-boba-b53db8.netlify.app/">
+  <title>Indian Calculator Hub - Free Finance, Tax, Student & Health Calculators</title>
+  <meta name="description" content="Calculate EMI, SIP, Income Tax, PPF, NPS, GST, Scientific Math, Calorie, CGPA, Age, and BMI instantly. Free, accurate, and customized for Indian standards.">
+  <link rel="canonical" href="https://indiancalchub.online/">
   
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://roaring-boba-b53db8.netlify.app/">
-  <meta property="og:title" content="Indian Calculator Hub - Fast, Free & Accurate Calculators for India">
-  <meta property="og:description" content="Instant calculation for Home Loan EMI, Mutual Fund SIP, Bank FD, GST Invoices, CBSE CGPA, Age, and Asian Indian BMI.">
-  <meta property="og:image" content="https://roaring-boba-b53db8.netlify.app/images/logo.svg">
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Indian Calculator Hub - Free Online Calculators for India">
-  <meta name="twitter:description" content="Instant, reliable calculation tools for Indian finance, education, and daily health milestones.">
-  
-  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    :root {
+      --primary: #1e40af;
+      --primary-hover: #1d4ed8;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 12px;
+      --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.05);
+    }
 
-  <!-- Google AdSense Placeholder in Head -->
-  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.5; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
 
-  <!-- Structured Data: WebSite & Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://roaring-boba-b53db8.netlify.app/#website",
-        "url": "https://roaring-boba-b53db8.netlify.app/",
-        "name": "Indian Calculator Hub",
-        "description": "Comprehensive suite of finance, student, and daily lifestyle calculators built specifically for Indian standards.",
-        "inLanguage": "en-IN"
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://roaring-boba-b53db8.netlify.app/#organization",
-        "name": "Indian Calculator Hub",
-        "url": "https://roaring-boba-b53db8.netlify.app/",
-        "logo": "https://roaring-boba-b53db8.netlify.app/images/logo.svg"
-      }
-    ]
-  }
-  </script>
+    /* Header */
+    header { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+    nav a { text-decoration: none; color: var(--text-muted); margin-left: 1.5rem; font-weight: 500; }
+    nav a:hover, nav a.active { color: var(--primary); }
+
+    /* Ads Placement */
+    .ad-banner { background: #f1f5f9; border: 1px dashed #cbd5e1; text-align: center; padding: 0.75rem; margin: 1rem 0; color: var(--text-muted); font-size: 0.85rem; border-radius: 8px; }
+
+    /* Hero & Search */
+    .hero { text-align: center; padding: 2.5rem 1rem; background: var(--surface); border-bottom: 1px solid var(--border); }
+    .hero h1 { font-size: 2.25rem; margin-bottom: 0.5rem; }
+    .hero p { color: var(--text-muted); margin-bottom: 1.5rem; }
+    .search-box { max-width: 500px; margin: 0 auto; }
+    .search-box input { width: 100%; padding: 0.85rem 1.25rem; border: 2px solid var(--border); border-radius: 25px; font-size: 1rem; outline: none; }
+    .search-box input:focus { border-color: var(--primary); }
+
+    /* Tabs */
+    .tabs { display: flex; gap: 0.5rem; justify-content: center; margin: 2rem 0 1rem; flex-wrap: wrap; }
+    .tab-btn { padding: 0.5rem 1.25rem; border: 1px solid var(--border); background: var(--surface); border-radius: 20px; cursor: pointer; font-weight: 500; }
+    .tab-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+
+    /* Grid Layout */
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; padding-bottom: 3rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow); }
+    .card h3 { font-size: 1.15rem; margin-bottom: 1rem; color: var(--primary); }
+    
+    /* Calculator Forms */
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--text-muted); }
+    .form-group input, .form-group select { width: 100%; padding: 0.6rem; border: 1px solid var(--border); border-radius: 6px; font-size: 0.95rem; }
+    .calc-btn { width: 100%; padding: 0.75rem; background: var(--primary); color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; margin-top: 0.5rem; }
+    .calc-btn:hover { background: var(--primary-hover); }
+    
+    /* Output Screen */
+    .result-box { margin-top: 1rem; padding: 0.85rem; background: #eff6ff; border-radius: 6px; border-left: 4px solid var(--primary); display: none; }
+    .result-box.active { display: block; }
+    .result-item { font-size: 0.9rem; margin-bottom: 0.25rem; }
+    .result-value { font-weight: 700; font-size: 1.1rem; color: var(--primary); }
+
+    /* Footer */
+    footer { background: var(--surface); border-top: 1px solid var(--border); text-align: center; padding: 2rem 0; color: var(--text-muted); font-size: 0.9rem; }
+  </style>
 </head>
 <body>
 
-  <!-- Top Announcement / Ad Banner -->
-  <aside class="ad-wrapper top-banner" aria-label="Sponsored Content">
-    <div class="container">
-      <span class="ad-label">Advertisement</span>
-      <div id="ad-slot-1" class="ad-slot leaderboard">
-        <span>Responsive Ad Placement (Header Leaderboard 728x90 / Auto)</span>
-      </div>
-    </div>
-  </aside>
-
-  <!-- Site Header -->
-  <header class="site-header">
+  <header>
     <div class="container header-inner">
-      <a href="/" class="site-logo" aria-label="Indian Calculator Hub Home">
-        <img src="/images/logo.svg" alt="Indian Calculator Hub Logo" width="220" height="38">
-      </a>
-
-      <nav aria-label="Primary Navigation">
-        <ul class="nav-links">
-          <li><a href="/" class="nav-link active">Home</a></li>
-          <li class="nav-dropdown">
-            <button class="nav-dropdown-trigger" aria-haspopup="true">
-              Calculators
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="nav-dropdown-menu">
-              <a href="/emi-calculator">Home / Car EMI Calculator</a>
-              <a href="/sip-calculator">Mutual Fund SIP Calculator</a>
-              <a href="/fd-calculator">Fixed Deposit (FD) Calculator</a>
-              <a href="/gst-calculator">GST (Goods & Services Tax)</a>
-              <a href="/percentage-calculator">Percentage Calculator</a>
-              <a href="/cgpa-calculator">CGPA to Percentage (CBSE)</a>
-              <a href="/age-calculator">Chronological Age Calculator</a>
-              <a href="/bmi-calculator">Asian Indian BMI Calculator</a>
-              <a href="/epf-calculator">EPF Calculator (EPFO Rules)</a>
-            </div>
-          </li>
-          <li><a href="/about" class="nav-link">About Us</a></li>
-          <li><a href="/contact" class="nav-link">Contact</a></li>
-        </ul>
+      <a href="/" class="logo">Indian Calculator Hub</a>
+      <nav>
+        <a href="/" class="active">Home</a>
+        <a href="#calculators">Tools</a>
+        <a href="/about">About Us</a>
+        <a href="/contact">Contact</a>
       </nav>
-
-      <div class="header-actions">
-        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Drawer -->
-    <div class="mobile-nav-menu">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/emi-calculator">EMI Calculator</a></li>
-        <li><a href="/sip-calculator">SIP Calculator</a></li>
-        <li><a href="/fd-calculator">FD Calculator</a></li>
-        <li><a href="/gst-calculator">GST Calculator</a></li>
-        <li><a href="/percentage-calculator">Percentage Calculator</a></li>
-        <li><a href="/cgpa-calculator">CGPA to % Calculator</a></li>
-        <li><a href="/age-calculator">Age Calculator</a></li>
-        <li><a href="/bmi-calculator">BMI Calculator</a></li>
-        <li><a href="/epf-calculator">EPF Calculator</a></li>
-        <li><a href="/about">About Us</a></li>
-        <li><a href="/contact">Contact Support</a></li>
-      </ul>
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="container hero-content">
-        <div class="hero-badge">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          Tailored For Indian Standards & Norms
-        </div>
-        <h1 class="hero-title">Smart Calculators Built For <span>Indian Citizens</span></h1>
-        <p class="hero-subtitle">
-          Calculate your Home Loan EMIs, Mutual Fund SIP wealth, Bank FD maturity, GST invoices, CBSE academic percentages, and health metrics instantly with zero lag.
-        </p>
+  <div class="container">
+    <div class="ad-banner">
+      <span>Advertisement Placement (AdSense Responsive Banner)</span>
+    </div>
+  </div>
 
-        <!-- Search Bar -->
-        <div class="search-wrapper">
-          <div class="search-input-box">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <input type="text" id="global-search-input" class="search-input" placeholder="Search any calculator (e.g., EMI, SIP, GST, CGPA, Age)..." aria-label="Search all calculators">
-          </div>
-          <div id="search-dropdown" class="search-results-dropdown"></div>
-        </div>
-
-        <!-- Quick Chips -->
-        <div class="hero-quick-chips">
-          <span>Popular:</span>
-          <a href="/emi-calculator" class="quick-chip">Home Loan EMI</a>
-          <a href="/sip-calculator" class="quick-chip">SIP Return</a>
-          <a href="/gst-calculator" class="quick-chip">GST 18%</a>
-          <a href="/cgpa-calculator" class="quick-chip">CBSE CGPA</a>
-          <a href="/bmi-calculator" class="quick-chip">Asian Indian BMI</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Main Categorized Grid Section -->
-    <section class="section" id="calculators">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Instant Tools</span>
-          <h2 class="section-title">Explore All Free Online Calculators</h2>
-          <p class="section-description">
-            Accurate mathematical tools compliant with RBI loan formulas, SEBI mutual fund guidelines, CBSE grading scales, and WHO Asian Indian criteria.
-          </p>
-        </div>
-
-        <div class="category-tabs" role="tablist">
-    <button class="tab-btn active" data-category="all" role="tab">All Calculators (9)</button>
-    <button class="tab-btn" data-category="Finance" role="tab">Finance & Banking (5)</button>
-    <button class="tab-btn" data-category="Student" role="tab">Student & Academic (2)</button>
-    <button class="tab-btn" data-category="Daily Life" role="tab">Daily Life & Health (2)</button>
-        </div>
-        
-        <!-- Calculators Grid -->
-        <div class="calculators-grid">
-
-          <!-- 1. EMI Calculator -->
-          <article class="calc-card" data-category="Finance">
-            <div class="calc-card-top">
-              <div class="calc-card-icon finance" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-              </div>
-              <span class="calc-category-badge badge-finance">Finance</span>
-            </div>
-            <h3 class="calc-card-title">Loan EMI Calculator</h3>
-            <p class="calc-card-desc">
-              Calculate exact monthly EMI, total interest payable, and amortization schedule for SBI, HDFC, ICICI home loans, car loans, and personal loans.
-            </p>
-            <div class="calc-card-features">
-              <span class="feature-pill">Home Loan</span>
-              <span class="feature-pill">Car Loan</span>
-              <span class="feature-pill">Rupee Breakdown</span>
-            </div>
-            <a href="/emi-calculator" class="calc-card-link">
-              Calculate EMI Now
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </article>
-
-          <!-- 2. SIP Calculator -->
-          <article class="calc-card" data-category="Finance">
-            <div class="calc-card-top">
-              <div class="calc-card-icon finance" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-              </div>
-              <span class="calc-category-badge badge-finance">Finance</span>
-            </div>
-            <h3 class="calc-card-title">SIP Investment Calculator</h3>
-            <p class="calc-card-desc">
-              Estimate future wealth creation and compound returns for monthly SIP mutual fund investments in Nifty 50, large-cap, flexi-cap, and ELSS funds.
-            </p>
-            <div class="calc-card-features">
-              <span class="feature-pill">Mutual Funds</span>
-              <span class="feature-pill">Compound Returns</span>
-              <span class="feature-pill">Wealth Gain</span>
-            </div>
-            <a href="/sip-calculator" class="calc-card-link">
-              Calculate SIP Return
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </article>
-
-          <!-- 3. FD Calculator -->
-          <article class="calc-card" data-category="Finance">
-            <div class="calc-card-top">
-              <div class="calc-card-icon finance" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              </div>
-              <span class="calc-category-badge badge-finance">Finance</span>
-            </div>
-            <h3 class="calc-card-title">Fixed Deposit (FD) Calculator</h3>
-            <p class="calc-card-desc">
-              Calculate maturity amount and compound interest for bank and post office fixed deposits with senior citizen interest rate booster (+0.50%) and TDS alerts.
-            </p>
-            <div class="calc-card-features">
-              <span class="feature-pill">Senior Citizen Rates</span>
-              <span class="feature-pill">Quarterly Compounding</span>
-              <span class="feature-pill">TDS Alert</span>
-            </div>
-            <a href="/fd-calculator" class="calc-card-link">
-              Calculate FD Returns
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </article>
-
-          <!-- 4. GST Calculator -->
-          <article class="calc-card" data-category="Finance">
-            <div class="calc-card-top">
-              <div class="calc-card-icon finance" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              </div>
-              <span class="calc-category-badge badge-finance">Finance</span>
-            </div>
-            <h3 class="calc-card-title">GST Tax Calculator</h3>
-            <p class="calc-card-desc">
-              Calculate GST inclusive and exclusive prices at standard Indian tax slabs (3%, 5%, 12%, 18%, 28%) with instant CGST, SGST, and IGST breakdowns.
-            </p>
-            <div class="calc-card-features">
-              <span class="feature-pill">CGST & SGST Split</span>
-              <span class="feature-pill">Tax Inclusive/Exclusive</span>
-              <span class="feature-pill">GST Slabs</span>
-            </div>
-            <a href="/gst-calculator" class="calc-card-link">
-              Calculate GST Invoices
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </article>
-
-          <!-- 5. Percentage Calculator -->
-          <article class="calc-card" data-category="Student">
-            <div class="calc-card-top">
-              <div class="calc-card-icon student" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
-              </div>
-              <span class="calc-category-badge badge-student">Student</span>
-            </div>
-            <h3 class="calc-card-title">Percentage Calculator</h3>
-            <p class="calc-card-desc">
-              Multi-mode percentage calculator for exam marks, percentage change, price discounts, and mathematical proportions with step-by-step arithmetic.
-            </p>
-            <div class="calc-card-features">
-              <span class="feature-pill">Exam Marks %</span>
-              <span class="feature-pill">Discount Off</span>
-              <span class="feature-pill">% Change</span>
-            </div>
-            <a href="/percentage-calculator" class="calc-card-link">
-              Calculate Percentage
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </article>
-
-          <!-- 6. CGPA to Percentage -->
-          <article class="calc-card" data-category="Student">
-            <div class="calc-card-top">
-              <div class="calc-card-icon student" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-              </div>
-              <span class="calc-category-badge badge-student">Student</span>
-            </div>
-            <h3 class="calc-card-title">CGPA to Percentage Calculator</h3>
-            <p class="calc-card-desc">
-              Convert 10-point CGPA to percentage using CBSE's official 9.5 multiplier, VTU, Mumbai University, or AICTE engineering conversion formulas.
-            </p>
-            <div class="calc-card-features">
-              <span class="feature-pill">CBSE 9.5 Multiplier</span>
-              <span class="feature-pill">University Standards</span>
-              <span class="feature-pill">Division / Grade</span>
-            </div>
-            <a href="/cgpa-calculator" class="calc-card-link">
-              Convert CGPA to %
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </article>
-
-          <!-- 7. Age Calculator -->
-          <article class="calc-card" data-category="Daily Life">
-            <div class="calc-card-top">
-              <div class="calc-card-icon daily" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              </div>
-              <span class="calc-category-badge badge-daily">Daily Life</span>
-            </div>
-            <h3 class="calc-card-title">Exact Age Calculator</h3>
-            <p class="calc-card-desc">
-              Find exact age in years, months, days, hours, and minutes from date of birth. Includes countdown to next birthday and Indian government exam age eligibility.
-            </p>
-            <div class="calc-card-features">
-              <span class="feature-pill">Years, Months, Days</span>
-              <span class="feature-pill">Next Birthday</span>
-              <span class="feature-pill">Govt Exam Eligibility</span>
-            </div>
-            <a href="/age-calculator" class="calc-card-link">
-              Calculate Exact Age
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </article>
-
-          <!-- 8. BMI Calculator -->
-          <article class="calc-card" data-category="Daily Life">
-            <div class="calc-card-top">
-              <div class="calc-card-icon daily" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-              </div>
-              <span class="calc-category-badge badge-daily">Daily Life</span>
-            </div>
-            <h3 class="calc-card-title">Asian Indian BMI Calculator</h3>
-            <p class="calc-card-desc">
-              Calculate Body Mass Index using WHO-approved Asian Indian specific cutoffs (overweight at 23+ instead of 25+) reflecting South Asian cardiovascular profiles.
-            </p>
-           <div class="calc-card-features">
-              <span class="feature-pill">Asian Cutoffs (23/25)</span>
-              <span class="feature-pill">Ideal Weight (kg)</span>
-              <span class="feature-pill">Health Advisory</span>
-            </div>
-            <a href="/bmi-calculator" class="calc-card-link">
-              Check BMI & Health
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </article>
-
-               <!-- 9. EPF Calculator -->
-        <article class="calc-card" data-category="Finance">
-          <div class="calc-card-top">
-            <div class="calc-card-icon finance" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-              </svg>
-            </div>
-            <span class="calc-category-badge badge-finance">Finance</span>
-          </div>
-          <h3 class="calc-card-title">EPF Calculator</h3>
-          <p class="calc-card-desc">
-            Calculate Employee Provident Fund retirement corpus and interest accumulated with annual increments.
-          </p>
-          <div class="calc-card-features">
-            <span class="feature-pills">8.25% Interest</span>
-            <span class="feature-pills">Salary Increment</span>
-            <span class="feature-pills">Tax-Free Corpus</span>
-          </div>
-          <a href="/epf-calculator" class="calc-card-link">
-            Calculate EPF Growth
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
-        </article>
-          
-        </div>
-      </div>
-    </section>
-
-    <!-- In-Content Ad Placeholder -->
-    <aside class="ad-wrapper in-content" aria-label="Sponsored Content">
-      <div class="container">
-        <span class="ad-label">Advertisement</span>
-        <div id="ad-slot-2" class="ad-slot leaderboard">
-          <span>In-Content Responsive Ad Slot (728x90 / Auto)</span>
-        </div>
-      </div>
-    </aside>
-
-    <!-- Why Choose Indian Calculator Hub Section -->
-    <section class="section trust-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Why Choose Us</span>
-          <h2 class="section-title">Engineered Specifically For India</h2>
-          <p class="section-description">
-            Most generic calculators on the internet use US/Western defaults. Indian Calculator Hub is built from the ground up for Indian banking, tax, and educational systems.
-          </p>
-        </div>
-
-        <div class="features-grid">
-          <div class="feature-item">
-            <div class="feature-icon-wrapper" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            </div>
-            <h3>Indian Rupee (Lakhs & Crores)</h3>
-            <p>
-              Calculations format numbers using Indian numbering standards (₹ 1,50,000 / Lakhs / Crores) so you never have to translate millions or billions.
-            </p>
-          </div>
-
-          <div class="feature-item">
-            <div class="feature-icon-wrapper" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <h3>RBI & GST Aligned Formulas</h3>
-            <p>
-              EMI calculations match SBI and HDFC reducing balance algorithms. GST matches Indian tax slabs (3%, 5%, 12%, 18%, 28%) with CGST and SGST splits.
-            </p>
-          </div>
-
-          <div class="feature-item">
-            <div class="feature-icon-wrapper" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            </div>
-            <h3>Instant Client-Side JS (0 Lag)</h3>
-            <p>
-              Calculations run entirely in your browser with zero page reloads and zero server delays. 100% private: your financial inputs never leave your device.
-            </p>
-          </div>
-
-          <div class="feature-item">
-            <div class="feature-icon-wrapper" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-            </div>
-            <h3>100% Mobile Optimized</h3>
-            <p>
-              Designed mobile-first with tactile slider controls, thumb-friendly buttons, and high-contrast readability across 4G and 5G connections across India.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Comprehensive Homepage Guide & About Section -->
-    <section class="section">
-      <div class="container">
-        <article class="content-article">
-          <h2>About Indian Calculator Hub: Free Digital Calculation Platform</h2>
-          <p>
-            Welcome to <strong>Indian Calculator Hub</strong>, India's dedicated online computational resource created for salaried professionals, business owners, investors, students, and everyday consumers. Navigating Indian financial planning, tax compliance, university evaluations, and wellness metrics often requires precise mathematical tools that respect Indian regulatory benchmarks.
-          </p>
-          <p>
-            Whether you are evaluating a ₹40 Lakh home loan offer from SBI, comparing monthly SIP returns across diversified mutual funds, checking the GST invoice breakdown on a business purchase, or converting your university CGPA to a percentage for CAT or campus placement drives, our tools deliver mathematical accuracy in milliseconds.
-          </p>
-
-          <h3>How To Get The Most Out Of Our Calculators</h3>
-          <ul>
-            <li><strong>Financial Calculators (EMI, SIP, FD, GST):</strong> Use dynamic sliders to test different scenarios. Compare how increasing your EMI tenure affects total interest, or how an extra 2% return on your SIP alters your 15-year retirement corpus.</li>
-            <li><strong>Academic Calculators (Percentage, CGPA):</strong> Tailored directly to CBSE, ICSE, state boards, and major engineering universities (VTU, Mumbai University, Anna University, AICTE).</li>
-            <li><strong>Daily Utility Calculators (Age, BMI):</strong> Instant age breakdown for Indian competitive exams (UPSC, SSC, Banking) and Asian Indian BMI cutoffs recommended by the Indian Council of Medical Research (ICMR) and WHO.</li>
-          </ul>
-
-          <div class="formula-box">
-            <div class="formula-title">Core Design Principles</div>
-            <p class="formula-legend">
-              Every calculator on Indian Calculator Hub operates client-side inside your browser engine. We do not track your financial numbers, request sign-ins, or store financial inputs on any backend database. Your calculations remain 100% confidential and lightning-fast.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <!-- Site Footer -->
-  <footer class="site-footer">
+  <section class="hero">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="/" class="site-logo" style="color: #FFFFFF;">
-            <img src="/images/logo.svg" alt="Indian Calculator Hub" width="200" height="34" style="filter: brightness(0) invert(1);">
-          </a>
-          <p>
-            Indian Calculator Hub is an independent, free computational utility platform providing accurate finance, academic, and daily life calculators built for Indian standards.
-          </p>
-        </div>
-
-        <div>
-          <h4 class="footer-title">Finance Tools</h4>
-          <ul class="footer-links">
-            <li><a href="/emi-calculator">EMI Calculator</a></li>
-            <li><a href="/sip-calculator">SIP Calculator</a></li>
-            <li><a href="/fd-calculator">Fixed Deposit (FD)</a></li>
-            <li><a href="/gst-calculator">GST Calculator</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-title">Education & Life</h4>
-          <ul class="footer-links">
-            <li><a href="/percentage-calculator">Percentage Calculator</a></li>
-            <li><a href="/cgpa-calculator">CGPA to Percentage</a></li>
-            <li><a href="/age-calculator">Age Calculator</a></li>
-            <li><a href="/bmi-calculator">Asian Indian BMI</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-title">Company & Legal</h4>
-          <ul class="footer-links">
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/contact">Contact Support</a></li>
-            <li><a href="/privacy-policy">Privacy Policy</a></li>
-            <li><a href="/terms-of-use">Terms of Use</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div>&copy; 2026 Indian Calculator Hub. All rights reserved.</div>
-        <div>
-          <a href="/privacy-policy" style="color: #94A3B8; margin-right: 1rem;">Privacy Policy</a>
-          <a href="/terms-of-use" style="color: #94A3B8;">Terms of Service</a>
-        </div>
-        <p class="footer-disclaimer">
-          <strong>Disclaimer:</strong> The tools and calculators on Indian Calculator Hub are designed for educational and informational estimation purposes only. They do not constitute certified financial, tax, or medical advice. Please consult a qualified chartered accountant, certified financial planner, or healthcare practitioner for personalized guidance.
-        </p>
+      <h1>Smart Calculators for Daily Needs</h1>
+      <p>Instant financial, academic, and health utilities compliant with Indian standards.</p>
+      <div class="search-box">
+        <input type="text" id="toolSearch" placeholder="Search calculator (e.g., EMI, Tax, PPF, BMI)..." onkeyup="filterTools()">
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="/js/calculators.js"></script>
-  <script src="/js/main.js"></script>
-</body>
-</html>
+  <main class="container" id="calculators">
+    
+    <div class="tabs">
+      <button class="tab-btn active" onclick="filterCategory('all', this)">All Tools (19)</button>
+      <button class="tab-btn" onclick="filterCategory('finance', this)">Finance & Tax (13)</button>
+      <button class="tab-btn" onclick="filterCategory('student', this)">Student & Math (3)</button>
+      <button class="tab-btn" onclick="filterCategory('health', this)">Daily Life & Health (3)</button>
+    </div>
+
+    <div class="grid" id="toolsGrid">
+
+      <!-- 1. EMI Calculator -->
+      <article class="card" data-cat="finance" data-name="loan emi home car calculator">
+        <h3>Loan EMI Calculator</h3>
+        <div class="form-group"><label>Loan Amount (₹)</label><input type="number" id="emiP" value="500000"></div>
+        <div class="form-group"><label>Annual Interest Rate (%)</label><input type="number" step="0.1" id="emiR" value="8.5"></div>
+        <div class="form-group"><label>Tenure (Years)</label><input type="number" id="emiN" value="5"></div>
+        <button class="calc-btn" onclick="calcEMI()">Calculate Monthly EMI</button>
+        <div class="result-box" id="resEMI">
+          <div class="result-item">Monthly EMI: <span class="result-value" id="valEMI">₹0</span></div>
+          <div class="result-item">Total Interest: <span id="valEMITotalInt">₹0</span></div>
+        </div>
+      </article>
+
+      <!-- 2. SIP Calculator -->
+      <article class="card" data-cat="finance" data-name="sip mutual fund investment calculator">
+        <h3>SIP Investment Calculator</h3>
+        <div class="form-group"><label>Monthly Investment (₹)</label><input type="number" id="sipM" value="5000"></div>
+        <div class="form-group"><label>Expected Return Rate (% p.a)</label><input type="number" step="0.1" id="sipR" value="12"></div>
+        <div class="form-group"><label>Tenure (Years)</label><input type="number" id="sipN" value="10"></div>
+        <button class="calc-btn" onclick="calcSIP()">Calculate Returns</button>
+        <div class="result-box" id="resSIP">
+          <div class="result-item">Future Value: <span class="result-value" id="valSIPTotal">₹0</span></div>
+          <div class="result-item">Invested Amount: <span id="valSIPInv">₹0</span></div>
+        </div>
+      </article>
+
+      <!-- 3. Income Tax Calculator -->
+      <article class="card" data-cat="finance" data-name="income tax regime calculator">
+        <h3>Income Tax Calculator (New Regime)</h3>
+        <div class="form-group"><label>Annual Gross Income (₹)</label><input type="number" id="taxInc" value="1000000"></div>
+        <button class="calc-btn" onclick="calcTax()">Calculate Tax</button>
+        <div class="result-box" id="resTax">
+          <div class="result-item">Est. Tax Payable: <span class="result-value" id="valTax">₹0</span></div>
+          <div class="result-item"><small>Standard Deduction (₹75,000 applied)</small></div>
+        </div>
+      </article>
+
+      <!-- 4. PPF Calculator -->
+      <article class="card" data-cat="finance" data-name="ppf public provident fund calculator">
+        <h3>PPF Calculator</h3>
+        <div class="form-group"><label>Yearly Investment (Max ₹1.5L)</label><input type="number" id="ppfA" value="150000"></div>
+        <div class="form-group"><label>Interest Rate (% p.a)</label><input type="number" id="ppfR" value="7.1" readonly></div>
+        <div class="form-group"><label>Tenure (Years)</label><input type="number" id="ppfN" value="15" readonly></div>
+        <button class="calc-btn" onclick="calcPPF()">Calculate Maturity</button>
+        <div class="result-box" id="resPPF">
+          <div class="result-item">Maturity Value: <span class="result-value" id="valPPF">₹0</span></div>
+        </div>
+      </article>
+
+      <!-- 5. GST Calculator -->
+      <article class="card" data-cat="finance" data-name="gst tax calculator">
+        <h3>GST Calculator</h3>
+        <div class="form-group"><label>Amount (₹)</label><input type="number" id="gstAmt" value="1000"></div>
+        <div class="form-group"><label>GST Rate (%)</label>
+          <select id="gstRate"><option value="5">5%</option><option value="12">12%</option><option value="18" selected>18%</option><option value="28">28%</option></select>
+        </div>
+        <button class="calc-btn" onclick="calcGST()">Calculate GST</button>
+        <div class="result-box" id="resGST">
+          <div class="result-item">GST Amount: <span class="result-value" id="valGST">₹0</span></div>
+          <div class="result-item">Total Amount: <span id="valGSTTotal">₹0</span></div>
+        </div>
+      </article>
+
+      <!-- 6. CGPA to Percentage -->
+      <article class="card" data-cat="student" data-name="cgpa to percentage cbse calculator">
+        <h3>CGPA to Percentage</h3>
+        <div class="form-group"><label>Enter CGPA (Scale 10)</label><input type="number" step="0.01" id="cgpaVal" value="8.5"></div>
+        <button class="calc-btn" onclick="calcCGPA()">Convert</button>
+        <div class="result-box" id="resCGPA">
+          <div class="result-item">Percentage: <span class="result-value" id="valCGPA">0%</span></div>
+          <div class="result-item"><small>CBSE Standard Multiplier (9.5)</small></div>
+        </div>
+      </article>
+
+      <!-- 7. Age Calculator -->
+      <article class="card" data-cat="health" data-name="exact age date of birth calculator">
+        <h3>Exact Age Calculator</h3>
+        <div class="form-group"><label>Date of Birth</label><input type="date" id="dobVal"></div>
+        <button class="calc-btn" onclick="calcAge()">Calculate Age</button>
+        <div class="result-box" id="resAge">
+          <div class="result-item">Your Age: <span class="result-value" id="valAge">--</span></div>
+        </div>
+      </article>
+
+      <!-- 8. Asian Indian BMI Calculator -->
+      <article class="card" data-cat="health" data-name="bmi body mass index health calculator">
+        <h3>Asian Indian BMI Calculator</h3>
+        <div class="form-group"><label>Weight (kg)</label><input type="number" id="bmiW" value="70"></div>
+        <div class="form-group"><label>Height (cm)</label><input type="number" id="bmiH" value="170"></div>
+        <button class="calc-btn" onclick="calcBMI()">Calculate BMI</button>
+        <div class="result-box" id="resBMI">
+          <div class="result-item">BMI Index: <span class="result-value" id="valBMI">0</span></div>
+          <div class="result-item">Status: <span id="valBMIStatus">--</span></div>
+        </div>
+      </article>
+
+      <!-- 9. Daily Calorie Calculator -->
+      <article class="card" data-cat="health" data-name="daily calorie bmr health weight calculator">
+        <h3>Daily Calorie Calculator</h3>
+        <div class="form-group"><label>Age</label><input type="number" id="calAge" value="25"></div>
+        <div class="form-group"><label>Gender</label><select id="calGen"><option value="m">Male</option><option value="f">Female</option></select></div>
+        <div class="form-group"><label>Weight (kg)</label><input type="number" id="calW" value="65"></div>
+        <div class="form-group"><label>Height (cm)</label><input type="number" id="calH" value="165"></div>
+        <button class="calc-btn" onclick="calcCalorie()">Calculate Maintenance Calorie</button>
+        <div class="result-box" id="resCal">
+          <div class="result-item">Daily Maintenance: <span class="result-value" id="valCal">0 kcal</span></div>
+        </div>
+      </article>
+
+      <!-- 10. FD Calculator -->
+      <article class="card" data-cat="finance" data-name="fd fixed deposit interest bank calculator">
+        <h3>FD (Fixed Deposit) Calculator</h3>
+        <div class="form-group"><label>Deposit Amount (₹)</label><input type="number" id="fdP" value="100000"></div>
+        <div class="form-group"><label>Interest Rate (% p.a)</label><input type="number" step="0.1" id="fdR" value="7.0"></div>
+        <div class="form-group"><label>Tenure (Years)</label><input type="number" id="fdN" value="3"></div>
+        <button class="calc-btn" onclick="calcFD()">Calculate FD Maturity</button>
+        <div class="result-box" id="resFD">
+          <div class="result-item">Maturity Amount: <span class="result-value" id="valFD">₹0</span></div>
+        </div>
+      </article>
+
+      <!-- 11. RD Calculator -->
+      <article class="card" data-cat="finance" data-name="rd recurring deposit bank calculator">
+        <h3>RD (Recurring Deposit) Calculator</h3>
+        <div class="form-group"><label>Monthly Deposit (₹)</label><input type="number" id="rdM" value="2000"></div>
+        <div class="form-group"><label>Interest Rate (% p.a)</label><input type="number" step="0.1" id="rdR" value="6.5"></div>
+        <div class="form-group"><label>Tenure (Years)</label><input type="number" id="rdN" value="2"></div>
+        <button class="calc-btn" onclick="calcRD()">Calculate RD</button>
+        <div class="result-box" id="resRD">
+          <div class="result-item">Maturity Value: <span class="result-value" id="valRD">₹0</span></div>
+        </div>
+      </article>
+
+      <!-- 12. NPS Calculator -->
+      <article class="card" data-cat="finance" data-name="nps national pension scheme calculator">
+        <h3>NPS Pension Calculator</h3>
+        <div class="form-group"><label>Monthly Contribution (₹)</label><input type="number" id="npsM" value="3000"></div>
+        <div class="form-group"><label>Current Age</label><input type="number" id="npsAge" value="30"></div>
+        <button class="calc-btn" onclick="calcNPS()">Estimate Retirement Corpus</button>
+        <div class="result-box" id="resNPS">
+          <div class="result-item">Corpus at 60 Age: <span class="result-value" id="valNPS">₹0</span></div>
+        </div>
+      </article>
+
+      <!-- 13. EPF Calculator -->
+      <article class="card" data-cat="finance" data-name="epf employee provident fund salary calculator">
+        <h3>EPF Calculator</h3>
+        <div class="form-group"><label>Monthly Basic Salary (₹)</label><input type="number" id="epfSal" value="25000"></div>
+        <div class="form-group"><label>EPF Interest Rate (%)</label><input type="number" id="epfR" value="8.25" readonly></div>
+        <button class="calc-btn" onclick="calcEPF()">Calculate Monthly EPF</button>
+        <div class="result-box" id="resEPF">
+          <div class="result-item">Monthly Total EPF Contribution: <span class="result-value" id="valEPF">₹0</span></div>
+        </div>
+      </article>
+
+      <!-- 14. Percentage Calculator -->
+      <article class="card" data-cat="student" data-name="percentage math exam marks calculator">
+        <h3>Percentage Calculator</h3>
+        <div class="form-group"><label>Marks Obtained</label><input type="number" id="pctO" value="420"></div>
+        <div class="form-group"><label>Total Marks</label><input type="number" id="pctT" value="500"></div>
+        <button class="calc-btn" onclick="calcPct()">Calculate %</button>
+        <div class="result-box" id="resPct">
+          <div class="result-item">Percentage: <span class="result-value" id="valPct">0%</span></div>
+        </div>
+      </article>
+
+      <!-- 15. Simple & Compound Interest -->
+      <article class="card" data-cat="finance" data-name="simple compound interest calculator">
+        <h3>Interest Calculator</h3>
+        <div class="form-group"><label>Principal Amount (₹)</label><input type="number" id="intP" value="10000"></div>
+        <div class="form-group"><label>Rate (% p.a)</label><input type="number" id="intR" value="5"></div>
+        <div class="form-group"><label>Time (Years)</label><input type="number" id="intT" value="2"></div>
+        <button class="calc-btn" onclick="calcInterest()">Calculate Interest</button>
+        <div class="result-box" id="resInt">
+          <div class="result-item">Simple Int: <span class="result-value" id="valSI">₹0</span></div>
+          <div class="result-item">Compound Int: <span class="result-value" id="valCI">₹0</span></div>
+        </div>
+      </article>
+
+      <!-- 16. Lumpsum Investment -->
+      <article class="card" data-cat="finance" data-name="lumpsum mutual fund return calculator">
+        <h3>Lumpsum Investment</h3>
+        <div class="form-group"><label>One-time Investment (₹)</label><input type="number" id="lumpP" value="50000"></div>
+        <div class="form-group"><label>Return Rate (% p.a)</label><input type="number" id="lumpR" value="12"></div>
+        <div class="form-group"><label>Tenure (Years)</label><input type="number" id="lumpN" value="5"></div>
+        <button class="calc-btn" onclick="calcLump()">Calculate Future Value</button>
+        <div class="result-box" id="resLump">
+          <div class="result-item">Future Value: <span class="result-value" id="valLump">₹0</span></div>
+        </div>
+      </article>
+
+      <!-- 17. Scientific Calculator -->
+      <article class="card" data-cat="student" data-name="scientific math algebra trigonometry calculator">
+        <h3>Scientific Math Calculator</h3>
+        <div class="form-group"><label>Math Expression (e.g., Math.sin(30), 5*25)</label><input type="text" id="sciExp" value="Math.sqrt(144)"></div>
+        <button class="calc-btn" onclick="calcSci()">Evaluate Expression</button>
+        <div class="result-box" id="resSci">
+          <div class="result-item">Result: <span class="result-value" id="valSci">0</span></div>
+        </div>
+      </article>
+
+      <!-- 18. Home Loan Eligibility -->
+      <article class="card" data-cat="finance" data-name="home loan eligibility salary calculator">
+        <h3>Home Loan Eligibility</h3>
+        <div class="form-group"><label>Net Monthly Income (₹)</label><input type="number" id="hlInc" value="50000"></div>
+        <div class="form-group"><label>Other Monthly EMIs (₹)</label><input type="number" id="hlEmi" value="0"></div>
+        <button class="calc-btn" onclick="calcHLElig()">Calculate Eligibility</button>
+        <div class="result-box" id="resHLElig">
+          <div class="result-item">Max Eligible Loan: <span class="result-value" id="valHLElig">₹0</span></div>
+        </div>
+      </article>
+
+      <!-- 19. In-Hand Salary Calculator -->
+      <article class="card" data-cat="finance" data-name="salary ctc take home inhand calculator">
+        <h3>In-Hand Salary Calculator</h3>
+        <div class="form-group"><label>Annual CTC (₹)</label><input type="number" id="salCTC" value="600000"></div>
+        <button class="calc-btn" onclick="calcSalary()">Estimate Monthly Salary</button>
+        <div class="result-box" id="resSal">
+          <div class="result-item">Est. In-Hand / Month: <span class="result-value" id="val
