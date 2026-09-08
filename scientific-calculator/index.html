@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Scientific Calculator Online | Math All-in-One</title>
+    <meta name="description" content="Free online scientific calculator with Greek symbols (α, β, φ, ψ), trigonometric functions, logarithms, and advanced mathematical constants.">
+    <meta name="keywords" content="scientific calculator, online math calculator, greek symbol calculator, trigonometry calculator, advanced math calculator">
+    <link rel="canonical" href="https://indiancalchub.online/scientific-calculator/" />
+
+    <!-- Schema Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Scientific Math Calculator",
+      "url": "https://indiancalchub.online/scientific-calculator/",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "description": "All-in-one advanced scientific calculator featuring Greek constants, trigonometric operations, and complex expressions."
+    }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; line-height: 1.6; padding: 20px; }
+        .calc-container { max-width: 800px; margin: 20px auto; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        h1 { text-align: center; color: #4f46e5; font-size: 26px; margin-bottom: 8px; }
+        .subtitle { text-align: center; color: #64748b; margin-bottom: 25px; font-size: 15px; }
+
+        /* AdSense Top Header Slot */
+        .ad-slot-top { text-align: center; margin-bottom: 20px; background: #f8fafc; border: 1px dashed #cbd5e1; padding: 10px; font-size: 12px; color: #94a3b8; }
+
+        /* Display Screen */
+        .display-screen { width: 100%; background: #0f172a; color: #38bdf8; text-align: right; padding: 15px 20px; border-radius: 8px; margin-bottom: 20px; }
+        .expression { font-size: 16px; color: #94a3b8; min-height: 24px; overflow-x: auto; word-wrap: break-word; }
+        .result { font-size: 32px; font-weight: bold; color: #38bdf8; min-height: 45px; word-wrap: break-word; }
+
+        /* Keypad Grid */
+        .keypad { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+        .btn { padding: 14px; font-size: 16px; font-weight: 600; border: none; border-radius: 6px; cursor: pointer; transition: background 0.2s; background: #f1f5f9; color: #1e293b; }
+        .btn:hover { background: #e2e8f0; }
+        .btn.operator { background: #e0e7ff; color: #4338ca; }
+        .btn.operator:hover { background: #c7d2fe; }
+        .btn.greek { background: #fef3c7; color: #b45309; }
+        .btn.greek:hover { background: #fde68a; }
+        .btn.action-danger { background: #fee2e2; color: #dc2626; }
+        .btn.action-danger:hover { background: #fca5a5; }
+        .btn.equal { background: #4f46e5; color: #ffffff; grid-column: span 2; }
+        .btn.equal:hover { background: #4338ca; }
+
+        /* AdSense Middle Slot */
+        .ad-slot-middle { text-align: center; margin: 30px 0 10px 0; background: #f8fafc; border: 1px dashed #cbd5e1; padding: 10px; font-size: 12px; color: #94a3b8; }
+
+        .seo-section { margin-top: 25px; border-top: 1px solid #e2e8f0; padding-top: 25px; }
+        .seo-section h2 { color: #4338ca; font-size: 20px; margin-bottom: 12px; margin-top: 20px; }
+        .seo-section p, .seo-section ul { color: #334155; font-size: 15px; }
+
+        /* FAQ Styles */
+        .faq-accordion { margin-top: 15px; }
+        .faq-item { border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 12px; overflow: hidden; transition: border-color 0.2s; }
+        .faq-item.active { border-color: #4f46e5; }
+        .faq-header { width: 100%; padding: 16px; background: #ffffff; text-align: left; font-size: 15px; font-weight: 600; color: #1e293b; border: none; outline: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-header:hover { background-color: #e0e7ff; }
+        .faq-icon { font-size: 18px; font-weight: bold; color: #4f46e5; }
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: #ffffff; padding: 0 16px; }
+        .faq-content p { padding-bottom: 16px; color: #475569; font-size: 14px; line-height: 1.6; }
+
+        @media (max-width: 600px) {
+            .keypad { grid-template-columns: repeat(4, 1fr); }
+            .btn.equal { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+<main class="calc-container">
+    <!-- AdSense Slot Above Fold -->
+    <div class="ad-slot-top">
+        <span>Advertisement Placeholder</span>
+    </div>
+
+    <h1>Scientific & Math Calculator</h1>
+    <p class="subtitle">All-in-One online calculator with Greek constants (α, β, φ, ψ) and algebraic functions</p>
+
+    <!-- Display -->
+    <div class="display-screen">
+        <div class="expression" id="exprDisplay">0</div>
+        <div class="result" id="resDisplay">0</div>
+    </div>
+
+    <!-- Keypad -->
+    <div class="keypad">
+        <!-- Greek Symbols / Constants -->
+        <button class="btn greek" onclick="appendInput('α', '2.5')">α</button>
+        <button class="btn greek" onclick="appendInput('β', '1.618')">β</button>
+        <button class="btn greek" onclick="appendInput('φ', '1.618033')">φ</button>
+        <button class="btn greek" onclick="appendInput('ψ', '0.470003')">ψ</button>
+        <button class="btn greek" onclick="appendInput('π', 'Math.PI')">π</button>
+
+        <!-- Functions -->
+        <button class="btn operator" onclick="appendFunc('Math.sin')">sin</button>
+        <button class="btn operator" onclick="appendFunc('Math.cos')">cos</button>
+        <button class="btn operator" onclick="appendFunc('Math.tan')">tan</button>
+        <button class="btn operator" onclick="appendFunc('Math.log10')">log</button>
+        <button class="btn operator" onclick="appendFunc('Math.log')">ln</button>
+
+        <button class="btn operator" onclick="appendFunc('Math.sqrt')">√</button>
+        <button class="btn operator" onclick="appendOp('**')">x^y</button>
+        <button class="btn operator" onclick="appendOp('(')">(</button>
+        <button class="btn operator" onclick="appendOp(')')">)</button>
+        <button class="btn action-danger" onclick="clearAll()">AC</button>
+
+        <!-- Numbers and Operations -->
+        <button class="btn" onclick="appendNum('7')">7</button>
+        <button class="btn" onclick="appendNum('8')">8</button>
+        <button class="btn" onclick="appendNum('9')">9</button>
+        <button class="btn operator" onclick="appendOp('/')">÷</button>
+        <button class="btn action-danger" onclick="deleteLast()">DEL</button>
+
+        <button class="btn" onclick="appendNum('4')">4</button>
+        <button class="btn" onclick="appendNum('5')">5</button>
+        <button class="btn" onclick="appendNum('6')">6</button>
+        <button class="btn operator" onclick="appendOp('*')">×</button>
+        <button class="btn operator" onclick="appendOp('%')">%</button>
+
+        <button class="btn" onclick="appendNum('1')">1</button>
+        <button class="btn" onclick="appendNum('2')">2</button>
+        <button class="btn" onclick="appendNum('3')">3</button>
+        <button class="btn operator" onclick="appendOp('-')">-</button>
+        <button class="btn operator" onclick="appendOp('+')">+</button>
+
+        <button class="btn" onclick="appendNum('0')">0</button>
+        <button class="btn" onclick="appendNum('.')">.</button>
+        <button class="btn greek" onclick="appendInput('e', 'Math.E')">e</button>
+        <button class="btn equal" onclick="computeResult()">=</button>
+    </div>
+
+    <!-- AdSense Slot Middle -->
+    <div class="ad-slot-middle">
+        <span>Advertisement Placeholder</span>
+    </div>
+
+    <!-- SEO Content -->
+    <section class="seo-section">
+        <h2>Features of All-in-One Scientific Calculator</h2>
+        <p>This online tool allows students and engineers to execute complex mathematical operations including:</p>
+        <ul>
+            <li><strong>Greek Constants:</strong> Alpha (α), Beta (β), Golden Ratio Phi (φ), and Psi (ψ).</li>
+            <li><strong>Trigonometry & Logarithms:</strong> Real-time evaluation for sine, cosine, tangent, log, and natural log (ln).</li>
+            <li><strong>Standard Algebraic Controls:</strong> Full bracket support, exponents, square roots, and basic arithmetic.</li>
+        </ul>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-accordion">
+            <div class="faq-item">
+                <button class="faq-header" onclick="toggleFaq(this)">
+                    <span>What does the Golden Ratio Phi (φ) represent?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-content">
+                    <p>Phi (φ) represents the mathematical Golden Ratio (~1.618033), widely used in geometry, architecture, and scientific evaluations.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-header" onclick="toggleFaq(this)">
+                    <span>Are trigonometric functions computed in radians or degrees?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-content">
+                    <p>Standard JavaScript trigonometric functions evaluate arguments in radians. Convert degrees by multiplying by (π/180).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+let visibleExpression = "";
+let evalExpression = "";
+
+function updateDisplay() {
+    document.getElementById('exprDisplay').innerText = visibleExpression || "0";
+}
+
+function appendNum(num) {
+    visibleExpression += num;
+    evalExpression += num;
+    updateDisplay();
+}
+
+function appendOp(op) {
+    visibleExpression += " " + op + " ";
+    evalExpression += op;
+    updateDisplay();
+}
+
+function appendFunc(funcName) {
+    let label = funcName.replace('Math.', '');
+    visibleExpression += label + "(";
+    evalExpression += funcName + "(";
+    updateDisplay();
+}
+
+function appendInput(label, val) {
+    visibleExpression += label;
+    evalExpression += val;
+    updateDisplay();
+}
+
+function clearAll() {
+    visibleExpression = "";
+    evalExpression = "";
+    document.getElementById('exprDisplay').innerText = "0";
+    document.getElementById('resDisplay').innerText = "0";
+}
+
+function deleteLast() {
+    visibleExpression = visibleExpression.slice(0, -1);
+    evalExpression = evalExpression.slice(0, -1);
+    updateDisplay();
+}
+
+function computeResult() {
+    try {
+        let res = eval(evalExpression);
+        document.getElementById('resDisplay').innerText = res;
+    } catch (e) {
+        document.getElementById('resDisplay').innerText = "Error";
+    }
+}
+
+function toggleFaq(headerBtn) {
+    const item = headerBtn.parentElement;
+    const content = item.querySelector('.faq-content');
+    const icon = item.querySelector('.faq-icon');
+
+    if (item.classList.contains('active')) {
+        item.classList.remove('active');
+        content.style.maxHeight = "0";
+        icon.innerText = "+";
+    } else {
+        document.querySelectorAll('.faq-item').forEach(el => {
+            el.classList.remove('active');
+            el.querySelector('.faq-content').style.maxHeight = "0";
+            el.querySelector('.faq-icon').innerText = "+";
+        });
+
+        item.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.innerText = "-";
+    }
+}
+</script>
+
+</body>
+</html>
