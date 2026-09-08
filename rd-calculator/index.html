@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RD Calculator Online | Recurring Deposit Maturity Calculator</title>
+    <meta name="description" content="Calculate maturity value and interest earned on your Recurring Deposit (RD). Accurately estimate bank RD returns with quarterly compounding interest.">
+    <meta name="keywords" content="rd calculator, recurring deposit calculator, sbi rd calculator, post office rd calculator, rd interest rate calculator, hdfc rd calculator">
+    <link rel="canonical" href="https://indiancalchub.online/rd-calculator/" />
+
+    <!-- Schema Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Recurring Deposit Calculator",
+      "url": "https://indiancalchub.online/rd-calculator/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "description": "Calculate RD maturity value and interest returns based on quarterly compounding formula used by Indian banks."
+    }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; line-height: 1.6; padding: 20px; }
+        .calc-container { max-width: 800px; margin: 20px auto; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        h1 { text-align: center; color: #059669; font-size: 26px; margin-bottom: 8px; }
+        .subtitle { text-align: center; color: #64748b; margin-bottom: 25px; font-size: 15px; }
+
+        /* AdSense Top Header Slot */
+        .ad-slot-top { text-align: center; margin-bottom: 20px; background: #f8fafc; border: 1px dashed #cbd5e1; padding: 10px; font-size: 12px; color: #94a3b8; }
+        
+        .form-group { margin-bottom: 18px; }
+        label { display: block; font-weight: 600; margin-bottom: 6px; color: #1e293b; }
+        input[type="number"], select { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 16px; outline: none; }
+        input[type="number"]:focus, select:focus { border-color: #059669; }
+
+        .calc-btn { width: 100%; padding: 14px; background-color: #059669; color: #ffffff; font-size: 16px; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.3s; margin-top: 10px; }
+        .calc-btn:hover { background-color: #047857; }
+
+        .results-box { display: none; margin-top: 25px; padding: 20px; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; }
+        .results-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; text-align: center; margin-top: 10px; }
+        .res-card { background: #ffffff; padding: 15px; border-radius: 6px; border: 1px solid #d1fae5; }
+        .res-card label { font-size: 13px; color: #64748b; font-weight: normal; }
+        .res-card .val { font-size: 20px; font-weight: bold; color: #059669; margin-top: 4px; }
+        .res-card .val.highlight { color: #16a34a; }
+
+        /* AdSense Middle Slot */
+        .ad-slot-middle { text-align: center; margin: 30px 0 10px 0; background: #f8fafc; border: 1px dashed #cbd5e1; padding: 10px; font-size: 12px; color: #94a3b8; }
+
+        .seo-section { margin-top: 25px; border-top: 1px solid #e2e8f0; padding-top: 25px; }
+        .seo-section h2 { color: #047857; font-size: 20px; margin-bottom: 12px; margin-top: 20px; }
+        .seo-section p, .seo-section ul { color: #334155; font-size: 15px; }
+        .seo-section ul { margin-left: 20px; margin-top: 8px; }
+
+        /* Interactive Collapsible FAQ Accordion Styles */
+        .faq-accordion { margin-top: 15px; }
+        .faq-item { border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 12px; overflow: hidden; transition: border-color 0.2s; }
+        .faq-item.active { border-color: #059669; }
+        .faq-header { width: 100%; padding: 16px; background: #ffffff; text-align: left; font-size: 15px; font-weight: 600; color: #1e293b; border: none; outline: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-header:hover { background-color: #f0fdf4; }
+        .faq-icon { font-size: 18px; font-weight: bold; color: #059669; transition: transform 0.3s; }
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: #ffffff; padding: 0 16px; }
+        .faq-content p { padding-bottom: 16px; color: #475569; font-size: 14px; line-height: 1.6; }
+
+        @media (max-width: 650px) { .results-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<main class="calc-container">
+    <!-- AdSense Slot Above Fold -->
+    <div class="ad-slot-top">
+        <span>Advertisement Placeholder</span>
+    </div>
+
+    <h1>Recurring Deposit (RD) Calculator</h1>
+    <p class="subtitle">Calculate expected maturity value and total interest earned on monthly deposits</p>
+
+    <div class="form-group">
+        <label for="monthlyDeposit">Monthly Deposit Amount (₹)</label>
+        <input type="number" id="monthlyDeposit" placeholder="e.g. 5000" value="5000" min="500">
+    </div>
+
+    <div class="form-group">
+        <label for="interestRate">Annual Interest Rate (% P.A.)</label>
+        <input type="number" id="interestRate" placeholder="e.g. 7.1" step="0.1" value="7.1" min="1" max="20">
+    </div>
+
+    <div class="form-group">
+        <label for="tenureMonths">Tenure (in Months)</label>
+        <input type="number" id="tenureMonths" placeholder="e.g. 36" value="36" min="6" max="120">
+    </div>
+
+    <button class="calc-btn" onclick="calculateRD()">Calculate RD Maturity</button>
+
+    <div class="results-box" id="resultsBox">
+        <div class="results-grid">
+            <div class="res-card">
+                <label>Total Investment Amount</label>
+                <div class="val" id="investedVal">₹0</div>
+            </div>
+            <div class="res-card">
+                <label>Total Interest Earned</label>
+                <div class="val highlight" id="interestVal">₹0</div>
+            </div>
+            <div class="res-card">
+                <label>Maturity Value</label>
+                <div class="val" id="maturityVal">₹0</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AdSense Slot Between Content -->
+    <div class="ad-slot-middle">
+        <span>Advertisement Placeholder</span>
+    </div>
+
+    <!-- SEO Content & Interactive FAQs -->
+    <section class="seo-section">
+        <h2>What is a Recurring Deposit (RD)?</h2>
+        <p>A <strong>Recurring Deposit (RD)</strong> is a financial product offered by Indian banks and Post Office that enables individuals to deposit a fixed amount every month for a specific tenure and earn guaranteed interest returns.</p>
+
+        <h2>How RD Interest is Calculated in India</h2>
+        <p>Indian commercial banks calculate interest on Recurring Deposits using quarterly compounding formula recommended by the Indian Banks' Association (IBA):</p>
+        <p style="background: #ecfdf5; padding: 10px; border-radius: 5px; font-weight: bold; margin: 10px 0; color: #047857;">
+            M = P × [(1 + i)^n - 1] / [1 - (1 + i)^(-1/3)]
+        </p>
+        <p>Where <strong>P</strong> is the monthly deposit amount, <strong>i</strong> is (Annual Rate / 400), and <strong>n</strong> is the number of quarters in the tenure.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-accordion">
+            <div class="faq-item">
+                <button class="faq-header" onclick="toggleFaq(this)">
+                    <span>What is the minimum tenure for a bank RD?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-content">
+                    <p>In most Indian commercial banks, the minimum tenure for an RD account is 6 months, while the maximum tenure can extend up to 10 years (120 months).</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-header" onclick="toggleFaq(this)">
+                    <span>Is interest earned on RD taxable in India?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-content">
+                    <p>Yes, RD interest is fully taxable under 'Income from Other Sources'. Tax Deducted at Source (TDS) applies if total interest earned across deposits exceeds ₹40,000 (₹50,000 for senior citizens) in a financial year.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-header" onclick="toggleFaq(this)">
+                    <span>Can senior citizens get extra interest on Recurring Deposits?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-content">
+                    <p>Yes, almost all public and private sector banks offer an additional interest rate of 0.50% to senior citizens (aged 60 and above) on RD schemes.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-header" onclick="toggleFaq(this)">
+                    <span>What happens if I miss an RD monthly installment?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-content">
+                    <p>If you delay or miss paying a monthly installment, banks may levy a small penalty fee (usually around ₹1.50 to ₹2.00 per ₹100 per month of default).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Embedded Client-Side JavaScript Logic -->
+<script>
+function calculateRD() {
+    const p = parseFloat(document.getElementById('monthlyDeposit').value) || 0;
+    const rate = parseFloat(document.getElementById('interestRate').value) || 0;
+    const months = parseFloat(document.getElementById('tenureMonths').value) || 0;
+
+    if (p < 100 || rate <= 0 || months <= 0) {
+        alert("Please enter valid positive values for deposit, rate, and tenure.");
+        return;
+    }
+
+    const totalInvested = p * months;
+    
+    // IBA standard formula quarterly compounding algorithm for RD
+    let totalMaturity = 0;
+    for (let m = months; m >= 1; m--) {
+        const timeInYears = m / 12;
+        // quarterly compounding for each monthly instalment
+        totalMaturity += p * Math.pow(1 + (rate / 400), 4 * timeInYears);
+    }
+
+    const totalInterest = totalMaturity - totalInvested;
+
+    document.getElementById('resultsBox').style.display = 'block';
+    document.getElementById('investedVal').innerText = "₹" + Math.round(totalInvested).toLocaleString('en-IN');
+    document.getElementById('interestVal').innerText = "₹" + Math.round(totalInterest).toLocaleString('en-IN');
+    document.getElementById('maturityVal').innerText = "₹" + Math.round(totalMaturity).toLocaleString('en-IN');
+}
+
+// Collapsible FAQ Accordion Toggle Function
+function toggleFaq(headerBtn) {
+    const item = headerBtn.parentElement;
+    const content = item.querySelector('.faq-content');
+    const icon = item.querySelector('.faq-icon');
+
+    if (item.classList.contains('active')) {
+        item.classList.remove('active');
+        content.style.maxHeight = "0";
+        icon.innerText = "+";
+    } else {
+        document.querySelectorAll('.faq-item').forEach(el => {
+            el.classList.remove('active');
+            el.querySelector('.faq-content').style.maxHeight = "0";
+            el.querySelector('.faq-icon').innerText = "+";
+        });
+
+        item.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.innerText = "-";
+    }
+}
+</script>
+
+</body>
+</html>
