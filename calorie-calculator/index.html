@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie & TDEE Calculator | Daily Caloric Needs for Weight Loss</title>
+    <meta name="description" content="Calculate your Total Daily Energy Expenditure (TDEE) and BMR. Get exact daily calorie targets for weight loss, maintenance, or muscle gain.">
+    <meta name="keywords" content="calorie calculator, tdee calculator, bmr calculator, daily calorie intake for weight loss, maintenance calories calculator">
+    <link rel="canonical" href="https://indiancalchub.online/calorie-calculator/" />
+
+    <!-- Schema Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Calorie & TDEE Calculator",
+      "url": "https://indiancalchub.online/calorie-calculator/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "All",
+      "description": "Calculate daily calories needed for weight loss, gain, or maintenance based on BMR and activity level."
+    }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; line-height: 1.6; padding: 20px; }
+        .calc-container { max-width: 800px; margin: 20px auto; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        h1 { text-align: center; color: #059669; font-size: 26px; margin-bottom: 8px; }
+        .subtitle { text-align: center; color: #64748b; margin-bottom: 25px; font-size: 15px; }
+
+        /* AdSense Top Header Slot */
+        .ad-slot-top { text-align: center; margin-bottom: 20px; background: #f8fafc; border: 1px dashed #cbd5e1; padding: 10px; font-size: 12px; color: #94a3b8; }
+        
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .form-group { margin-bottom: 18px; }
+        label { display: block; font-weight: 600; margin-bottom: 6px; color: #1e293b; }
+        input[type="number"], select { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 16px; outline: none; }
+        input[type="number"]:focus, select:focus { border-color: #059669; }
+
+        .calc-btn { width: 100%; padding: 14px; background-color: #059669; color: #ffffff; font-size: 16px; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.3s; margin-top: 10px; }
+        .calc-btn:hover { background-color: #047857; }
+
+        .results-box { display: none; margin-top: 25px; padding: 20px; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; }
+        .results-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; text-align: center; margin-top: 10px; }
+        .res-card { background: #ffffff; padding: 15px; border-radius: 6px; border: 1px solid #d1fae5; }
+        .res-card label { font-size: 13px; color: #64748b; font-weight: normal; }
+        .res-card .val { font-size: 20px; font-weight: bold; color: #059669; margin-top: 4px; }
+        .res-card .val.highlight { color: #2563eb; }
+
+        /* AdSense Content Slot */
+        .ad-slot-middle { text-align: center; margin: 30px 0 10px 0; background: #f8fafc; border: 1px dashed #cbd5e1; padding: 10px; font-size: 12px; color: #94a3b8; }
+
+        .seo-section { margin-top: 25px; border-top: 1px solid #e2e8f0; padding-top: 25px; }
+        .seo-section h2 { color: #047857; font-size: 20px; margin-bottom: 12px; margin-top: 20px; }
+        .seo-section p, .seo-section ul { color: #334155; font-size: 15px; }
+        .seo-section ul { margin-left: 20px; margin-top: 8px; }
+        .faq-item { margin-top: 15px; }
+        .faq-item h4 { color: #1e293b; font-weight: 600; font-size: 15px; }
+        .faq-item p { color: #334155; font-size: 14px; }
+
+        @media (max-width: 600px) { 
+            .results-grid { grid-template-columns: 1fr; } 
+            .form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<main class="calc-container">
+    <!-- AdSense Slot Above Fold -->
+    <div class="ad-slot-top">
+        <span>Advertisement Placeholder</span>
+    </div>
+
+    <h1>Calorie & TDEE Calculator</h1>
+    <p class="subtitle">Calculate your daily calorie needs for maintenance, fat loss, or muscle gain</p>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender">
+                <option value="male" selected>Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="age">Age (Years)</label>
+            <input type="number" id="age" placeholder="e.g. 25" min="10" max="100" value="25">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="weight">Weight (kg)</label>
+            <input type="number" id="weight" placeholder="e.g. 70" min="30" max="250">
+        </div>
+        <div class="form-group">
+            <label for="height">Height (cm)</label>
+            <input type="number" id="height" placeholder="e.g. 175" min="100" max="250">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="activity">Daily Activity Level</label>
+        <select id="activity">
+            <option value="1.2">Sedentary (Little or no exercise)</option>
+            <option value="1.375">Lightly Active (Exercise 1-3 days/week)</option>
+            <option value="1.55" selected>Moderately Active (Exercise 3-5 days/week)</option>
+            <option value="1.725">Very Active (Hard exercise 6-7 days/week)</option>
+            <option value="1.9">Extra Active (Very heavy physical job/training)</option>
+        </select>
+    </div>
+
+    <button class="calc-btn" onclick="calculateCalories()">Calculate Calories</button>
+
+    <div class="results-box" id="resultsBox">
+        <div class="results-grid">
+            <div class="res-card">
+                <label>Weight Loss (-500 kcal)</label>
+                <div class="val" id="lossVal">0 kcal</div>
+            </div>
+            <div class="res-card">
+                <label>Maintenance (TDEE)</label>
+                <div class="val highlight" id="maintVal">0 kcal</div>
+            </div>
+            <div class="res-card">
+                <label>Weight Gain (+500 kcal)</label>
+                <div class="val" id="gainVal">0 kcal</div>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 15px; font-size: 13px; color: #047857;">
+            <strong>Basal Metabolic Rate (BMR):</strong> <span id="bmrVal">0</span> kcal/day (Calories burned at complete rest)
+        </p>
+    </div>
+
+    <!-- AdSense Slot Between Content -->
+    <div class="ad-slot-middle">
+        <span>Advertisement Placeholder</span>
+    </div>
+
+    <!-- SEO Content, Explanation, & FAQs -->
+    <section class="seo-section">
+        <h2>What is BMR and TDEE?</h2>
+        <p>Understanding calorie expenditure is essential for managing body weight effectively:</p>
+        <ul>
+            <li><strong>Basal Metabolic Rate (BMR):</strong> The minimum number of calories your body needs to maintain basic life-sustaining functions (breathing, heart rate, cell production) while at rest.</li>
+            <li><strong>Total Daily Energy Expenditure (TDEE):</strong> The total amount of calories you burn per day, including physical activities, work, and workouts. It is calculated by multiplying BMR with an activity multiplier.</li>
+        </ul>
+
+        <h2>How Calorie Targets Work for Weight Goals</h2>
+        <ul>
+            <li><strong>Fat Loss:</strong> Consuming 300 to 500 calories below your TDEE creates a caloric deficit, leading to safe weight loss of about 0.5 kg per week.</li>
+            <li><strong>Weight Maintenance:</strong> Eating at your exact TDEE maintains your current body weight.</li>
+            <li><strong>Muscle Building / Weight Gain:</strong> Consuming 300 to 500 calories above your TDEE provides the energy surplus required for muscle growth.</li>
+        </ul>
+
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <div class="faq-item">
+            <h4>Q1. Which formula is used to calculate BMR?</h4>
+            <p>This calculator uses the highly accurate <strong>Mifflin-St Jeor Equation</strong>, recognized globally as the gold standard for clinical and fitness assessment.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Q2. How fast should I lose weight safely?</h4>
+            <p>A safe rate of weight loss recommended by health professionals is 0.5 kg to 1 kg per week, achieved through a moderate daily deficit of 500 to 750 calories.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Q3. Do macronutrients matter alongside total calories?</h4>
+            <p>Yes. While total daily calories dictate weight loss or gain, balancing protein, carbohydrates, and healthy fats is vital for muscle retention and overall health.</p>
+        </div>
+    </section>
+</main>
+
+<!-- Embedded Client-Side JavaScript Logic -->
+<script>
+function calculateCalories() {
+    const gender = document.getElementById('gender').value;
+    const age = parseFloat(document.getElementById('age').value) || 0;
+    const weight = parseFloat(document.getElementById('weight').value) || 0;
+    const height = parseFloat(document.getElementById('height').value) || 0;
+    const activity = parseFloat(document.getElementById('activity').value) || 1.2;
+
+    if (weight <= 0 || height <= 0 || age <= 0) {
+        alert("Please enter valid positive numbers for age, weight, and height.");
+        return;
+    }
+
+    // Mifflin-St Jeor BMR Equation
+    let bmr = (10 * weight) + (6.25 * height) - (5 * age);
+    if (gender === 'male') {
+        bmr += 5;
+    } else {
+        bmr -= 161;
+    }
+
+    const tdee = bmr * activity;
+    const weightLoss = Math.max(1000, tdee - 500);
+    const weightGain = tdee + 500;
+
+    document.getElementById('resultsBox').style.display = 'block';
+    document.getElementById('bmrVal').innerText = Math.round(bmr).toLocaleString('en-IN');
+    document.getElementById('maintVal').innerText = Math.round(tdee).toLocaleString('en-IN') + " kcal";
+    document.getElementById('lossVal').innerText = Math.round(weightLoss).toLocaleString('en-IN') + " kcal";
+    document.getElementById('gainVal').innerText = Math.round(weightGain).toLocaleString('en-IN') + " kcal";
+}
+</script>
+
+</body>
+</html>
