@@ -1,612 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KWSFTNW1VF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-KWSFTNW1VF');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EMI Calculator India - Home Loan, Car Loan & Personal Loan EMI (2026)</title>
-  <meta name="description" content="Calculate monthly EMI for SBI, HDFC, ICICI, and Axis Bank home loans, car loans, and personal loans. View total interest, repayment breakdown, and loan amortization in Indian Rupees.">
-  <meta name="keywords" content="emi calculator, home loan emi calculator india, sbi emi calculator, hdfc car loan emi, personal loan emi calculator, reducing balance emi, loan interest calculator">
-  <link rel="canonical" href="https://roaring-boba-b53db8.netlify.app/emi-calculator">
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://roaring-boba-b53db8.netlify.app/emi-calculator">
-  <meta property="og:title" content="EMI Calculator India - Accurate Home, Car & Personal Loan EMI">
-  <meta property="og:description" content="Instant monthly EMI calculation with principal vs interest breakdown for Indian bank loans.">
-  <meta property="og:image" content="https://roaring-boba-b53db8.netlify.app/images/logo.svg">
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="EMI Calculator India - Instant Loan Installment Tool">
-  <meta name="twitter:description" content="Calculate your loan EMI, total interest, and tenure comparisons in Indian Rupees.">
-  
-  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/calculators.css">
-
-  <!-- Schema.org FAQPage Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is an EMI and how is it calculated in Indian banks?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "An Equated Monthly Installment (EMI) is a fixed payment amount made by a borrower to a lender at a specified date each calendar month. Indian commercial banks like SBI, HDFC, and ICICI calculate EMIs using the reducing balance method, where interest is charged only on the outstanding loan balance."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does loan tenure affect my total interest payout?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A longer tenure reduces your monthly EMI amount making it easier on your monthly budget, but it significantly increases the total interest paid over the life of the loan. Conversely, a shorter tenure increases monthly EMI but saves substantial amounts in cumulative interest."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are there prepayment penalties on home loans in India?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "According to Reserve Bank of India (RBI) mandates, banks and housing finance companies cannot charge prepayment penalties or foreclosure charges on floating-rate individual home loans. However, fixed-rate loans or loans taken by non-individual entities may attract prepayment charges."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between fixed-rate and floating-rate loans?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In a fixed-rate loan, the interest rate remains unchanged throughout the loan tenure, providing certainty in monthly outflows. In a floating-rate loan, the interest rate is linked to an external benchmark (such as the RBI Repo Rate) and fluctuates with central bank monetary policy updates."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I claim income tax deductions on my home loan EMI in India?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, under the old tax regime of the Indian Income Tax Act, you can claim a deduction of up to ₹1.5 Lakh on principal repayment under Section 80C, and up to ₹2 Lakh on interest paid for a self-occupied property under Section 24(b)."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does a CIBIL credit score affect my loan interest rate?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Most Indian lenders offer tiered interest rates based on your CIBIL score. A score of 750 or above typically qualifies borrowers for the lowest interest rates, reduced processing fees, and expedited loan sanctioning."
-        }
-      }
-    ]
-  }
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMI Calculator Online – Home, Car & Personal Loan EMI | Indian Calculator Hub</title>
+<meta name="description" content="Calculate your monthly loan EMI, total interest and total payment instantly for home loans, car loans and personal loans. Free, accurate and mobile-friendly.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://indiancalchub.online/emi-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://indiancalchub.online/emi-calculator.html">
+<meta property="og:title" content="EMI Calculator Online – Home, Car & Personal Loan EMI | Indian Calculator Hub">
+<meta property="og:description" content="Calculate your monthly loan EMI, total interest and total payment instantly for home loans, car loans and personal loans. Free, accurate and mobile-friendly.">
+<meta property="og:site_name" content="Indian Calculator Hub">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="EMI Calculator Online – Home, Car & Personal Loan EMI | Indian Calculator Hub">
+<meta name="twitter:description" content="Calculate your monthly loan EMI, total interest and total payment instantly for home loans, car loans and personal loans. Free, accurate and mobile-friendly.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KWSFTNW1VF"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-KWSFTNW1VF');
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is EMI in a loan?", "acceptedAnswer": {"@type": "Answer", "text": "EMI (Equated Monthly Instalment) is the fixed monthly payment you make to repay a loan, made up of a principal component and an interest component, until the loan is fully repaid."}}, {"@type": "Question", "name": "What formula does this EMI calculator use?", "acceptedAnswer": {"@type": "Answer", "text": "It uses the standard reducing-balance formula EMI = P × r × (1+r)^n / [(1+r)^n − 1], where P is the loan amount, r is the monthly interest rate and n is the number of monthly instalments. This matches the method most Indian banks and NBFCs use."}}, {"@type": "Question", "name": "Does prepaying a loan reduce my EMI or my tenure?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on what you choose with your lender. Most banks let you either reduce the tenure (keep EMI the same, finish earlier) or reduce the EMI (keep tenure the same, pay less each month). Reducing tenure usually saves more total interest."}}, {"@type": "Question", "name": "Can I use this calculator for a car loan or personal loan, not just a home loan?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The EMI formula is identical for home loans, car loans, personal loans and education loans — only the amount, rate and tenure change."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://indiancalchub.online/index.html"}, {"@type": "ListItem", "position": 2, "name": "Loan EMI Calculator", "item": "https://indiancalchub.online/emi-calculator.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Loan EMI Calculator", "url": "https://indiancalchub.online/emi-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "description": "Calculate your monthly loan EMI, total interest and total payment instantly for home loans, car loans and personal loans. Free, accurate and mobile-friendly.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}</script>
 </head>
 <body>
 
-  <!-- Top Ad Slot -->
-  <aside class="ad-wrapper top-banner" aria-label="Sponsored Content">
-    <div class="container">
-      <span class="ad-label">Advertisement</span>
-      <div id="ad-slot-1" class="ad-slot leaderboard">
-        <span>Leaderboard Ad Placement (728x90)</span>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="Indian Calculator Hub home">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" stroke="#DD8A1E" stroke-width="2"/>
+        <path d="M13 26V14h4.2c2.6 0 4.3 1.4 4.3 3.7 0 1.8-1 3-2.6 3.5L22 26h-2.7l-2.7-4.4H15.3V26H13Zm2.3-6.3h1.7c1.4 0 2.2-.6 2.2-1.9 0-1.2-.8-1.8-2.2-1.8h-1.7v3.7Z" fill="#fff"/>
+      </svg>
+      Indian Calculator Hub
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      Menu
+    </button>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html" class="">Home</a>
+      <div class="dropdown">
+        <a href="index.html#calculators" aria-haspopup="true">Calculators</a>
+        <div class="dropdown-panel">
+          <div class="grp-label">Finance & Tax</div>
+<a href="emi-calculator.html">Loan EMI Calculator</a>
+<a href="sip-calculator.html">SIP Investment Calculator</a>
+<a href="income-tax-calculator.html">Income Tax Calculator</a>
+<a href="ppf-calculator.html">PPF Calculator</a>
+<a href="fd-calculator.html">Fixed Deposit (FD) Calculator</a>
+<a href="gst-calculator.html">GST Calculator</a>
+<div class="grp-label">Student & Academic</div>
+<a href="percentage-calculator.html">Percentage Calculator</a>
+<a href="cgpa-calculator.html">CGPA to Percentage Calculator</a>
+<div class="grp-label">Daily Life & Health</div>
+<a href="age-calculator.html">Exact Age Calculator</a>
+<a href="bmi-calculator.html">Asian Indian BMI Calculator</a>
+<a href="calorie-calculator.html">Daily Calorie Calculator</a>
+        </div>
       </div>
-    </div>
-  </aside>
+      <a href="about.html" class="">About</a>
+      <a href="contact.html" class="">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- Site Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="/" class="site-logo">
-        <img src="/images/logo.svg" alt="Indian Calculator Hub Logo" width="220" height="38">
-      </a>
-      <nav aria-label="Primary Navigation">
-        <ul class="nav-links">
-          <li><a href="/" class="nav-link">Home</a></li>
-          <li><a href="/emi-calculator" class="nav-link active">EMI Calculator</a></li>
-          <li><a href="/sip-calculator" class="nav-link">SIP Calculator</a></li>
-          <li><a href="/fd-calculator" class="nav-link">FD Calculator</a></li>
-          <li><a href="/gst-calculator" class="nav-link">GST Calculator</a></li>
-          <li><a href="/about" class="nav-link">About</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        </button>
+
+<nav class="breadcrumb container" aria-label="Breadcrumb">
+  <a href="index.html">Home</a> <span class="sep">/</span> <span>Loan EMI Calculator</span>
+</nav>
+<main id="main">
+<div class="container">
+  <div class="ad-slot" aria-label="Advertisement"><span>Header ad &middot; responsive ad unit</span></div>
+  <div class="calc-shell">
+    <section class="calc-card">
+      <h1>Loan EMI Calculator</h1>
+      <p class="sub">Work out your monthly instalment, total interest payable and full repayment amount for any home, car or personal loan.</p>
+      
+      <div class="form-row">
+        <label for="emiP">Loan amount (₹)</label>
+        <input type="number" id="emiP" value="2500000" min="0" step="1000">
       </div>
-    </div>
-    <div class="mobile-nav-menu">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/emi-calculator">EMI Calculator</a></li>
-        <li><a href="/sip-calculator">SIP Calculator</a></li>
-        <li><a href="/fd-calculator">FD Calculator</a></li>
-        <li><a href="/gst-calculator">GST Calculator</a></li>
-        <li><a href="/percentage-calculator">Percentage Calculator</a></li>
-        <li><a href="/cgpa-calculator">CGPA Calculator</a></li>
-        <li><a href="/age-calculator">Age Calculator</a></li>
-        <li><a href="/bmi-calculator">BMI Calculator</a></li>
-      </ul>
-    </div>
-  </header>
+      <div class="form-grid">
+        <div class="form-row">
+          <label for="emiR">Annual interest rate (%)</label>
+          <input type="number" id="emiR" value="8.5" min="0" step="0.05">
+        </div>
+        <div class="form-row">
+          <label for="emiN">Loan tenure (years)</label>
+          <input type="number" id="emiN" value="20" min="1" step="1">
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcEMI()">Calculate EMI</button>
+      <div class="result-box" id="resEMI">
+        <div class="result-headline-label">Monthly EMI</div>
+        <div class="result-headline" id="valEMI">₹0</div>
+        <div class="result-line"><span>Total interest payable</span><strong id="valEMIInt">₹0</strong></div>
+        <div class="result-line"><span>Total amount payable</span><strong id="valEMITotal">₹0</strong></div>
+      </div>
+    
+    </section>
+    <aside class="side-panel">
+      
+<h2>Quick tips</h2>
+<ul>
+  <li>Lower interest rate or shorter tenure reduces total interest, but raises the monthly EMI.</li>
+  <li>Compare offers from at least 3 lenders — even a 0.25% rate difference matters on large home loans.</li>
+  <li>Part-prepayments reduce either your tenure or EMI, and save substantial interest over the loan's life.</li>
+</ul>
 
-  <!-- Page Header -->
-  <div class="calc-page-header">
-    <div class="container">
-      <ul class="breadcrumbs">
-        <li><a href="/">Home</a></li>
-        <li>/</li>
-        <li><a href="/#calculators">Finance</a></li>
-        <li>/</li>
-        <li><span class="current">EMI Calculator</span></li>
-      </ul>
-      <h1 class="calc-page-title">Loan EMI Calculator India</h1>
-      <p class="calc-page-subtitle">
-        Calculate your monthly EMI, total interest, and complete repayment schedule for Home Loans, Car Loans, and Personal Loans in Indian Rupees.
-      </p>
-    </div>
+    </aside>
   </div>
 
-  <main class="container">
-    <div class="calc-page-layout">
-      
-      <!-- Left / Main Column -->
-      <div class="calc-main-content">
-        
-        <!-- Interactive EMI Calculator Widget -->
-        <section class="calculator-card" aria-label="EMI Calculator Interface">
-          <div class="calc-widget-grid">
-            
-            <!-- Inputs -->
-            <div class="calc-inputs-col">
-              
-              <!-- Loan Amount -->
-              <div class="input-field-group">
-                <div class="input-header-row">
-                  <label for="emi-amount" class="input-label">Loan Amount (Principal)</label>
-                  <span id="emi-amount-badge" class="input-value-badge">₹ 25,00,000</span>
-                </div>
-                <div class="input-number-wrapper has-prefix">
-                  <span class="input-affix-prefix">₹</span>
-                  <input type="number" id="emi-amount" class="calc-text-input" value="2500000" min="10000" max="50000000" step="10000">
-                </div>
-                <input type="range" id="emi-amount-slider" class="calc-range-slider" min="100000" max="20000000" step="50000" value="2500000" aria-label="Loan Amount Slider">
-                <div class="slider-scale-row">
-                  <span>₹ 1 Lakh</span>
-                  <span>₹ 1 Crore</span>
-                  <span>₹ 2 Crore</span>
-                </div>
-              </div>
+  <div class="ad-slot" aria-label="Advertisement"><span>In-content ad &middot; responsive ad unit</span></div>
 
-              <!-- Interest Rate -->
-              <div class="input-field-group">
-                <div class="input-header-row">
-                  <label for="emi-rate" class="input-label">Interest Rate (% p.a.)</label>
-                  <span id="emi-rate-badge" class="input-value-badge">8.5 %</span>
-                </div>
-                <div class="input-number-wrapper has-suffix">
-                  <input type="number" id="emi-rate" class="calc-text-input" value="8.5" min="1" max="30" step="0.05">
-                  <span class="input-affix-suffix">%</span>
-                </div>
-                <input type="range" id="emi-rate-slider" class="calc-range-slider" min="6.0" max="18.0" step="0.1" value="8.5" aria-label="Interest Rate Slider">
-                <div class="slider-scale-row">
-                  <span>6%</span>
-                  <span>12%</span>
-                  <span>18%</span>
-                </div>
-              </div>
+  <section class="content-block" style="margin-top:36px;">
+    
+<h2>How loan EMI is calculated</h2>
+<p>EMI stands for Equated Monthly Instalment — the fixed amount you repay every month toward a loan until it is fully cleared. Each instalment combines a portion of principal and a portion of interest; early in the loan, the interest share is larger, and it shrinks over time as the outstanding principal reduces.</p>
+<p>The calculator uses the standard reducing-balance formula:</p>
+<p style="font-family:'Zilla Slab',serif;font-size:1.05rem;color:var(--navy);">EMI = P &times; r &times; (1 + r)<sup>n</sup> / [(1 + r)<sup>n</sup> &minus; 1]</p>
+<p>Here P is the loan amount (principal), r is the monthly interest rate (annual rate divided by 12 and by 100), and n is the number of monthly instalments (tenure in years multiplied by 12). This is the same method banks and NBFCs use for home loans, car loans, education loans and personal loans in India.</p>
+<h3>What changes your EMI</h3>
+<ul>
+  <li><strong>Interest rate:</strong> a lower rate reduces both your EMI and total interest paid.</li>
+  <li><strong>Tenure:</strong> a longer tenure lowers the monthly EMI but increases total interest paid over the loan.</li>
+  <li><strong>Prepayment:</strong> paying extra toward the principal, even occasionally, shortens the loan and cuts interest cost significantly.</li>
+</ul>
 
-              <!-- Loan Tenure -->
-              <div class="input-field-group">
-                <div class="input-header-row">
-                  <label for="emi-tenure" class="input-label">Loan Tenure (Years)</label>
-                  <span id="emi-tenure-badge" class="input-value-badge">20 Years</span>
-                </div>
-                <div class="input-number-wrapper has-suffix">
-                  <input type="number" id="emi-tenure" class="calc-text-input" value="20" min="1" max="30" step="1">
-                  <span class="input-affix-suffix">Yr</span>
-                </div>
-                <input type="range" id="emi-tenure-slider" class="calc-range-slider" min="1" max="30" step="1" value="20" aria-label="Tenure Slider">
-                <div class="slider-scale-row">
-                  <span>1 Year</span>
-                  <span>15 Years</span>
-                  <span>30 Years</span>
-                </div>
-              </div>
+  </section>
 
-            </div>
+  <section class="content-block" style="margin-top:36px;">
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+<details><summary>What is EMI in a loan?</summary><p>EMI (Equated Monthly Instalment) is the fixed monthly payment you make to repay a loan, made up of a principal component and an interest component, until the loan is fully repaid.</p></details>
+<details><summary>What formula does this EMI calculator use?</summary><p>It uses the standard reducing-balance formula EMI = P × r × (1+r)^n / [(1+r)^n − 1], where P is the loan amount, r is the monthly interest rate and n is the number of monthly instalments. This matches the method most Indian banks and NBFCs use.</p></details>
+<details><summary>Does prepaying a loan reduce my EMI or my tenure?</summary><p>It depends on what you choose with your lender. Most banks let you either reduce the tenure (keep EMI the same, finish earlier) or reduce the EMI (keep tenure the same, pay less each month). Reducing tenure usually saves more total interest.</p></details>
+<details><summary>Can I use this calculator for a car loan or personal loan, not just a home loan?</summary><p>Yes. The EMI formula is identical for home loans, car loans, personal loans and education loans — only the amount, rate and tenure change.</p></details>
+</div>
+  </section>
 
-            <!-- Output Column -->
-            <div class="calc-results-col">
-              <div class="result-main-card">
-                <div class="result-label">Monthly Loan EMI</div>
-                <div id="res-monthly-emi" class="result-primary-value">₹ 21,696</div>
-                <div class="result-subtext">Payable every month</div>
-              </div>
+  <section style="margin-top:32px;">
+    <h2 style="font-size:1.1rem;">Related calculators</h2>
+    <div class="related-tools">
+<a href="sip-calculator.html">SIP Investment Calculator</a>
+<a href="fd-calculator.html">Fixed Deposit (FD) Calculator</a>
+<a href="ppf-calculator.html">PPF Calculator</a>
+</div>
+  </section>
 
-              <!-- Visual Proportion Bar -->
-              <div class="visual-bar-wrapper">
-                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #64748B; margin-bottom: 0.25rem;">
-                  <span>Principal: <strong id="lbl-p-pct">46.5%</strong></span>
-                  <span>Interest: <strong id="lbl-i-pct">53.5%</strong></span>
-                </div>
-                <div class="visual-progress-bar">
-                  <div id="bar-principal" class="bar-segment seg-primary" style="width: 46.5%;"></div>
-                  <div id="bar-interest" class="bar-segment seg-accent" style="width: 53.5%;"></div>
-                </div>
-              </div>
+  <div class="ad-slot" aria-label="Advertisement"><span>Footer ad &middot; responsive ad unit</span></div>
+</div>
+</main>
 
-              <!-- Breakdown Rows -->
-              <div class="result-breakdown-list">
-                <div class="breakdown-row">
-                  <span class="breakdown-label">
-                    <span class="breakdown-dot dot-primary"></span>
-                    Principal Loan Amount
-                  </span>
-                  <span id="res-principal" class="breakdown-val">₹ 25,00,000</span>
-                </div>
-                <div class="breakdown-row">
-                  <span class="breakdown-label">
-                    <span class="breakdown-dot dot-accent"></span>
-                    Total Interest Amount
-                  </span>
-                  <span id="res-total-interest" class="breakdown-val">₹ 27,06,936</span>
-                </div>
-                <div class="breakdown-row">
-                  <span class="breakdown-label">
-                    <span class="breakdown-dot dot-neutral"></span>
-                    Total Amount Payable
-                  </span>
-                  <span id="res-total-payment" class="breakdown-val">₹ 52,06,936</span>
-                </div>
-              </div>
 
-              <!-- Action buttons -->
-              <div class="calc-actions">
-                <button type="button" id="btn-copy-emi" class="btn-primary" style="font-size: 0.875rem; padding: 0.6rem 1rem;">
-                  Copy EMI Details
-                </button>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- In-Content Ad Slot -->
-        <aside class="ad-wrapper in-content" aria-label="Sponsored Content">
-          <span class="ad-label">Advertisement</span>
-          <div id="ad-slot-2" class="ad-slot responsive-banner">
-            <span>In-Content Ad Slot (Responsive Display)</span>
-          </div>
-        </aside>
-
-        <!-- 400-600 Word Explanatory Content -->
-        <article class="content-article">
-          <h2>Understanding Loan EMI: Formulas, Mechanics & Financial Planning in India</h2>
-          <p>
-            An <strong>Equated Monthly Installment (EMI)</strong> is the designated fixed payment amount provided by a borrower to a financial institution, bank, or housing finance company on a predetermined calendar day every month. In India, whether you secure a home loan from the State Bank of India (SBI), a vehicle loan from HDFC Bank, or a personal loan from ICICI Bank, your EMI acts as the structured amortization mechanism to systematically extinguish your debt over a set tenure.
-          </p>
-
-          <h3>The Mathematical Formula for EMI Calculation</h3>
-          <p>
-            Indian retail lending practices employ the reducing balance method. Under this framework, interest is calculated solely on the unliquidated principal balance at the beginning of each monthly payment cycle. The mathematical formula utilized is:
-          </p>
-
-          <div class="formula-box">
-            <div class="formula-title">Equated Monthly Installment (EMI) Formula</div>
-            <code class="formula-math">E = P × r × (1 + r)^n / ((1 + r)^n - 1)</code>
-            <div class="formula-legend">
-              <strong>Where:</strong><br>
-              • <strong>E</strong> = Equated Monthly Installment in Rupees (₹)<br>
-              • <strong>P</strong> = Principal loan amount borrowed<br>
-              • <strong>r</strong> = Monthly interest rate, calculated as (Annual Interest Rate / 12) / 100<br>
-              • <strong>n</strong> = Loan duration expressed in total monthly installments (Tenure in Years × 12)
-            </div>
-          </div>
-
-          <h3>How To Use The Indian Calculator Hub EMI Tool</h3>
-          <ol>
-            <li><strong>Input Principal Loan Amount:</strong> Enter the precise loan amount required. You can adjust the slider or type directly into the numerical field.</li>
-            <li><strong>Select Annual Interest Rate:</strong> Enter the expected lending rate offered by your bank (e.g., 8.50% for standard home loans or 11.5% for car financing).</li>
-            <li><strong>Specify Tenure in Years:</strong> Choose your loan repayment horizon. Home loans in India typically range from 10 to 30 years, while vehicle and personal loans span 1 to 7 years.</li>
-            <li><strong>Review Instant Analytics:</strong> The calculator updates in real time, projecting your monthly EMI, total interest accrued, and total repayment capital.</li>
-          </ol>
-
-          <h3>Real-World Indian Case Study: ₹50 Lakh Home Loan Comparison</h3>
-          <p>
-            Consider Rahul, an IT professional based in Pune who is acquiring an apartment for ₹65 Lakh. He takes a home loan of <strong>₹50,00,000</strong> at an annual floating interest rate of <strong>8.75%</strong>. Rahul compares a 20-year tenure against a 30-year tenure:
-          </p>
-
-          <div class="example-box">
-            <h4>Case Comparison: 20-Year vs 30-Year Home Loan</h4>
-            <p><strong>Option A (20-Year Tenure):</strong></p>
-            <ul>
-              <li>Monthly EMI: <strong>₹ 44,186</strong></li>
-              <li>Total Interest Paid: <strong>₹ 56,04,535</strong></li>
-              <li>Total Payout: <strong>₹ 1,06,04,535</strong></li>
-            </ul>
-            <p style="margin-top: 0.75rem;"><strong>Option B (30-Year Tenure):</strong></p>
-            <ul>
-              <li>Monthly EMI: <strong>₹ 39,336</strong> (only ₹4,850 lower per month)</li>
-              <li>Total Interest Paid: <strong>₹ 91,60,937</strong></li>
-              <li>Total Payout: <strong>₹ 1,41,60,937</strong></li>
-            </ul>
-            <p style="margin-top: 0.5rem; font-weight: 700; color: #854D0E;">
-              Insight: Extending the loan from 20 to 30 years saves Rahul less than ₹5,000 in monthly EMI, but costs him an additional ₹35.56 Lakh in cumulative interest!
-            </p>
-          </div>
-
-          <h3>Proven Strategies to Lower Your Home Loan Interest Burden</h3>
-          <p>
-            To save Lakhs of rupees across your loan lifecycle in India, consider adopting these key repayment strategies:
-          </p>
-          <ul>
-            <li><strong>Pay One Extra EMI Each Year:</strong> Contributing just one additional installment per calendar year can slash your effective 25-year home loan tenure by over 4 years.</li>
-            <li><strong>Utilize Home Loan Overdraft (Maxgain) Accounts:</strong> Accounts such as SBI Maxgain or Bank of Baroda Home Loan Advantage link your savings account balance to your loan account, reducing daily interest calculations.</li>
-            <li><strong>Maintain a 750+ CIBIL Score:</strong> Lenders reward disciplined credit histories with concessionary interest rates of 25 to 50 basis points.</li>
-          </ul>
-        </article>
-
-        <!-- FAQ Section -->
-        <section class="faq-section" aria-label="Frequently Asked Questions">
-          <div class="faq-header">
-            <h2>Frequently Asked Questions on Loan EMIs</h2>
-          </div>
-          <div class="faq-list">
-            <details class="faq-item" open>
-              <summary class="faq-question">What is an EMI and how is it calculated in Indian banks?</summary>
-              <div class="faq-answer">
-                An Equated Monthly Installment (EMI) is a fixed payment amount made by a borrower to a lender at a specified date each calendar month. Indian commercial banks like SBI, HDFC, and ICICI calculate EMIs using the reducing balance method, where interest is charged only on the outstanding loan balance.
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary class="faq-question">How does loan tenure affect my total interest payout?</summary>
-              <div class="faq-answer">
-                A longer tenure reduces your monthly EMI amount making it easier on your monthly budget, but it significantly increases the total interest paid over the life of the loan. Conversely, a shorter tenure increases monthly EMI but saves substantial amounts in cumulative interest.
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary class="faq-question">Are there prepayment penalties on home loans in India?</summary>
-              <div class="faq-answer">
-                According to Reserve Bank of India (RBI) mandates, banks and housing finance companies cannot charge prepayment penalties or foreclosure charges on floating-rate individual home loans. However, fixed-rate loans or loans taken by non-individual entities may attract prepayment charges.
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary class="faq-question">What is the difference between fixed-rate and floating-rate loans?</summary>
-              <div class="faq-answer">
-                In a fixed-rate loan, the interest rate remains unchanged throughout the loan tenure, providing certainty in monthly outflows. In a floating-rate loan, the interest rate is linked to an external benchmark (such as the RBI Repo Rate) and fluctuates with central bank monetary policy updates.
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary class="faq-question">Can I claim income tax deductions on my home loan EMI in India?</summary>
-              <div class="faq-answer">
-                Yes, under the old tax regime of the Indian Income Tax Act, you can claim a deduction of up to ₹1.5 Lakh on principal repayment under Section 80C, and up to ₹2 Lakh on interest paid for a self-occupied property under Section 24(b).
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary class="faq-question">How does a CIBIL credit score affect my loan interest rate?</summary>
-              <div class="faq-answer">
-                Most Indian lenders offer tiered interest rates based on your CIBIL score. A score of 750 or above typically qualifies borrowers for the lowest interest rates, reduced processing fees, and expedited loan sanctioning.
-              </div>
-            </details>
-          </div>
-        </section>
-
-      </div>
-
-      <!-- Right / Sidebar Column -->
-      <aside class="calc-sidebar">
-        
-        <!-- Sidebar Ad Slot -->
-        <div class="sidebar-box" style="padding: 1rem; text-align: center;">
-          <span class="ad-label">Advertisement</span>
-          <div id="ad-slot-3" class="ad-slot rectangle">
-            <span>Sidebar Ad (300x250)</span>
-          </div>
-        </div>
-
-        <!-- Related Calculators -->
-        <div class="sidebar-box">
-          <h3 class="sidebar-title">Related Calculators</h3>
-          <ul class="sidebar-links">
-            <li>
-              <a href="/sip-calculator">
-                <span>SIP Mutual Fund</span>
-                <span>→</span>
-              </a>
-            </li>
-            <li>
-              <a href="/fd-calculator">
-                <span>Fixed Deposit (FD)</span>
-                <span>→</span>
-              </a>
-            </li>
-            <li>
-              <a href="/gst-calculator">
-                <span>GST Tax Calculator</span>
-                <span>→</span>
-              </a>
-            </li>
-            <li>
-              <a href="/percentage-calculator">
-                <span>Percentage Calculator</span>
-                <span>→</span>
-              </a>
-            </li>
-            <li>
-              <a href="/cgpa-calculator">
-                <span>CGPA to % (CBSE)</span>
-                <span>→</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Quick Summary Box -->
-        <div class="sidebar-box" style="background: #F8FAFC;">
-          <h3 class="sidebar-title" style="border-bottom-color: #E2E8F0;">EMI Quick Fact</h3>
-          <p style="font-size: 0.875rem; color: #475569; line-height: 1.6;">
-            In the early years of any long-term home loan, up to <strong>75% to 80%</strong> of each monthly EMI goes purely toward paying interest, while only 20% to 25% repays the principal balance.
-          </p>
-        </div>
-
-      </aside>
-
+<footer>
+  <div class="container footer-inner">
+    <div>
+      <h4>Indian Calculator Hub</h4>
+      <p style="color:#AEC0D8;font-size:0.88rem;max-width:32ch;">Free calculators for Indian finance, tax, education and everyday health estimates. Built for quick, mobile-friendly use.</p>
     </div>
-  </main>
-
-  <!-- Site Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="/" class="site-logo" style="color: #FFFFFF;">
-            <img src="/images/logo.svg" alt="Indian Calculator Hub" width="200" height="34" style="filter: brightness(0) invert(1);">
-          </a>
-          <p>
-            Indian Calculator Hub provides free financial and mathematical tools engineered for Indian citizens.
-          </p>
-        </div>
-
-        <div>
-          <h4 class="footer-title">Finance Tools</h4>
-          <ul class="footer-links">
-            <li><a href="/emi-calculator">EMI Calculator</a></li>
-            <li><a href="/sip-calculator">SIP Calculator</a></li>
-            <li><a href="/fd-calculator">FD Calculator</a></li>
-            <li><a href="/gst-calculator">GST Calculator</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-title">Academic & Life</h4>
-          <ul class="footer-links">
-            <li><a href="/percentage-calculator">Percentage Calculator</a></li>
-            <li><a href="/cgpa-calculator">CGPA to %</a></li>
-            <li><a href="/age-calculator">Age Calculator</a></li>
-            <li><a href="/bmi-calculator">Asian Indian BMI</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-title">Legal & Trust</h4>
-          <ul class="footer-links">
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/contact">Contact Support</a></li>
-            <li><a href="/privacy-policy">Privacy Policy</a></li>
-            <li><a href="/terms-of-use">Terms of Use</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div>&copy; 2026 Indian Calculator Hub. All rights reserved.</div>
-        <div>
-          <a href="/privacy-policy" style="color: #94A3B8; margin-right: 1rem;">Privacy Policy</a>
-          <a href="/terms-of-use" style="color: #94A3B8;">Terms of Service</a>
-        </div>
-      </div>
+    <div>
+      <h4>Finance & Tax</h4>
+      <ul><li><a href="emi-calculator.html">Loan EMI Calculator</a></li>
+<li><a href="sip-calculator.html">SIP Investment Calculator</a></li>
+<li><a href="income-tax-calculator.html">Income Tax Calculator</a></li>
+<li><a href="ppf-calculator.html">PPF Calculator</a></li>
+<li><a href="fd-calculator.html">Fixed Deposit (FD) Calculator</a></li>
+<li><a href="gst-calculator.html">GST Calculator</a></li></ul>
     </div>
-  </footer>
+    <div>
+      <h4>Student & Health</h4>
+      <ul><li><a href="percentage-calculator.html">Percentage Calculator</a></li>
+<li><a href="cgpa-calculator.html">CGPA to Percentage Calculator</a></li>
+<li><a href="age-calculator.html">Exact Age Calculator</a></li>
+<li><a href="bmi-calculator.html">Asian Indian BMI Calculator</a></li>
+<li><a href="calorie-calculator.html">Daily Calorie Calculator</a></li></ul>
+    </div>
+    <div>
+      <h4>Site</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; <span id="yr"></span> Indian Calculator Hub &middot; indiancalchub.online &middot; Calculators are for estimation only and are not financial, tax, medical or academic advice.
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 
-  <script src="/js/calculators.js"></script>
-  <script src="/js/main.js"></script>
-  <script>
-    // EMI Calculator Real-time Wiring
-    const amtInput = document.getElementById('emi-amount');
-    const amtSlider = document.getElementById('emi-amount-slider');
-    const amtBadge = document.getElementById('emi-amount-badge');
+<script src="app.js"></script>
+<script>
 
-    const rateInput = document.getElementById('emi-rate');
-    const rateSlider = document.getElementById('emi-rate-slider');
-    const rateBadge = document.getElementById('emi-rate-badge');
+function inr(n){ return "₹" + Math.round(n).toLocaleString('en-IN'); }
+function calcEMI(){
+  var P = parseFloat(document.getElementById('emiP').value) || 0;
+  var annR = parseFloat(document.getElementById('emiR').value) || 0;
+  var years = parseFloat(document.getElementById('emiN').value) || 0;
+  var r = annR/12/100;
+  var n = years*12;
+  var emi = 0;
+  if (r === 0) { emi = n > 0 ? P/n : 0; }
+  else { emi = P*r*Math.pow(1+r,n) / (Math.pow(1+r,n)-1); }
+  var total = emi*n;
+  var interest = total-P;
+  document.getElementById('valEMI').textContent = inr(emi);
+  document.getElementById('valEMIInt').textContent = inr(interest);
+  document.getElementById('valEMITotal').textContent = inr(total);
+  document.getElementById('resEMI').classList.add('active');
+}
 
-    const tenureInput = document.getElementById('emi-tenure');
-    const tenureSlider = document.getElementById('emi-tenure-slider');
-    const tenureBadge = document.getElementById('emi-tenure-badge');
-
-    const resMonthlyEmi = document.getElementById('res-monthly-emi');
-    const resPrincipal = document.getElementById('res-principal');
-    const resInterest = document.getElementById('res-total-interest');
-    const resTotal = document.getElementById('res-total-payment');
-
-    const barPrincipal = document.getElementById('bar-principal');
-    const barInterest = document.getElementById('bar-interest');
-    const lblPPct = document.getElementById('lbl-p-pct');
-    const lblIPct = document.getElementById('lbl-i-pct');
-
-    function updateEMI() {
-      const p = parseFloat(amtInput.value) || 0;
-      const r = parseFloat(rateInput.value) || 0;
-      const t = parseFloat(tenureInput.value) || 0;
-
-      amtBadge.textContent = IndianCalc.formatINR(p) + ' ' + IndianCalc.formatIndianWords(p);
-      rateBadge.textContent = r + ' %';
-      tenureBadge.textContent = t + ' Years';
-
-      const res = IndianCalc.calculateEMI(p, r, t);
-
-      resMonthlyEmi.textContent = IndianCalc.formatINR(res.emi);
-      resPrincipal.textContent = IndianCalc.formatINR(res.principal);
-      resInterest.textContent = IndianCalc.formatINR(res.totalInterest) + ' ' + IndianCalc.formatIndianWords(res.totalInterest);
-      resTotal.textContent = IndianCalc.formatINR(res.totalPayment) + ' ' + IndianCalc.formatIndianWords(res.totalPayment);
-
-      barPrincipal.style.width = res.principalPercent + '%';
-      barInterest.style.width = res.interestPercent + '%';
-      lblPPct.textContent = res.principalPercent + '%';
-      lblIPct.textContent = res.interestPercent + '%';
-    }
-
-    amtInput.addEventListener('input', () => {
-      amtSlider.value = amtInput.value;
-      updateEMI();
-    });
-    amtSlider.addEventListener('input', () => {
-      amtInput.value = amtSlider.value;
-      updateEMI();
-    });
-
-    rateInput.addEventListener('input', () => {
-      rateSlider.value = rateInput.value;
-      updateEMI();
-    });
-    rateSlider.addEventListener('input', () => {
-      rateInput.value = rateSlider.value;
-      updateEMI();
-    });
-
-    tenureInput.addEventListener('input', () => {
-      tenureSlider.value = tenureInput.value;
-      updateEMI();
-    });
-    tenureSlider.addEventListener('input', () => {
-      tenureInput.value = tenureSlider.value;
-      updateEMI();
-    });
-
-    document.getElementById('btn-copy-emi').addEventListener('click', () => {
-      const p = amtInput.value;
-      const r = rateInput.value;
-      const t = tenureInput.value;
-      const emi = resMonthlyEmi.textContent;
-      const text = `Loan EMI Calculation:\nLoan Amount: ${IndianCalc.formatINR(p)}\nInterest Rate: ${r}%\nTenure: ${t} Years\nMonthly EMI: ${emi}\nCalculated via Indian Calculator Hub (https://roaring-boba-b53db8.netlify.app/emi-calculator)`;
-      window.copyToClipboard(text, 'EMI Details copied to clipboard!');
-    });
-
-    updateEMI();
-  </script>
+</script>
 </body>
-</html>
+        </html>
+        
