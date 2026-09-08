@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Loan EMI Calculator | Calculate Housing Loan Monthly EMI</title>
+    <meta name="description" content="Free online Home Loan EMI Calculator. Estimate your monthly housing loan EMI, total interest payable, and repayment schedule with principal breakdown.">
+    <meta name="keywords" content="home loan emi calculator, housing loan calculator india, home loan interest rate, housing finance emi, SBI home loan emi calculator">
+    <link rel="canonical" href="https://indiancalchub.online/home-loan-calculator/" />
+
+    <!-- Schema Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Home Loan EMI Calculator",
+      "url": "https://indiancalchub.online/home-loan-calculator/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "description": "Calculate exact home loan monthly EMI payments and total interest liability."
+    }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; line-height: 1.6; padding: 20px; }
+        .calc-container { max-width: 800px; margin: 20px auto; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        h1 { text-align: center; color: #0284c7; font-size: 26px; margin-bottom: 8px; }
+        .subtitle { text-align: center; color: #64748b; margin-bottom: 25px; font-size: 15px; }
+
+        /* AdSense Top Header Slot */
+        .ad-slot-top { text-align: center; margin-bottom: 20px; background: #f8fafc; border: 1px dashed #cbd5e1; padding: 10px; font-size: 12px; color: #94a3b8; }
+        
+        .form-group { margin-bottom: 18px; }
+        label { display: block; font-weight: 600; margin-bottom: 6px; color: #1e293b; }
+        input[type="number"], select { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 16px; outline: none; }
+        input[type="number"]:focus, select:focus { border-color: #0284c7; }
+
+        .calc-btn { width: 100%; padding: 14px; background-color: #0284c7; color: #ffffff; font-size: 16px; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.3s; margin-top: 10px; }
+        .calc-btn:hover { background-color: #0369a1; }
+
+        .results-box { display: none; margin-top: 25px; padding: 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; }
+        .results-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; text-align: center; margin-top: 10px; }
+        .res-card { background: #ffffff; padding: 15px; border-radius: 6px; border: 1px solid #e0f2fe; }
+        .res-card label { font-size: 13px; color: #64748b; font-weight: normal; }
+        .res-card .val { font-size: 20px; font-weight: bold; color: #0284c7; margin-top: 4px; }
+        .res-card .val.highlight { color: #16a34a; }
+
+        /* AdSense Content Slot */
+        .ad-slot-middle { text-align: center; margin: 30px 0 10px 0; background: #f8fafc; border: 1px dashed #cbd5e1; padding: 10px; font-size: 12px; color: #94a3b8; }
+
+        .seo-section { margin-top: 25px; border-top: 1px solid #e2e8f0; padding-top: 25px; }
+        .seo-section h2 { color: #0369a1; font-size: 20px; margin-bottom: 12px; margin-top: 20px; }
+        .seo-section p, .seo-section ul { color: #334155; font-size: 15px; }
+        .seo-section ul { margin-left: 20px; margin-top: 8px; }
+        .faq-item { margin-top: 15px; }
+        .faq-item h4 { color: #1e293b; font-weight: 600; font-size: 15px; }
+        .faq-item p { color: #334155; font-size: 14px; }
+
+        @media (max-width: 650px) { .results-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<main class="calc-container">
+    <!-- AdSense Slot Above Fold -->
+    <div class="ad-slot-top">
+        <span>Advertisement Placeholder</span>
+    </div>
+
+    <h1>Home Loan EMI Calculator</h1>
+    <p class="subtitle">Plan your dream home with accurate monthly EMI and interest calculations</p>
+
+    <div class="form-group">
+        <label for="loanAmount">Home Loan Amount (₹)</label>
+        <input type="number" id="loanAmount" placeholder="e.g. 5000000" min="100000" value="3000000">
+    </div>
+
+    <div class="form-group">
+        <label for="interestRate">Interest Rate (% P.A.)</label>
+        <input type="number" id="interestRate" placeholder="e.g. 8.5" step="0.1" value="8.5" min="1" max="20">
+    </div>
+
+    <div class="form-group">
+        <label for="loanTenure">Loan Tenure (Years)</label>
+        <input type="number" id="loanTenure" placeholder="e.g. 20" value="20" min="1" max="30">
+    </div>
+
+    <button class="calc-btn" onclick="calculateHomeEMI()">Calculate Home EMI</button>
+
+    <div class="results-box" id="resultsBox">
+        <div class="results-grid">
+            <div class="res-card">
+                <label>Monthly EMI</label>
+                <div class="val highlight" id="emiVal">₹0</div>
+            </div>
+            <div class="res-card">
+                <label>Total Interest Payable</label>
+                <div class="val" id="interestVal">₹0</div>
+            </div>
+            <div class="res-card">
+                <label>Total Payment (Principal + Interest)</label>
+                <div class="val" id="totalPaymentVal">₹0</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AdSense Slot Between Content -->
+    <div class="ad-slot-middle">
+        <span>Advertisement Placeholder</span>
+    </div>
+
+    <!-- SEO Content, Explanation, & FAQs -->
+    <section class="seo-section">
+        <h2>How Home Loan EMI is Calculated</h2>
+        <p>A Home Loan EMI consists of two major components: Principal Repayment and Interest Payment. The standard formula used across banks in India (SBI, HDFC, ICICI, Axis) is:</p>
+        <p style="background: #f0f9ff; padding: 10px; border-radius: 5px; font-weight: bold; margin: 10px 0; color: #0369a1;">
+            EMI = [P × R × (1+R)^N] / [(1+R)^N - 1]
+        </p>
+        <p>Where <strong>P</strong> is the principal home loan amount, <strong>R</strong> is the monthly interest rate, and <strong>N</strong> is the tenure in months.</p>
+
+        <h2>Tax Benefits on Home Loan in India</h2>
+        <ul>
+            <li><strong>Section 80C Deduction:</strong> You can claim tax deduction up to ₹1.5 Lakh per year on the principal component repaid.</li>
+            <li><strong>Section 24(b) Deduction:</strong> Deduction up to ₹2 Lakh per financial year on interest paid for a self-occupied property.</li>
+        </ul>
+
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <div class="faq-item">
+            <h4>Q1. What is the maximum tenure available for a home loan?</h4>
+            <p>In India, major housing finance institutions offer home loans with maximum tenures up to 30 years.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Q2. Does increasing loan tenure lower monthly EMI?</h4>
+            <p>Yes, choosing a longer tenure reduces your monthly EMI amount, but it increases the total interest liability paid over the entire tenure.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Q3. Can I make partial prepayments on a floating rate home loan?</h4>
+            <p>Yes, RBI guidelines prohibit banks from levying prepayment penalties on floating-rate home loans given to individual borrowers.</p>
+        </div>
+    </section>
+</main>
+
+<!-- Embedded Client-Side JavaScript Logic -->
+<script>
+function calculateHomeEMI() {
+    const p = parseFloat(document.getElementById('loanAmount').value) || 0;
+    const annualRate = parseFloat(document.getElementById('interestRate').value) || 0;
+    const years = parseFloat(document.getElementById('loanTenure').value) || 0;
+
+    if (p <= 0 || annualRate <= 0 || years <= 0) {
+        alert("Please enter valid loan details.");
+        return;
+    }
+
+    const r = (annualRate / 12) / 100;
+    const n = years * 12;
+
+    const emi = (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+    const totalPayment = emi * n;
+    const totalInterest = totalPayment - p;
+
+    document.getElementById('resultsBox').style.display = 'block';
+    document.getElementById('emiVal').innerText = "₹" + Math.round(emi).toLocaleString('en-IN');
+    document.getElementById('interestVal').innerText = "₹" + Math.round(totalInterest).toLocaleString('en-IN');
+    document.getElementById('totalPaymentVal').innerText = "₹" + Math.round(totalPayment).toLocaleString('en-IN');
+}
+</script>
+
+</body>
+</html>
