@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPS Calculator Online | National Pension System Maturity & Annuity Calculator</title>
+    <meta name="description" content="Calculate your retirement corpus, monthly pension, and lump sum tax-free withdrawal under National Pension Scheme (NPS) in India.">
+    <meta name="keywords" content="nps calculator, national pension system calculator, nps pension calculator, nps return calculator, retirement planning india">
+    <link rel="canonical" href="https://indiancalchub.online/nps-calculator/" />
+
+    <!-- Schema Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "NPS Calculator",
+      "url": "https://indiancalchub.online/nps-calculator/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "description": "Calculate total retirement corpus, monthly pension amount, and tax-free lump sum withdrawal using NPS Calculator."
+    }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; line-height: 1.6; padding: 20px; }
+        .calc-container { max-width: 800px; margin: 20px auto; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        h1 { text-align: center; color: #d97706; font-size: 26px; margin-bottom: 8px; }
+        .subtitle { text-align: center; color: #64748b; margin-bottom: 25px; font-size: 15px; }
+
+        /* AdSense Top Header Slot */
+        .ad-slot-top { text-align: center; margin-bottom: 20px; background: #f8fafc; border: 1px dashed #cbd5e1; padding: 10px; font-size: 12px; color: #94a3b8; }
+        
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .form-group { margin-bottom: 18px; }
+        label { display: block; font-weight: 600; margin-bottom: 6px; color: #1e293b; }
+        input[type="number"] { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 16px; outline: none; }
+        input[type="number"]:focus { border-color: #d97706; }
+
+        .calc-btn { width: 100%; padding: 14px; background-color: #d97706; color: #ffffff; font-size: 16px; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.3s; margin-top: 10px; }
+        .calc-btn:hover { background-color: #b45309; }
+
+        .results-box { display: none; margin-top: 25px; padding: 20px; background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; }
+        .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; text-align: center; margin-top: 10px; }
+        .res-card { background: #ffffff; padding: 15px; border-radius: 6px; border: 1px solid #fef3c7; }
+        .res-card label { font-size: 13px; color: #64748b; font-weight: normal; }
+        .res-card .val { font-size: 18px; font-weight: bold; color: #d97706; margin-top: 4px; }
+        .res-card .val.highlight { color: #16a34a; }
+
+        /* AdSense Middle Slot */
+        .ad-slot-middle { text-align: center; margin: 30px 0 10px 0; background: #f8fafc; border: 1px dashed #cbd5e1; padding: 10px; font-size: 12px; color: #94a3b8; }
+
+        .seo-section { margin-top: 25px; border-top: 1px solid #e2e8f0; padding-top: 25px; }
+        .seo-section h2 { color: #b45309; font-size: 20px; margin-bottom: 12px; margin-top: 20px; }
+        .seo-section p, .seo-section ul { color: #334155; font-size: 15px; }
+        .seo-section ul { margin-left: 20px; margin-top: 8px; }
+
+        /* Interactive Collapsible FAQ Accordion Styles */
+        .faq-accordion { margin-top: 15px; }
+        .faq-item { border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 12px; overflow: hidden; transition: border-color 0.2s; }
+        .faq-item.active { border-color: #d97706; }
+        .faq-header { width: 100%; padding: 16px; background: #ffffff; text-align: left; font-size: 15px; font-weight: 600; color: #1e293b; border: none; outline: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-header:hover { background-color: #fffbeb; }
+        .faq-icon { font-size: 18px; font-weight: bold; color: #d97706; transition: transform 0.3s; }
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: #ffffff; padding: 0 16px; }
+        .faq-content p { padding-bottom: 16px; color: #475569; font-size: 14px; line-height: 1.6; }
+
+        @media (max-width: 650px) { 
+            .results-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<main class="calc-container">
+    <!-- AdSense Slot Above Fold -->
+    <div class="ad-slot-top">
+        <span>Advertisement Placeholder</span>
+    </div>
+
+    <h1>NPS (National Pension System) Calculator</h1>
+    <p class="subtitle">Estimate total pension corpus, tax-free lump sum, and expected monthly pension</p>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="monthlyContribution">Monthly Contribution (₹)</label>
+            <input type="number" id="monthlyContribution" placeholder="e.g. 5000" value="5000" min="500">
+        </div>
+        <div class="form-group">
+            <label for="currentAge">Current Age (Years)</label>
+            <input type="number" id="currentAge" placeholder="e.g. 30" value="30" min="18" max="59">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="expectedReturn">Expected Investment Return (% P.A.)</label>
+            <input type="number" id="expectedReturn" placeholder="e.g. 10" step="0.1" value="10" min="5" max="20">
+        </div>
+        <div class="form-group">
+            <label for="annuityRatio">Annuity Reinvestment Ratio (%)</label>
+            <input type="number" id="annuityRatio" placeholder="e.g. 40" value="40" min="40" max="100">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="annuityRate">Expected Annuity Interest Rate (% P.A.)</label>
+        <input type="number" id="annuityRate" placeholder="e.g. 6" step="0.1" value="6" min="3" max="12">
+    </div>
+
+    <button class="calc-btn" onclick="calculateNPS()">Calculate Pension Corpus</button>
+
+    <div class="results-box" id="resultsBox">
+        <div class="results-grid">
+            <div class="res-card">
+                <label>Total Investment</label>
+                <div class="val" id="totalInvested">₹0</div>
+            </div>
+            <div class="res-card">
+                <label>Total Retirement Corpus</label>
+                <div class="val" id="totalCorpus">₹0</div>
+            </div>
+            <div class="res-card">
+                <label>Lump Sum Withdrawal (Tax-Free)</label>
+                <div class="val highlight" id="lumpSum">₹0</div>
+            </div>
+            <div class="res-card">
+                <label>Est. Monthly Pension</label>
+                <div class="val highlight" id="monthlyPension">₹0</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AdSense Slot Between Content -->
+    <div class="ad-slot-middle">
+        <span>Advertisement Placeholder</span>
+    </div>
+
+    <!-- SEO Content & Interactive FAQs -->
+    <section class="seo-section">
+        <h2>What is the National Pension System (NPS)?</h2>
+        <p>The <strong>National Pension System (NPS)</strong> is a voluntary, government-backed pension scheme in India designed to provide financial security and a steady income stream post-retirement.</p>
+
+        <h2>NPS Tax Benefits Explained</h2>
+        <ul>
+            <li><strong>Section 80CCD(1):</strong> Tax deduction up to ₹1.5 Lakh under the overall 80C limit.</li>
+            <li><strong>Section 80CCD(1B):</strong> Exclusive additional tax deduction up to ₹50,000 over and above the ₹1.5 Lakh 80C cap.</li>
+            <li><strong>Lump Sum Exemption:</strong> Up to 60% of the corpus withdrawn at retirement (age 60) is completely exempt from income tax.</li>
+        </ul>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-accordion">
+            <div class="faq-item">
+                <button class="faq-header" onclick="toggleFaq(this)">
+                    <span>What is the retirement age in NPS?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-content">
+                    <p>The standard retirement age in NPS is 60 years. Subscribers can continue contributing up to the age of 75 if they choose to defer their withdrawal.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-header" onclick="toggleFaq(this)">
+                    <span>How much lump sum can I withdraw at retirement?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-content">
+                    <p>You can withdraw up to 60% of your accumulated corpus as a tax-free lump sum. The remaining minimum 40% must be used to purchase an annuity plan for monthly pension payouts.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-header" onclick="toggleFaq(this)">
+                    <span>What is an Annuity in NPS?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-content">
+                    <p>An annuity is a financial contract purchased from registered Annuity Service Providers (like LIC, HDFC Life) that guarantees a regular monthly pension for life.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-header" onclick="toggleFaq(this)">
+                    <span>Can I withdraw NPS money before age 60?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-content">
+                    <p>Partial withdrawals up to 25% of your own contributions are allowed after 3 years for specific purposes like higher education, marriage, or buying a house.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Embedded Client-Side JavaScript Logic -->
+<script>
+function calculateNPS() {
+    const p = parseFloat(document.getElementById('monthlyContribution').value) || 0;
+    const age = parseInt(document.getElementById('currentAge').value) || 0;
+    const returnRate = parseFloat(document.getElementById('expectedReturn').value) || 0;
+    const annuityPercent = parseFloat(document.getElementById('annuityRatio').value) || 40;
+    const annuityReturn = parseFloat(document.getElementById('annuityRate').value) || 0;
+
+    if (age < 18 || age >= 60) {
+        alert("Current age must be between 18 and 59 years.");
+        return;
+    }
+    if (p < 500 || returnRate <= 0) {
+        alert("Please enter valid investment and return values.");
+        return;
+    }
+
+    const tenureYears = 60 - age;
+    const totalMonths = tenureYears * 12;
+    const monthlyRate = returnRate / 12 / 100;
+
+    const totalInvested = p * totalMonths;
+    const totalCorpus = p * ((Math.pow(1 + monthlyRate, totalMonths) - 1) / monthlyRate) * (1 + monthlyRate);
+
+    const annuityAmount = totalCorpus * (annuityPercent / 100);
+    const lumpSumAmount = totalCorpus - annuityAmount;
+    const estimatedMonthlyPension = (annuityAmount * (annuityReturn / 100)) / 12;
+
+    document.getElementById('resultsBox').style.display = 'block';
+    document.getElementById('totalInvested').innerText = "₹" + Math.round(totalInvested).toLocaleString('en-IN');
+    document.getElementById('totalCorpus').innerText = "₹" + Math.round(totalCorpus).toLocaleString('en-IN');
+    document.getElementById('lumpSum').innerText = "₹" + Math.round(lumpSumAmount).toLocaleString('en-IN');
+    document.getElementById('monthlyPension').innerText = "₹" + Math.round(estimatedMonthlyPension).toLocaleString('en-IN');
+}
+
+// Collapsible FAQ Accordion Toggle Function
+function toggleFaq(headerBtn) {
+    const item = headerBtn.parentElement;
+    const content = item.querySelector('.faq-content');
+    const icon = item.querySelector('.faq-icon');
+
+    if (item.classList.contains('active')) {
+        item.classList.remove('active');
+        content.style.maxHeight = "0";
+        icon.innerText = "+";
+    } else {
+        document.querySelectorAll('.faq-item').forEach(el => {
+            el.classList.remove('active');
+            el.querySelector('.faq-content').style.maxHeight = "0";
+            el.querySelector('.faq-icon').innerText = "+";
+        });
+
+        item.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.innerText = "-";
+    }
+}
+</script>
+
+</body>
+</html>
