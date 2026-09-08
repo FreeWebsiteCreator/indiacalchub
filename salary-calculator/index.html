@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In-Hand Salary Calculator | Convert CTC to Take Home Pay</title>
+    <meta name="description" content="Calculate your exact monthly take-home salary from Annual CTC in India. Detailed breakdown of EPF, Professional Tax, TDS, and Allowances.">
+    <meta name="keywords" content="in hand salary calculator, ctc to take home salary, salary breakdown india, epf deduction calculator, monthly salary calculator">
+    <link rel="canonical" href="https://indiancalchub.online/salary-calculator/" />
+
+    <!-- Schema Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "In-Hand Salary Calculator India",
+      "url": "https://indiancalchub.online/salary-calculator/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "description": "Calculate monthly take-home salary from gross CTC with EPF and tax deductions."
+    }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; line-height: 1.6; padding: 20px; }
+        .calc-container { max-width: 800px; margin: 20px auto; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        h1 { text-align: center; color: #0284c7; font-size: 26px; margin-bottom: 8px; }
+        .subtitle { text-align: center; color: #64748b; margin-bottom: 25px; font-size: 15px; }
+
+        /* AdSense Top Header Slot */
+        .ad-slot-top { text-align: center; margin-bottom: 20px; background: #f8fafc; border: 1px dashed #cbd5e1; padding: 10px; font-size: 12px; color: #94a3b8; }
+        
+        .form-group { margin-bottom: 18px; }
+        label { display: block; font-weight: 600; margin-bottom: 6px; color: #1e293b; }
+        input[type="number"], select { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 16px; outline: none; }
+        input[type="number"]:focus, select:focus { border-color: #0284c7; }
+
+        .calc-btn { width: 100%; padding: 14px; background-color: #0284c7; color: #ffffff; font-size: 16px; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.3s; }
+        .calc-btn:hover { background-color: #0369a1; }
+
+        .results-box { display: none; margin-top: 25px; padding: 20px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; }
+        .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: center; margin-top: 10px; }
+        .res-card { background: #ffffff; padding: 15px; border-radius: 6px; border: 1px solid #e0f2fe; }
+        .res-card label { font-size: 13px; color: #64748b; font-weight: normal; }
+        .res-card .val { font-size: 20px; font-weight: bold; color: #0284c7; margin-top: 4px; }
+        .res-card .val.highlight { color: #16a34a; font-size: 24px; }
+
+        /* AdSense Content Slot */
+        .ad-slot-middle { text-align: center; margin: 30px 0 10px 0; background: #f8fafc; border: 1px dashed #cbd5e1; padding: 10px; font-size: 12px; color: #94a3b8; }
+
+        .seo-section { margin-top: 25px; border-top: 1px solid #e2e8f0; padding-top: 25px; }
+        .seo-section h2 { color: #0369a1; font-size: 20px; margin-bottom: 12px; margin-top: 20px; }
+        .seo-section p, .seo-section ul { color: #334155; font-size: 15px; }
+        .seo-section ul { margin-left: 20px; margin-top: 8px; }
+        .faq-item { margin-top: 15px; }
+        .faq-item h4 { color: #1e293b; font-weight: 600; font-size: 15px; }
+        .faq-item p { color: #334155; font-size: 14px; }
+
+        @media (max-width: 600px) { .results-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<main class="calc-container">
+    <!-- AdSense Slot Above Fold -->
+    <div class="ad-slot-top">
+        <span>Advertisement Placeholder</span>
+    </div>
+
+    <h1>In-Hand Salary Calculator (CTC Breakdown)</h1>
+    <p class="subtitle">Convert your Annual CTC package into exact monthly take-home salary after deductions</p>
+
+    <div class="form-group">
+        <label for="ctcAmount">Cost to Company (Annual CTC in ₹)</label>
+        <input type="number" id="ctcAmount" placeholder="e.g. 1000000" min="100000">
+    </div>
+
+    <div class="form-group">
+        <label for="bonusPercent">Variable Pay / Performance Bonus (% of CTC)</label>
+        <input type="number" id="bonusPercent" placeholder="e.g. 10" value="0" min="0" max="50">
+    </div>
+
+    <div class="form-group">
+        <label for="ptax">Monthly Professional Tax (P-Tax in ₹)</label>
+        <input type="number" id="ptax" placeholder="Standard: 200" value="200" min="0">
+    </div>
+
+    <button class="calc-btn" onclick="calculateSalary()">Calculate Take-Home Pay</button>
+
+    <div class="results-box" id="resultsBox">
+        <div class="results-grid">
+            <div class="res-card" style="grid-column: span 2;">
+                <label>Monthly In-Hand (Take-Home) Salary</label>
+                <div class="val highlight" id="takeHomeVal">₹0</div>
+            </div>
+            <div class="res-card">
+                <label>Monthly EPF Contribution (12%)</label>
+                <div class="val" id="epfVal">₹0</div>
+            </div>
+            <div class="res-card">
+                <label>Monthly Tax Deduction (TDS approx)</label>
+                <div class="val" id="tdsVal">₹0</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AdSense Slot Between Content -->
+    <div class="ad-slot-middle">
+        <span>Advertisement Placeholder</span>
+    </div>
+
+    <!-- SEO Content, Explanation, & FAQs -->
+    <section class="seo-section">
+        <h2>CTC vs Gross Salary vs In-Hand Salary Explained</h2>
+        <p>Understanding your salary package structure prevents unexpected surprises on payday. Here is how your total CTC gets broken down into actual take-home income:</p>
+        <ul>
+            <li><strong>CTC (Cost to Company):</strong> The total annual expenditure an employer incurs on an employee, including basic salary, HRA, bonuses, EPF contributions, and perks.</li>
+            <li><strong>Gross Salary:</strong> Total earnings before any tax or EPF deductions (CTC minus Employer EPF & Variable Bonus).</li>
+            <li><strong>In-Hand (Take-Home) Salary:</strong> The net salary deposited into your bank account after mandatory deductions (Employee EPF, Professional Tax, and Income Tax TDS).</li>
+        </ul>
+
+        <h2>Standard Deductions from Salary in India</h2>
+        <p>The primary deductions subtracted from your gross salary each month include:</p>
+        <ul>
+            <li><strong>Employee Provident Fund (EPF):</strong> Typically 12% of your Basic Salary + DA goes toward mandatory long-term savings.</li>
+            <li><strong>Professional Tax (PT):</strong> A state-level tax levied on salaried employees, usually capped at ₹200 per month (₹2,500/year).</li>
+            <li><strong>TDS (Tax Deducted at Source):</strong> Income tax deducted by your employer based on your applicable tax slab under the Old or New Tax Regime.</li>
+        </ul>
+
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <div class="faq-item">
+            <h4>Q1. Why is my in-hand salary significantly lower than my total CTC?</h4>
+            <p>Components like employer EPF contributions, variable performance bonuses, gratuity allocations, and income tax (TDS) reduce your monthly credited amount from the gross CTC figure.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Q2. Is EPF deduction compulsory for all salaried employees?</h4>
+            <p>EPF is mandatory for employees with a monthly basic salary up to ₹15,000. For salaries above ₹15,000, employees can choose to opt out at the time of joining if they have never had an active EPF account.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Q3. How can I increase my monthly take-home pay?</h4>
+            <p>Selecting the New Tax Regime (if you have low investments) or optimizing HRA exemptions, NPS contributions, and Section 80C deductions under the Old Tax Regime helps minimize TDS deductions.</p>
+        </div>
+    </section>
+</main>
+
+<!-- Embedded Client-Side JavaScript Logic -->
+<script>
+function calculateSalary() {
+    const ctc = parseFloat(document.getElementById('ctcAmount').value) || 0;
+    const bonusPct = parseFloat(document.getElementById('bonusPercent').value) || 0;
+    const ptaxMonthly = parseFloat(document.getElementById('ptax').value) || 0;
+
+    if (ctc <= 0) {
+        alert("Please enter a valid annual CTC amount.");
+        return;
+    }
+
+    // 1. Remove Variable Bonus
+    const bonusAnnual = ctc * (bonusPct / 100);
+    const fixedCTC = ctc - bonusAnnual;
+
+    // 2. Base Basic Salary assumption (~50% of Fixed CTC)
+    const basicAnnual = fixedCTC * 0.50;
+    
+    // 3. EPF Calculation (12% of Basic, capped at 1800/mo standard if basic > 15k, or actual basic)
+    const epfMonthly = Math.min((basicAnnual / 12) * 0.12, 1800);
+    const epfEmployerAnnual = epfMonthly * 12;
+
+    // 4. Gross Salary (Fixed CTC minus Employer EPF)
+    const grossAnnual = fixedCTC - epfEmployerAnnual;
+
+    // 5. Income Tax (TDS) Estimation under New Regime (Standard Deduction = 75,000)
+    const taxableIncome = Math.max(0, grossAnnual - 75000);
+    let annualTax = 0;
+
+    if (taxableIncome > 1500000) {
+        annualTax += (taxableIncome - 1500000) * 0.3 + 150000;
+    } else if (taxableIncome > 1200000) {
+        annualTax += (taxableIncome - 1200000) * 0.2 + 90000;
+    } else if (taxableIncome > 900000) {
+        annualTax += (taxableIncome - 900000) * 0.15 + 45000;
+    } else if (taxableIncome > 600000) {
+        annualTax += (taxableIncome - 600000) * 0.10 + 15000;
+    } else if (taxableIncome > 300000) {
+        annualTax += (taxableIncome - 300000) * 0.05;
+    }
+
+    if (taxableIncome <= 700000) annualTax = 0; // Rebate 87A
+    annualTax += annualTax * 0.04; // Cess
+
+    const tdsMonthly = annualTax / 12;
+
+    // 6. Net Take-Home Salary
+    const grossMonthly = grossAnnual / 12;
+    const takeHomeMonthly = grossMonthly - epfMonthly - ptaxMonthly - tdsMonthly;
+
+    document.getElementById('resultsBox').style.display = 'block';
+    document.getElementById('takeHomeVal').innerText = "₹" + Math.max(0, Math.round(takeHomeMonthly)).toLocaleString('en-IN');
+    document.getElementById('epfVal').innerText = "₹" + Math.round(epfMonthly).toLocaleString('en-IN');
+    document.getElementById('tdsVal').innerText = "₹" + Math.round(tdsMonthly).toLocaleString('en-IN');
+}
+</script>
+
+</body>
+</html>
