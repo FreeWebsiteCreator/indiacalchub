@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Calculator FY 2026-27 | Compare Old vs New Regime</title>
+    <meta name="description" content="Calculate your income tax liability for FY 2026-27 (AY 2027-28) in India. Compare Old vs New Tax Regime with accurate deductions and standard allowance.">
+    <meta name="keywords" content="income tax calculator 2026, old vs new tax regime calculator, tax breakdown india, salary tax calculator">
+    <link rel="canonical" href="https://indiancalchub.online/income-tax-calculator/" />
+
+    <!-- Schema Structured Data for Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Income Tax Calculator India",
+      "url": "https://indiancalchub.online/income-tax-calculator/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "description": "Free online Income Tax Calculator for Old vs New Tax Regime in India."
+    }
+    </script>
+
+    <!-- Embedded CSS Styling -->
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; line-height: 1.6; padding: 20px; }
+        .calc-container { max-width: 800px; margin: 20px auto; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        h1 { text-align: center; color: #1a202c; font-size: 26px; margin-bottom: 8px; }
+        .subtitle { text-align: center; color: #718096; margin-bottom: 25px; font-size: 15px; }
+        .form-group { margin-bottom: 18px; }
+        label { display: block; font-weight: 600; margin-bottom: 6px; color: #2d3748; }
+        input[type="number"] { width: 100%; padding: 12px; border: 1px solid #cbd5e0; border-radius: 6px; font-size: 16px; outline: none; }
+        input[type="number"]:focus { border-color: #2b6cb0; }
+        .calc-btn { width: 100%; padding: 14px; background-color: #2b6cb0; color: #ffffff; font-size: 16px; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; transition: background 0.3s; }
+        .calc-btn:hover { background-color: #2c5282; }
+        .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 25px; }
+        .result-card { padding: 20px; background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center; }
+        .result-card.best-option { background: #e6fffa; border-color: #319795; }
+        .result-card h3 { color: #2d3748; margin-bottom: 6px; }
+        .amount { font-size: 24px; font-weight: bold; color: #1a202c; margin: 6px 0; }
+        .subtext { font-size: 13px; color: #718096; }
+        .seo-content { margin-top: 35px; border-top: 1px solid #e2e8f0; padding-top: 25px; }
+        .seo-content h2 { color: #2b6cb0; font-size: 20px; margin-bottom: 10px; margin-top: 20px; }
+        .seo-content p, .seo-content ul { color: #4a5568; font-size: 15px; }
+        .seo-content ul { margin-left: 20px; margin-top: 8px; }
+        .faq { margin-top: 15px; }
+        .faq h4 { color: #2d3748; font-weight: 600; font-size: 15px; }
+        .faq p { color: #4a5568; font-size: 14px; }
+        @media (max-width: 600px) { .results-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<main class="calc-container">
+    <h1>Income Tax Calculator FY 2026-27</h1>
+    <p class="subtitle">Compare your tax payout under Old vs New Regime instantly</p>
+
+    <div class="form-group">
+        <label for="grossIncome">Gross Annual Income (₹)</label>
+        <input type="number" id="grossIncome" placeholder="e.g. 1200000" min="0">
+    </div>
+
+    <div class="form-group">
+        <label for="deductions80C">Section 80C Deductions (PF, ELSS, LIC) (₹)</label>
+        <input type="number" id="deductions80C" placeholder="Max ₹1,50,000 (Old Regime)" value="0" min="0">
+    </div>
+
+    <div class="form-group">
+        <label for="otherDeductions">Other Exemptions (80D, HRA, NPS) (₹)</label>
+        <input type="number" id="otherDeductions" placeholder="Total other deductions" value="0" min="0">
+    </div>
+
+    <button class="calc-btn" onclick="calculateTax()">Calculate Tax</button>
+
+    <div class="results-grid" id="resultsBox" style="display:none;">
+        <div class="result-card" id="oldCard">
+            <h3>Old Tax Regime</h3>
+            <div class="amount" id="oldTaxVal">₹0</div>
+            <span class="subtext" id="oldTaxableText">Taxable: ₹0</span>
+        </div>
+        <div class="result-card" id="newCard">
+            <h3>New Tax Regime</h3>
+            <div class="amount" id="newTaxVal">₹0</div>
+            <span class="subtext" id="newTaxableText">Taxable: ₹0</span>
+        </div>
+    </div>
+
+    <!-- SEO & Educational Content Section -->
+    <section class="seo-content">
+        <h2>Understanding Income Tax Slabs FY 2026-27</h2>
+        <p>The Income Tax Department provides two regime options for individual taxpayers in India: the <strong>Old Tax Regime</strong> and the <strong>New Tax Regime</strong>. Selecting the right regime depends on your total annual deductions and investments.</p>
+        
+        <h2>Old vs New Regime Key Highlights</h2>
+        <ul>
+            <li><strong>Standard Deduction:</strong> Flat ₹75,000 in New Regime and ₹50,000 in Old Regime for salaried employees.</li>
+            <li><strong>Deductions & Exemptions:</strong> Old regime allows 80C, 80D, HRA, and Home Loan interest tax benefits. New regime has lower slab rates without major exemptions.</li>
+        </ul>
+
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <div class="faq">
+            <h4>Q1. Which regime is better for salaried individuals?</h4>
+            <p>If your total deductions (80C + 80D + HRA) exceed ₹3.75 Lakhs, the Old Regime usually yields higher tax savings. Otherwise, the New Regime is more beneficial.</p>
+        </div>
+        <div class="faq">
+            <h4>Q2. Can I switch regimes while filing ITR?</h4>
+            <p>Yes, salaried employees can choose between the Old and New Regime every financial year at the time of filing their ITR.</p>
+        </div>
+    </section>
+</main>
+
+<!-- Embedded JavaScript Logic -->
+<script>
+function calculateTax() {
+    const grossIncome = parseFloat(document.getElementById('grossIncome').value) || 0;
+    const ded80C = Math.min(parseFloat(document.getElementById('deductions80C').value) || 0, 150000);
+    const otherDed = parseFloat(document.getElementById('otherDeductions').value) || 0;
+
+    if (grossIncome <= 0) {
+        alert("Please enter a valid annual income.");
+        return;
+    }
+
+    const oldTaxable = Math.max(0, grossIncome - 50000 - ded80C - otherDed);
+    const newTaxable = Math.max(0, grossIncome - 75000);
+
+    // Old Regime Tax Math
+    let oldTax = 0;
+    if (oldTaxable > 1000000) {
+        oldTax += (oldTaxable - 1000000) * 0.3 + 112500;
+    } else if (oldTaxable > 500000) {
+        oldTax += (oldTaxable - 500000) * 0.2 + 12500;
+    } else if (oldTaxable > 250000) {
+        oldTax += (oldTaxable - 250000) * 0.05;
+    }
+    if (oldTaxable <= 500000) oldTax = 0;
+    oldTax += oldTax * 0.04;
+
+    // New Regime Tax Math
+    let newTax = 0;
+    if (newTaxable > 1500000) {
+        newTax += (newTaxable - 1500000) * 0.3 + 150000;
+    } else if (newTaxable > 1200000) {
+        newTax += (newTaxable - 1200000) * 0.2 + 90000;
+    } else if (newTaxable > 900000) {
+        newTax += (newTaxable - 900000) * 0.15 + 45000;
+    } else if (newTaxable > 600000) {
+        newTax += (newTaxable - 600000) * 0.10 + 15000;
+    } else if (newTaxable > 300000) {
+        newTax += (newTaxable - 300000) * 0.05;
+    }
+    if (newTaxable <= 700000) newTax = 0;
+    newTax += newTax * 0.04;
+
+    // UI Updates
+    document.getElementById('resultsBox').style.display = 'grid';
+    document.getElementById('oldTaxVal').innerText = "₹" + Math.round(oldTax).toLocaleString('en-IN');
+    document.getElementById('newTaxVal').innerText = "₹" + Math.round(newTax).toLocaleString('en-IN');
+    document.getElementById('oldTaxableText').innerText = "Taxable: ₹" + Math.round(oldTaxable).toLocaleString('en-IN');
+    document.getElementById('newTaxableText').innerText = "Taxable: ₹" + Math.round(newTaxable).toLocaleString('en-IN');
+
+    // Highlight Winner
+    const oldCard = document.getElementById('oldCard');
+    const newCard = document.getElementById('newCard');
+    oldCard.classList.remove('best-option');
+    newCard.classList.remove('best-option');
+
+    if (oldTax < newTax) {
+        oldCard.classList.add('best-option');
+    } else {
+        newCard.classList.add('best-option');
+    }
+}
+</script>
+
+</body>
+</html>
